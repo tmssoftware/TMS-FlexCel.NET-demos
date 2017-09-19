@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <Button
+            android:text="Fight!"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/FightButton" />
+        <CheckBox
+            android:text="Online"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/OnlineSwitch"
+            android:layout_marginRight="18.7dp" />
+        <Button
+            android:text="Share"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/ShareButton" />
+    </LinearLayout>
+    <WebView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ResultsWindow" />
+</LinearLayout>
