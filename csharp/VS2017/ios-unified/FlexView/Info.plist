@@ -25,8 +25,6 @@
     <string>MainStoryboard_iPhone</string>
     <key>UIMainStoryboardFile~ipad</key>
     <string>MainStoryboard_iPhone</string>
-    <key>MinimumOSVersion</key>
-    <string>6.0</string>
     <key>CFBundleDisplayName</key>
     <string>FlexView</string>
     <key>CFBundleIdentifier</key>
@@ -85,8 +83,10 @@
       </dict>
     </array>
     <key>CFBundleVersion</key>
-    <string>6.17.0.0</string>
+    <string>6.17.3.0</string>
     <key>CFBundleShortVersionString</key>
-    <string>6.17.0.0</string>
+    <string>6.17.3.0</string>
+    <key>MinimumOSVersion</key>
+    <string>8.0</string>
   </dict>
 </plist>

@@ -25,7 +25,7 @@
     <key>UIMainStoryboardFile~ipad</key>
     <string>MainStoryboard_iPhone</string>
     <key>MinimumOSVersion</key>
-    <string>6.0</string>
+    <string>8.0</string>
     <key>CFBundleIconFiles</key>
     <array>
       <string>Icon-72@2x</string>
@@ -49,8 +49,8 @@
     <key>CFBundleIdentifier</key>
     <string>FlexCalc</string>
     <key>CFBundleShortVersionString</key>
-    <string>6.17.0.0</string>
+    <string>6.17.3.0</string>
     <key>CFBundleVersion</key>
-    <string>6.17.0.0</string>
+    <string>6.17.3.0</string>
   </dict>
 </plist>

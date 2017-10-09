@@ -166,13 +166,14 @@ namespace FlexView
 
         void ShowHowToUse()
         {
-            using (UIAlertView Alert = new UIAlertView("Please open FlexView from other Application.", 
+            using (var alert = UIAlertController.Create("Please open FlexView from other Application.",
                 "In order to use this example you need to go to another app"
                 + " like dropbox or mail, and share an xls or xlsx file with FlexView."
                 + " When you click \"Share\" and select \"FlexView\" in the other app,"
-                + " the file will be converted to pdf and previewed with FlexView.", null, "Ok"))
-            {  
-                Alert.Show();
+                + " the file will be converted to pdf and previewed with FlexView.", UIAlertControllerStyle.Alert))
+            {
+                alert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Cancel, null));                
+                PresentViewController(alert, animated: true, completionHandler: null);
             }
         }
     }
