@@ -27,6 +27,6 @@ Global
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = LangWars\LangWars.csproj
-		version = 6.17.3.0
+		version = 6.17.4.0
 	EndGlobalSection
 EndGlobal

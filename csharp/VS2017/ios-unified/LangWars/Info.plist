@@ -7,9 +7,9 @@
     <key>CFBundleIdentifier</key>
     <string>LangWars</string>
     <key>CFBundleVersion</key>
-    <string>6.17.3.0</string>
+    <string>6.17.4.0</string>
     <key>CFBundleShortVersionString</key>
-    <string>6.17.3.0</string>
+    <string>6.17.4.0</string>
     <key>UIDeviceFamily</key>
     <array>
       <integer>1</integer>
