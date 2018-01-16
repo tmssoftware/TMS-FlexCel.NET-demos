@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("LangWars.Windows")]
-[assembly: AssemblyCopyright("(c) 2002 - 2017 TMS Software")]
+[assembly: AssemblyCopyright("(c) 2002 - 2018 TMS Software")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -24,6 +24,6 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("6.18.0.0")]
-[assembly: AssemblyFileVersion("6.18.0.0")]
+[assembly: AssemblyVersion("6.18.5.0")]
+[assembly: AssemblyFileVersion("6.18.5.0")]
 [assembly: ComVisible(false)]
