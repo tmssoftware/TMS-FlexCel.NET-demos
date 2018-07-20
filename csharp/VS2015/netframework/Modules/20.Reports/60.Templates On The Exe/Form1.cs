@@ -17,7 +17,7 @@ using FlexCel.Demo.SharedData;
 namespace TemplatesOnTheExe
 {
     /// <summary>
-    /// How to embed the reports in the executable, inlcluding "included" reports.
+    /// How to embed the reports in the executable, including "included" reports.
     /// </summary>
     public partial class mainForm: System.Windows.Forms.Form
     {
