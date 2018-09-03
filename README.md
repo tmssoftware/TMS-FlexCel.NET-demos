@@ -8,12 +8,12 @@ You can find a description of each demo in the [documentation](http://www.tmssof
 **:book: Note** We update this repository automatically every time we release a new FlexCel version. So if you have notifications integrated with github, you can subscribe to this feed to be notified of new releases.
 
 
-## New on v 6.21.5 - August 2018
+## New on v 6.21.6 - September 2018
 
 
-- **Bug Fix.** FlexCel could fail to parse complex structured references in tables.
+- **Updated SkiaSharp to 1.60.3.** FlexCel will now use SkiaSharp 1.60.3
 
-- **Bug Fix.** Formulas that referred to different files could refer to the wrong sheet on those linked files in some rare cases.
+- **Bug Fix.** FlexCel would fail to load "Strict Open XML files" with formulas which returned dates.
 
-- **Bug Fix.** the IFERROR function could give a #VALUE! error in some cases when used chained with other functions.
+- **Bug Fix.** FlexCel could crash when rendering xls files with rare images.
 

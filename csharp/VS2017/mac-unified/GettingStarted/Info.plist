@@ -11,9 +11,9 @@
     <key>NSPrincipalClass</key>
     <string>NSApplication</string>
     <key>CFBundleVersion</key>
-    <string>6.21.5.0</string>
+    <string>6.21.6.0</string>
     <key>CFBundleShortVersionString</key>
-    <string>6.21.5.0</string>
+    <string>6.21.6.0</string>
     <key>CFBundleIdentifier</key>
     <string>FlexCel OSX Demo</string>
   </dict>
