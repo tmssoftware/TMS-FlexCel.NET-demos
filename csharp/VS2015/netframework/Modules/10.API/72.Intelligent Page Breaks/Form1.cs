@@ -173,7 +173,7 @@ namespace IntelligentPageBreaks
         {
             if (saveFileDialog1.ShowDialog() != DialogResult.OK) return;
             ExcelFile Xls = new XlsFile(true);
-            Xls.NewFile(1);
+            Xls.NewFile(1, TExcelFileFormat.v2019);
             Xls.SetColWidth(1, 78 * 256); //;make longer lines wrap in the cell.
             TFlxFormat fmt = Xls.GetFormat(Xls.GetColFormat(1));
             fmt.WrapText = true;

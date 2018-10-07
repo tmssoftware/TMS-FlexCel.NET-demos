@@ -30,7 +30,7 @@ namespace CopyAndPaste
             try
             {
                 Xls = new XlsFile();
-                Xls.NewFile(1, TExcelFileFormat.v2016);
+                Xls.NewFile(1, TExcelFileFormat.v2019);
             }
             catch (Exception ex)
             {
@@ -96,7 +96,7 @@ namespace CopyAndPaste
             {
                 MessageBox.Show(ex.Message);
                 Xls = new XlsFile();
-                Xls.NewFile();
+                Xls.NewFile(1, TExcelFileFormat.v2019);
             }
         }
 

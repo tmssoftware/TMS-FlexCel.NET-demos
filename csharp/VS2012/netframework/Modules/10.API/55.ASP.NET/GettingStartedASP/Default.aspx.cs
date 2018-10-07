@@ -26,7 +26,7 @@ public partial class _Default : System.Web.UI.Page
     private void CreateFile(ExcelFile Xls)
     {
         //Create a new file. We could also open an existing file with Xls.Open
-        Xls.NewFile(1);
+        Xls.NewFile(1, TExcelFileFormat.v2019);
         //Set some cell values.
         Xls.SetCellValue(1, 1, "Hello to everybody");
         Xls.SetCellValue(2, 1, 3);

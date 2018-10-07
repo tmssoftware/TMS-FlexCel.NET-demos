@@ -21,7 +21,7 @@ namespace FlexCalc
             }
             catch
             {
-                xls.NewFile(1, TExcelFileFormat.v2016);
+                xls.NewFile(1, TExcelFileFormat.v2019);
                 xls.SetCellValue(1, 1, "Example");
                 xls.SetCellValue(2, 1, 42);
                 xls.SetCellValue(3, 1, new TFormula("=Sqrt(A2) * A2^2"));

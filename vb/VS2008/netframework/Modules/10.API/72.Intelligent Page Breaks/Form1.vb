@@ -156,7 +156,7 @@ Namespace IntelligentPageBreaks
 				Return
 			End If
 			Dim Xls As ExcelFile = New XlsFile(True)
-			Xls.NewFile(1)
+			Xls.NewFile(1, TExcelFileFormat.v2019)
 			Xls.SetColWidth(1, 78 * 256) ';make longer lines wrap in the cell.
 			Dim fmt As TFlxFormat = Xls.GetFormat(Xls.GetColFormat(1))
 			fmt.WrapText = True

@@ -66,7 +66,7 @@ Namespace HyperLinks
 			End If
 
 			Dim XlsOut As ExcelFile = New XlsFile(True)
-			XlsOut.NewFile(1)
+			XlsOut.NewFile(1, TExcelFileFormat.v2019)
 
 			For i As Integer = 1 To Xls.HyperLinkCount
 				Dim Range As TXlsCellRange = Xls.GetHyperLinkCellRange(i)

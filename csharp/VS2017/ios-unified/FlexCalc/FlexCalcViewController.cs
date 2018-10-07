@@ -110,7 +110,7 @@ namespace FlexCalc
 
         void CreateInitialFile(ExcelFile xls)
         {
-            xls.NewFile(1);
+            xls.NewFile(1, TExcelFileFormat.v2019);
             xls.SetCellValue(1, 1, 7);
             xls.SetCellValue(2, 1, 5);
             xls.SetCellValue(3,1, new TFormula("=sum(a1:a2)^2"));

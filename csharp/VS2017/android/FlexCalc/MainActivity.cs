@@ -47,7 +47,7 @@ namespace FlexCalc
 
             if (!Restoring)
             {
-                xls.NewFile(1);            
+                xls.NewFile(1, TExcelFileFormat.v2019);            
 
                 for (int k = 0; k < Predefined.Length; k++)
                 {

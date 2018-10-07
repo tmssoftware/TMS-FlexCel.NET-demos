@@ -21,7 +21,7 @@ Namespace CopyAndPaste
 		Private Sub btnNewFile_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnNewFile.Click
 			Try
 				Xls = New XlsFile()
-				Xls.NewFile(1, TExcelFileFormat.v2016)
+				Xls.NewFile(1, TExcelFileFormat.v2019)
 			Catch ex As Exception
 				MessageBox.Show(ex.Message)
 			End Try
@@ -71,7 +71,7 @@ Namespace CopyAndPaste
 			Catch ex As Exception
 				MessageBox.Show(ex.Message)
 				Xls = New XlsFile()
-				Xls.NewFile()
+				Xls.NewFile(1, TExcelFileFormat.v2019)
 			End Try
 		End Sub
 

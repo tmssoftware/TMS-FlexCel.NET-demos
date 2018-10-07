@@ -56,17 +56,17 @@ namespace RecalculationOfLinkedFiles
         {
             //Set up the files.
             XlsFile xls1 = new XlsFile();
-            xls1.NewFile();
+            xls1.NewFile(1, TExcelFileFormat.v2019);
 
             xls1.SetCellValue(1, 1, GetValue(CellA1.Text));
             xls1.SetCellValue(2, 1, new TFormula("=[Third File.xls]Sheet1!A1 + 7"));
 
             XlsFile xls2 = new XlsFile();
-            xls2.NewFile();
+            xls2.NewFile(1, TExcelFileFormat.v2019);
             xls2.SetCellValue(1, 1, new TFormula("=[First File.xls]Sheet1!A1 * 2"));
 
             XlsFile xls3 = new XlsFile();
-            xls3.NewFile();
+            xls3.NewFile(1, TExcelFileFormat.v2019);
             xls3.SetCellValue(1, 1, new TFormula("=[Second File.xls]Sheet1!A1 * 5"));
 
             //Create a workspace to recalculate them.

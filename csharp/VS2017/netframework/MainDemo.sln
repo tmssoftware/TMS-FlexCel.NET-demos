@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Getting Started Reports", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Range Reports", "Modules\20.Reports\20.Range Reports\Range Reports.csproj", "{6794F628-E850-411C-83AD-6A068D46B0E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tables As Datasources", "Modules\20.Reports\23.Tables As Datasources\Tables As Datasources.csproj", "{6794F628-E850-411C-83AD-6A068D46B0E8}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Includes", "Modules\20.Reports\40.Includes\Includes.csproj", "{11A4EF23-5C77-4D2F-878B-95D41FEA1FDF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiple sheet report", "Modules\20.Reports\25.Multiple sheet report\Multiple sheet report.csproj", "{D329679E-A0B4-44D5-B65F-E626EF3B1DD4}"

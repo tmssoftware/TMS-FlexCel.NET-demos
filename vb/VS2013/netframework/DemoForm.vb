@@ -37,6 +37,7 @@ Namespace MainDemo
 		Private PathToExe As String = Path.Combine("bin", "Debug")
 		Private ExtLaunch As String = ".xls"
 		Private ExtTemplate As String = ".template.xls"
+		Private ExtTemplateX As String = ".template.xlsx"
 		Private ExtCsProject As String = ".csproj"
 		Private ExtVbProject As String = ".vbproj"
 		Private ExtPrismProject As String = ".oxygene"
@@ -102,7 +103,7 @@ Namespace MainDemo
 
 			menuRunSelected.Enabled = btnRunSelected.Enabled
 
-			btnViewTemplate.Enabled = HasFileToLaunch(ExtTemplate) IsNot Nothing
+			btnViewTemplate.Enabled = HasFileToLaunch(ExtTemplate) IsNot Nothing OrElse HasFileToLaunch(ExtTemplateX) IsNot Nothing
 			menuViewTemplate.Enabled = btnViewTemplate.Enabled
 
 			btnOpenProject.Enabled = HasFileToLaunch(ExtCsProject) IsNot Nothing OrElse HasFileToLaunch(ExtVbProject) IsNot Nothing OrElse HasFileToLaunch(ExtPrismProject) IsNot Nothing
@@ -227,15 +228,21 @@ Namespace MainDemo
 
 		End Sub
 
-		Private Sub ViewTemplate_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles menuViewTemplate.Click, btnViewTemplate.Click
-			Dim f As String = HasFileToLaunch(ExtTemplate)
-			If f IsNot Nothing Then
-				System.Diagnostics.Process.Start(f)
-			End If
+        Private Sub ViewTemplate_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles menuViewTemplate.Click, btnViewTemplate.Click
+            Dim f As String = HasFileToLaunch(ExtTemplateX)
+            If f IsNot Nothing Then
+                System.Diagnostics.Process.Start(f)
+                Return
+            End If
 
-		End Sub
+            f = HasFileToLaunch(ExtTemplate)
+            If f IsNot Nothing Then
+                System.Diagnostics.Process.Start(f)
+            End If
 
-		Private Sub About_Click(ByVal sender As Object, ByVal e As EventArgs) Handles menuAbout.Click, btnAbout.Click
+        End Sub
+
+        Private Sub About_Click(ByVal sender As Object, ByVal e As EventArgs) Handles menuAbout.Click, btnAbout.Click
 			Using af As New AboutForm()
 				af.ShowDialog()
 			End Using

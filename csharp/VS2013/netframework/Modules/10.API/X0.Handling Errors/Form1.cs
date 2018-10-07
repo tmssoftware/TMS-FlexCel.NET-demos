@@ -76,7 +76,7 @@ namespace HandlingErrors
         private void DoThings()
         {
             ExcelFile xls = new XlsFile(true);
-            xls.NewFile(1);
+            xls.NewFile(1, TExcelFileFormat.v2019);
 
             for (int r = 1; r < 2000; r++)
             {

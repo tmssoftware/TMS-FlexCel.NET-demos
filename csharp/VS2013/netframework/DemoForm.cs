@@ -46,6 +46,7 @@ namespace MainDemo
         private string PathToExe = Path.Combine("bin", "Debug");
         private string ExtLaunch = ".xls";
         private string ExtTemplate = ".template.xls";
+        private string ExtTemplateX = ".template.xlsx";
         private string ExtCsProject = ".csproj";
         private string ExtVbProject = ".vbproj";
         private string ExtPrismProject = ".oxygene";
@@ -109,7 +110,7 @@ namespace MainDemo
 
             menuRunSelected.Enabled = btnRunSelected.Enabled;
 
-            btnViewTemplate.Enabled = HasFileToLaunch(ExtTemplate) != null;
+            btnViewTemplate.Enabled = HasFileToLaunch(ExtTemplate) != null || HasFileToLaunch(ExtTemplateX) != null;
             menuViewTemplate.Enabled = btnViewTemplate.Enabled;
 
             btnOpenProject.Enabled = HasFileToLaunch(ExtCsProject) != null || HasFileToLaunch(ExtVbProject) != null || HasFileToLaunch(ExtPrismProject) != null;
@@ -240,9 +241,18 @@ namespace MainDemo
 
         private void ViewTemplate_Click(object sender, System.EventArgs e)
         {
-            string f = HasFileToLaunch(ExtTemplate);
+            string f = HasFileToLaunch(ExtTemplateX);
             if (f != null)
+            {
                 System.Diagnostics.Process.Start(f);
+                return;
+            }
+
+            f = HasFileToLaunch(ExtTemplate);
+            if (f != null)
+            {
+                System.Diagnostics.Process.Start(f);
+            }
 
         }
 

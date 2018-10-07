@@ -9,7 +9,7 @@ namespace GettingStarted
     {
         static void Main(string[] args)
         {
-            var xls = new XlsFile(1, TExcelFileFormat.v2016, true);
+            var xls = new XlsFile(1, TExcelFileFormat.v2019, true);
             xls.SetCellValue(1, 1, "Hello");
             xls.SetCellValue(2, 1, "World");
             xls.SetCellValue(3, 1, new TFormula("=A1 & \" \" & A2"));

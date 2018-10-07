@@ -86,7 +86,7 @@ namespace HyperLinks
             }
 
             ExcelFile XlsOut = new XlsFile(true);
-            XlsOut.NewFile(1);
+            XlsOut.NewFile(1, TExcelFileFormat.v2019);
 
             for (int i = 1; i <= Xls.HyperLinkCount; i++)
             {

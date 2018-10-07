@@ -47,17 +47,17 @@ Namespace RecalculationOfLinkedFiles
 		Private Sub CreateFilesAndRecalculate()
 			'Set up the files.
 			Dim xls1 As New XlsFile()
-			xls1.NewFile()
+			xls1.NewFile(1, TExcelFileFormat.v2019)
 
 			xls1.SetCellValue(1, 1, GetValue(CellA1.Text))
 			xls1.SetCellValue(2, 1, New TFormula("=[Third File.xls]Sheet1!A1 + 7"))
 
 			Dim xls2 As New XlsFile()
-			xls2.NewFile()
+			xls2.NewFile(1, TExcelFileFormat.v2019)
 			xls2.SetCellValue(1, 1, New TFormula("=[First File.xls]Sheet1!A1 * 2"))
 
 			Dim xls3 As New XlsFile()
-			xls3.NewFile()
+			xls3.NewFile(1, TExcelFileFormat.v2019)
 			xls3.SetCellValue(1, 1, New TFormula("=[Second File.xls]Sheet1!A1 * 5"))
 
 			'Create a workspace to recalculate them.

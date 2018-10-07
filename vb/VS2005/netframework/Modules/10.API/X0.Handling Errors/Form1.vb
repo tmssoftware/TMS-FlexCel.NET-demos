@@ -61,7 +61,7 @@ Namespace HandlingErrors
 
 		Private Sub DoThings()
 			Dim xls As ExcelFile = New XlsFile(True)
-			xls.NewFile(1)
+			xls.NewFile(1, TExcelFileFormat.v2019)
 
 			For r As Integer = 1 To 1999
 				xls.InsertHPageBreak(r) 'This won't throw an exception here, since FlexCel allows to have more than 1025 page breaks, but at the moment of saving. (since an xls file can't have more than that)

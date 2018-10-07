@@ -42,7 +42,7 @@ Namespace ConsolidatingFiles
 		Private Function Consolidate(ByVal fileDatas() As Stream, ByVal fileNames() As String, ByVal OnlyData As Boolean) As ExcelFile
 			Dim XlsIn As ExcelFile = New XlsFile()
 			Dim XlsOut As ExcelFile = New XlsFile(True)
-			XlsOut.NewFile(1)
+			XlsOut.NewFile(1, TExcelFileFormat.v2019)
 
 			If fileNames.Length > 1 AndAlso cbOnlyData.Checked Then
 				XlsOut.InsertAndCopySheets(1, 2, fileNames.Length - 1)

@@ -53,7 +53,7 @@ namespace ConsolidatingFiles
         {
             ExcelFile XlsIn = new XlsFile();
             ExcelFile XlsOut = new XlsFile(true);
-            XlsOut.NewFile(1);
+            XlsOut.NewFile(1, TExcelFileFormat.v2019);
 
             if (fileNames.Length > 1 && cbOnlyData.Checked) XlsOut.InsertAndCopySheets(1, 2, fileNames.Length - 1);
 

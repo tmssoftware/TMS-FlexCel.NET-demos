@@ -39,7 +39,7 @@ namespace GettingStarted
         private void AddData(ExcelFile Xls)
         {
             //Create a new file. We could also open an existing file with Xls.Open
-            Xls.NewFile(1);
+            Xls.NewFile(1, TExcelFileFormat.v2019);
             //Set some cell values.
             Xls.SetCellValue(1, 1, "Hello to the world");
             Xls.SetCellValue(2, 1, 3);
@@ -91,15 +91,7 @@ namespace GettingStarted
 
 
             //Make the page print in landscape or portrait mode
-            bool Landscape = false;  //In this example we will just hard-code it to landscape, in a real app, landscape might have any value.
-            if (Landscape)
-                Xls.PrintOptions &= ~(TPrintOptions.Orientation | TPrintOptions.NoPls);
-            else
-            {
-                //ALWAYS SET NOPLS TO 0 BEFORE CHANGING THE OTHER OPTIONS.
-                Xls.PrintOptions &= ~TPrintOptions.NoPls;
-                Xls.PrintOptions |= TPrintOptions.Orientation;
-            }
+            Xls.PrintLandscape = false;  
 
         }
 
