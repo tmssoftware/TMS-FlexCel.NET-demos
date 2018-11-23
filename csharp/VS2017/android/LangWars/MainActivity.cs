@@ -22,6 +22,9 @@ namespace LangWars
     {
         WebView ResultsWindow;
         CheckBox OnlineSwitch;
+        ProgressBar LoadSpinner;
+        Button FightButton;
+        Button ShareButton;
         bool HTMLLoaded = false;
 
 
@@ -32,14 +35,14 @@ namespace LangWars
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            Button FightButton = FindViewById<Button>(Resource.Id.FightButton);
+            FightButton = FindViewById<Button>(Resource.Id.FightButton);
 			
             FightButton.Click += async delegate
             {
                 await TryCreateReport();
             };
 
-            Button ShareButton = FindViewById<Button>(Resource.Id.ShareButton);
+            ShareButton = FindViewById<Button>(Resource.Id.ShareButton);
 
             ShareButton.Click += delegate
             {
@@ -48,6 +51,8 @@ namespace LangWars
 
             ResultsWindow = FindViewById<WebView>(Resource.Id.ResultsWindow);
             OnlineSwitch = FindViewById<CheckBox>(Resource.Id.OnlineSwitch);
+            LoadSpinner = FindViewById<ProgressBar>(Resource.Id.LoadSpinner);
+            LoadSpinner.Visibility = ViewStates.Gone;
             await DisplayLastReport();
         }
 
@@ -56,10 +61,9 @@ namespace LangWars
         {
             try
             {
-                ProgressDialog progress = new ProgressDialog(this);
-                progress.SetMessage("Loading...");
-                progress.SetCancelable(false);
-                progress.Show();
+                LoadSpinner.Visibility = ViewStates.Visible;
+                FightButton.Enabled = false;
+                ShareButton.Enabled = false;
                 try
                 {
                     bool Offline = !OnlineSwitch.Checked;
@@ -67,7 +71,9 @@ namespace LangWars
                 }
                 finally
                 {
-                    progress.Dismiss();
+                    ShareButton.Enabled = true;
+                    FightButton.Enabled = true;
+                    LoadSpinner.Visibility = ViewStates.Gone;
                 }
             }
             catch (Exception ex)

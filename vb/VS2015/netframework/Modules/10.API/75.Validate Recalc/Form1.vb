@@ -7,7 +7,7 @@ Imports System.Reflection
 
 Namespace ValidateRecalc
 	''' <summary>
-	''' Use this demo to validate the recalculation mad by FlexCel.
+	''' Use this demo to validate the recalculation made by FlexCel.
 	''' </summary>
 	Partial Public Class mainForm
 		Inherits System.Windows.Forms.Form
@@ -67,6 +67,15 @@ Namespace ValidateRecalc
 					FileName = "File: " & Usl(i).FileName & "  => "
 				End If
 				report.Text &= vbLf & "     " & FileName & Usl(i).Cell.CellRef & ": " & Usl(i).ErrorType.ToString()
+				If Usl(i).StackTrace IsNot Nothing Then
+					For k As Integer = 0 To Usl(i).StackTrace.Length - 1
+						If Usl(i).StackTrace(k).Address IsNot Nothing Then
+							Dim TraceFileName As String = ""
+							If Usl(i).StackTrace(k).FileName Is Nothing Then TraceFileName = "[" & Usl(i).StackTrace(k).FileName & "]"
+							report.Text &= vbLf & "         -> References cell: " & TraceFileName & Usl(i).StackTrace(k).Address.CellRef
+						End If
+					Next k
+				End If
 				If Usl(i).FunctionName IsNot Nothing Then
 					Dim FunctionStr As String = "Function"
 					If Usl(i).ErrorType = TUnsupportedFormulaErrorType.ExternalReference Then

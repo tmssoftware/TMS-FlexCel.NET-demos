@@ -14,7 +14,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Getting Started Reports", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Range Reports", "Modules\20.Reports\20.Range Reports\Range Reports.csproj", "{6794F628-E850-411C-83AD-6A068D46B0E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tables As Datasources", "Modules\20.Reports\23.Tables As Datasources\Tables As Datasources.csproj", "{6794F628-E850-411C-83AD-6A068D46B0E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tables As Datasources", "Modules\20.Reports\23.Tables As Datasources\Tables As Datasources.csproj", "{5F968245-CF68-4B3E-BF4F-A31B8B4F12C4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Includes", "Modules\20.Reports\40.Includes\Includes.csproj", "{11A4EF23-5C77-4D2F-878B-95D41FEA1FDF}"
 EndProject
@@ -167,6 +167,12 @@ GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6794F628-E850-411C-83AD-6A068D46B0E8}.Release Testing|Any CPU.ActiveCfg = Release|Any CPU
 		{6794F628-E850-411C-83AD-6A068D46B0E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6794F628-E850-411C-83AD-6A068D46B0E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F968245-CF68-4B3E-BF4F-A31B8B4F12C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F968245-CF68-4B3E-BF4F-A31B8B4F12C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F968245-CF68-4B3E-BF4F-A31B8B4F12C4}.Release Testing|Any CPU.ActiveCfg = Release|Any CPU
+		{5F968245-CF68-4B3E-BF4F-A31B8B4F12C4}.Release Testing|Any CPU.Build.0 = Release|Any CPU
+		{5F968245-CF68-4B3E-BF4F-A31B8B4F12C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F968245-CF68-4B3E-BF4F-A31B8B4F12C4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{11A4EF23-5C77-4D2F-878B-95D41FEA1FDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{11A4EF23-5C77-4D2F-878B-95D41FEA1FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11A4EF23-5C77-4D2F-878B-95D41FEA1FDF}.Release Testing|Any CPU.ActiveCfg = Release|Any CPU
@@ -481,6 +487,9 @@ GlobalSection(ProjectConfigurationPlatforms) = postSolution
 EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8D6E93F-6A08-4400-A2F8-A2638BFDB66F}
 	EndGlobalSection
 	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
 		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}

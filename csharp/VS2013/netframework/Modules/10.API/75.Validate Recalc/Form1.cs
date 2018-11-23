@@ -13,7 +13,7 @@ using System.Reflection;
 namespace ValidateRecalc
 {
     /// <summary>
-    /// Use this demo to validate the recalculation mad by FlexCel.
+    /// Use this demo to validate the recalculation made by FlexCel.
     /// </summary>
     public partial class mainForm: System.Windows.Forms.Form
     {
@@ -79,6 +79,17 @@ namespace ValidateRecalc
                 string FileName = String.Empty;
                 if (Usl[i].FileName != null) FileName = "File: " + Usl[i].FileName + "  => ";
                 report.Text += "\n     " + FileName + Usl[i].Cell.CellRef + ": " + Usl[i].ErrorType.ToString();
+                if (Usl[i].StackTrace != null)
+                {
+                    for (int k = 0; k < Usl[i].StackTrace.Length; k++)
+                    {
+                        if (Usl[i].StackTrace[k].Address != null)
+                        {
+                            String TraceFileName = Usl[i].StackTrace[k].FileName == null ? "" : "[" + Usl[i].StackTrace[k].FileName + "]";
+                            report.Text += "\n         -> References cell: " + TraceFileName + Usl[i].StackTrace[k].Address.CellRef;
+                        }
+                    }
+                }
                 if (Usl[i].FunctionName != null)
                 {
                     string FunctionStr = "Function";
