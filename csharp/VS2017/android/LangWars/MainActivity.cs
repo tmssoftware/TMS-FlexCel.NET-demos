@@ -160,16 +160,9 @@ namespace LangWars
         { 
             get
             {
-                String state = Android.OS.Environment.ExternalStorageState;
-
-                if (state == Android.OS.Environment.MediaMounted)
-                {
-                    return Path.Combine(
-                        ApplicationContext.GetExternalFilesDir(null).AbsolutePath, //Note that we use EXTERNAL dir, because the other apps won't be able to read the internal cache.
-                        "langwars.xls"); 
-                }
-
-                return null; //We can't save.
+                return Path.Combine(
+                    ApplicationContext.FilesDir.AbsolutePath,
+                    "langwars.xls");
             }
         }
 
@@ -213,23 +206,19 @@ namespace LangWars
 
         async void SendFile()
         {
-            if (TempXlsPath == null)
-            {
-                new AlertDialog.Builder(this)
-                    .SetTitle("Error")
-                        .SetMessage("It is not possible to share the file because the external storage is not available.")
-                        .Show();
-                return;
-            }
-
+            // To send the file, we need to define a file provider in AndrodiManifest.xml
+            // See http://www.tmssoftware.biz/flexcel/doc/net/guides/android-guide.html#sharing-files
             if (!File.Exists(TempXlsPath))
             {
                 if (!await TryCreateReport()) return;
             }
 
             Intent Sender = new Intent(Intent.ActionSend);
-            Sender.SetType("application/vnd.ms-excel");
-            Sender.PutExtra(Intent.ExtraStream, Android.Net.Uri.Parse(new Uri(TempXlsPath).AbsoluteUri));
+            Sender.SetType(StandardMimeType.Xls);
+            Java.IO.File xlsFile = new Java.IO.File(TempXlsPath);
+            var contentUri = Android.Support.V4.Content.FileProvider.GetUriForFile(this, ApplicationContext.PackageName + ".fileprovider", xlsFile);
+            Sender.PutExtra(Intent.ExtraStream, contentUri);
+            Sender.SetFlags(ActivityFlags.GrantReadUriPermission);
             StartActivity(Intent.CreateChooser(Sender, "Select application"));
         }
     }

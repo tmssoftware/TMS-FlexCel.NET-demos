@@ -14,19 +14,27 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{AC593120-4038-4D96-9AF3-CD69D17ED869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AC593120-4038-4D96-9AF3-CD69D17ED869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC593120-4038-4D96-9AF3-CD69D17ED869}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{AC593120-4038-4D96-9AF3-CD69D17ED869}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC593120-4038-4D96-9AF3-CD69D17ED869}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AC593120-4038-4D96-9AF3-CD69D17ED869}.Trial|Any CPU.ActiveCfg = Debug|Any CPU
 		{AC593120-4038-4D96-9AF3-CD69D17ED869}.Trial|Any CPU.Build.0 = Debug|Any CPU
 		{DA5E1DF0-FFA0-4325-905A-2D24AC4A40E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DA5E1DF0-FFA0-4325-905A-2D24AC4A40E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA5E1DF0-FFA0-4325-905A-2D24AC4A40E6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{DA5E1DF0-FFA0-4325-905A-2D24AC4A40E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA5E1DF0-FFA0-4325-905A-2D24AC4A40E6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DA5E1DF0-FFA0-4325-905A-2D24AC4A40E6}.Trial|Any CPU.ActiveCfg = Debug|Any CPU
 		{DA5E1DF0-FFA0-4325-905A-2D24AC4A40E6}.Trial|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26F86522-B74B-41A8-AC55-EA6A6221E3CF}
+	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = LangWars\LangWars.csproj
-		version = 6.23.0.0
+		version = 6.24.0.0
 	EndGlobalSection
 EndGlobal
