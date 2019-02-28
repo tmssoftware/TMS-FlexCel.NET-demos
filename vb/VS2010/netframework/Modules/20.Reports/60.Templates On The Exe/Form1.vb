@@ -11,7 +11,7 @@ Imports FlexCel.Demo.SharedData
 
 Namespace TemplatesOnTheExe
 	''' <summary>
-	''' How to embed the reports in the executable, inlcluding "included" reports.
+	''' How to embed the reports in the executable, including "included" reports.
 	''' </summary>
 	Partial Public Class mainForm
 		Inherits System.Windows.Forms.Form

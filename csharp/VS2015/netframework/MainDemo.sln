@@ -124,6 +124,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Join and Union", "Modules\2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User Defined Formats", "Modules\20.Reports\95b.User Defined Formats\User Defined Formats.csproj", "{B2229425-A88F-4089-988A-D34477E3CE4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fixed Footer", "Modules\20.Reports\94a.Fixed Footer\Fixed Footer.csproj", "{E0A66C56-0C17-4464-801E-CD05341E09B7}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Modules\20.Reports\22.Linq\Linq.csproj", "{6794F628-E850-412C-83AD-6A068D46B0F8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overflow sheets", "Modules\20.Reports\94b.Overflow sheets\Overflow sheets.csproj", "{D78D208D-302D-445B-A0AC-000A3AEA9A36}"
@@ -478,6 +480,12 @@ GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B2229425-A88F-4089-988A-D34477E3CE4D}.Release Testing|Any CPU.Build.0 = Release|Any CPU
 		{B2229425-A88F-4089-988A-D34477E3CE4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2229425-A88F-4089-988A-D34477E3CE4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0A66C56-0C17-4464-801E-CD05341E09B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0A66C56-0C17-4464-801E-CD05341E09B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0A66C56-0C17-4464-801E-CD05341E09B7}.Release Testing|Any CPU.ActiveCfg = Release|Any CPU
+		{E0A66C56-0C17-4464-801E-CD05341E09B7}.Release Testing|Any CPU.Build.0 = Release|Any CPU
+		{E0A66C56-0C17-4464-801E-CD05341E09B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0A66C56-0C17-4464-801E-CD05341E09B7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6794F628-E850-412C-83AD-6A068D46B0F8}".Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6794F628-E850-412C-83AD-6A068D46B0F8}".Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6794F628-E850-412C-83AD-6A068D46B0F8}".Release|Any CPU.ActiveCfg = Release|Any CPU

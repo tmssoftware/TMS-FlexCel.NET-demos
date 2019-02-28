@@ -122,6 +122,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Join and Union", "Modules\2
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "User Defined Formats", "Modules\20.Reports\95b.User Defined Formats\User Defined Formats.vbproj", "{B2229425-A88F-4089-988A-D34477E3CE4D}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Fixed Footer", "Modules\20.Reports\94a.Fixed Footer\Fixed Footer.vbproj", "{E0A66C56-0C17-4464-801E-CD05341E09B7}"
+EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Linq", "Modules\20.Reports\22.Linq\Linq.vbproj", "{6794F628-E850-412C-83AD-6A068D46B0F8}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Overflow sheets", "Modules\20.Reports\94b.Overflow sheets\Overflow sheets.vbproj", "{6794F628-E850-412C-83AD-6A068D46B0F8}"
@@ -476,6 +478,12 @@ GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B2229425-A88F-4089-988A-D34477E3CE4D}.Release Testing|Any CPU.Build.0 = Release|Any CPU
 		{B2229425-A88F-4089-988A-D34477E3CE4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2229425-A88F-4089-988A-D34477E3CE4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0A66C56-0C17-4464-801E-CD05341E09B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0A66C56-0C17-4464-801E-CD05341E09B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0A66C56-0C17-4464-801E-CD05341E09B7}.Release Testing|Any CPU.ActiveCfg = Release|Any CPU
+		{E0A66C56-0C17-4464-801E-CD05341E09B7}.Release Testing|Any CPU.Build.0 = Release|Any CPU
+		{E0A66C56-0C17-4464-801E-CD05341E09B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0A66C56-0C17-4464-801E-CD05341E09B7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6794F628-E850-412C-83AD-6A068D46B0F8}".Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6794F628-E850-412C-83AD-6A068D46B0F8}".Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6794F628-E850-412C-83AD-6A068D46B0F8}".Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -489,7 +497,7 @@ EndGlobalSection
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6CA7FED4-6239-41EB-9A5D-9370028612E7}
+		SolutionGuid = {E8D6E93F-6A08-4400-A2F8-A2638BFDB66F}
 	EndGlobalSection
 	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
 		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
