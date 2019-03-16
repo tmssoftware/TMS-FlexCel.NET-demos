@@ -11,7 +11,7 @@ You can find a description of each demo in the [documentation](http://www.tmssof
 ## New on v 6.26 - March 2019
 
 
-- **In Reports now you can reference tables which include dots by writing <#[db.something].field>.** Now you can use square brackets in both the table name or field name to reference tables or fields which include dots. This is useful specially for LINQ reports as shown in the new [Advanced LINQ example](http://www.tmssoftware.biz/flexcel/doc/net/samples/csharp/netframework/reports/advanced-linq/index.html).
+- **In Reports now you can reference tables which include dots by writing <#[db.something].field>.** Now you can use square brackets in both the table name or field name to reference tables or fields which include dots. This is useful especially for reports from classes as shown in the new [Advanced LINQ example](http://www.tmssoftware.biz/flexcel/doc/net/samples/csharp/netframework/reports/advanced-linq/index.html).
 
 - **SkiaSharp used by .NET Core updated to v1.68.** We've updated the .NET Core code so it uses SkiaSharp 1.68
 
@@ -19,7 +19,7 @@ You can find a description of each demo in the [documentation](http://www.tmssof
 
 - **Now FlexCel won't throw an exception when reading custom properties in an xls file if the values of the property aren't defined.** Either because of corruption or because they were created with a tool that created wrong files,  some xls files might end up having a custom property but no value associated with them. FlexCel was throwing exceptions when you tried to read the properties of those files, but that didn't allow you to get other properties which might be set correctly. So now FlexCel will just ignore those errors.
 
-- **Bug Fix.** FlexCel would fail to read xlsx files with formulas that contained unknow user defined functions that returned a reference type.
+- **Bug Fix.** FlexCel would fail to read xlsx files with formulas that contained unknown user-defined functions that returned a reference type.
 
 - **Bug Fix.** FlexCel will now render labels in a 100% stacked chart as the values, not the percent in the charts.
 
