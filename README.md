@@ -8,12 +8,24 @@ You can find a description of each demo in the [documentation](http://www.tmssof
 **:book: Note** We update this repository automatically every time we release a new FlexCel version. So if you have notifications integrated with github, you can subscribe to this feed to be notified of new releases.
 
 
-## New on v 6.25
+## New on v 6.26 - March 2019
 
 
-- **New parameter in ATLEAST tag in reports allows for the number of rows of a dataset to be multiple of a number.** Now when using [ATLEAST](http://www.tmssoftware.biz/flexcel/doc/net/guides/reports-designer-guide.html#ensuring-a-table-has-at-least-n-records) you can specify that the number of rows must be a multiple of some number. That is, that the dataset must have for example 20, 40, 60... rows but not 30 or 45. Take a look at the new [Fixed Footer demo](http://www.tmssoftware.biz/flexcel/doc/net/samples/csharp/reports/fixed-footer/index.html)
+- **In Reports now you can reference tables which include dots by writing <#[db.something].field>.** Now you can use square brackets in both the table name or field name to reference tables or fields which include dots. This is useful specially for LINQ reports as shown in the new [Advanced LINQ example](http://www.tmssoftware.biz/flexcel/doc/net/samples/csharp/netframework/reports/advanced-linq/index.html).
 
-- **Improved handling of invalid "," in numeric formats.** A comma in a numeric format means "thousands separator" if it goes after the 3rd digit, like in "#,000". But when a comma is at the end of the format, it means scale: A format like "0," means divide the number by 1000. FlexCel already handled those cases correctly, but there are some "impossible" cases like "0,0" which are not actually valid but might be saved to xlsx files. FlexCel was interpreting that the "," in some of those cases meant scale, while for the same cases Excel was interpreting "thousands separator". Now we should behave like Excel even in the invalid cases.
+- **SkiaSharp used by .NET Core updated to v1.68.** We've updated the .NET Core code so it uses SkiaSharp 1.68
 
-- **FlexCel could fail when rendering cells with more than 32000 characters.** A cell in Excel is limited to 32767 characters, but a string in GDI+ is limited to 32000 characters. So if a cell had between 32000 and 32767 characters, FlexCel would raise an Exception when rendering the file becaus eGDI+ would fail to render the string. Now it should render correctly.
+- **Improved compatibility with LibreOffice/OpenOffice.** LibreOffice/OpenOffice can't at the time of this writing understand indexed colors inside xlsx files. Now we introduce a new property (false by default) named  [XlsxCompatibilityConvertIndexedColorsToRGB](http://www.tmssoftware.biz/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsFile/XlsxCompatibilityConvertIndexedColorsToRGB.html) which when true, will make FlexCel convert the indexed colors to RGB colors when saving xlsx files. Set it to true if you have xlsx files with indexed colors and you want them  to be compatible with Libre/OpenOffice.
+
+- **Now FlexCel won't throw an exception when reading custom properties in an xls file if the values of the property aren't defined.** Either because of corruption or because they were created with a tool that created wrong files,  some xls files might end up having a custom property but no value associated with them. FlexCel was throwing exceptions when you tried to read the properties of those files, but that didn't allow you to get other properties which might be set correctly. So now FlexCel will just ignore those errors.
+
+- **Bug Fix.** FlexCel would fail to read xlsx files with formulas that contained unknow user defined functions that returned a reference type.
+
+- **Bug Fix.** FlexCel will now render labels in a 100% stacked chart as the values, not the percent in the charts.
+
+- **Bug Fix.** If an xlsx file contained negative offsets to a shape, FlexCel could render the shape incorrectly.
+
+- **Bug Fix.** FlexCel will now render labels in stacked charts more like Excel renders them.
+
+- **Bug Fix.** When rendering charts, if the axis was reversed and the labels were aligned to the right, FlexCel would render them to the left and vice-versa.
 

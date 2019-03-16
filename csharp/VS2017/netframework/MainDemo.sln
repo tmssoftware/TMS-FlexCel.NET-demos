@@ -128,6 +128,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fixed Footer", "Modules\20.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Modules\20.Reports\22.Linq\Linq.csproj", "{6794F628-E850-412C-83AD-6A068D46B0F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advanced Linq", "Modules\20.Reports\22b.Advanced Linq\Advanced Linq.csproj", "{33418E23-1F3D-4B3F-A84A-0B1DBA5FF5B9}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overflow sheets", "Modules\20.Reports\94b.Overflow sheets\Overflow sheets.csproj", "{D78D208D-302D-445B-A0AC-000A3AEA9A36}"
 EndProject
 Global
@@ -490,6 +492,10 @@ GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6794F628-E850-412C-83AD-6A068D46B0F8}".Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6794F628-E850-412C-83AD-6A068D46B0F8}".Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6794F628-E850-412C-83AD-6A068D46B0F8}".Release|Any CPU.Build.0 = Release|Any CPU
+		{33418E23-1F3D-4B3F-A84A-0B1DBA5FF5B9}".Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33418E23-1F3D-4B3F-A84A-0B1DBA5FF5B9}".Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33418E23-1F3D-4B3F-A84A-0B1DBA5FF5B9}".Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33418E23-1F3D-4B3F-A84A-0B1DBA5FF5B9}".Release|Any CPU.Build.0 = Release|Any CPU
 		{D78D208D-302D-445B-A0AC-000A3AEA9A36}".Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D78D208D-302D-445B-A0AC-000A3AEA9A36}".Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D78D208D-302D-445B-A0AC-000A3AEA9A36}".Release|Any CPU.ActiveCfg = Release|Any CPU

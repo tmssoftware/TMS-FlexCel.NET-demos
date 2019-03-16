@@ -221,7 +221,7 @@
   <ItemGroup>
     <Reference Include="FlexCel">
       <Name>FlexCel</Name>
-      <HintPath>..\..\..\..\..\..\lib\net46\FlexCel.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\lib\net46\FlexCel.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
