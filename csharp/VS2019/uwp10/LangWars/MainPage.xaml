@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="LangWars.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LangWars"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- LOCALIZATION NOTE:
+            To localize the displayed strings copy their values to appropriately named
+            keys in the app's neutral language resource file (AppResources.resx) then
+            replace the hard-coded text value between the attributes' quotation marks
+            with the binding clause whose path points to that string name.
+
+            For example:
+
+                Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}"
+
+            This binding points to the template's string resource named "ApplicationTitle".
+
+            Adding supported languages in the Project Properties tab will create a
+            new resx file per language that can carry the translated values of your
+            UI strings. The binding in these examples will cause the value of the
+            attributes to be drawn from the .resx file that matches the
+            CurrentUICulture of the app at run time.
+         -->
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,1">
+            <TextBlock Text="LANGWARS"  Margin="12,0" FontSize="24"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <WebView x:Name="ResultsWindow" Margin="0,0,0,90" />
+            <Rectangle Name="MaskRectangle"/>
+            <ProgressRing x:Name="Progress" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" />
+
+        </Grid>
+
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar IsOpen="True" Name="appBar">
+            <AppBarButton x:Name="FightButton" Icon="Go" Label="fight" Click="appBarFightButton_Click" />
+            <AppBarToggleButton x:Name="OnlineButton" Icon="FourBars" Label="online" IsChecked="True"/>
+            <AppBarButton x:Name="ShareButton" Icon="Send" Label="share" Click="ShareButton_Click"/>
+
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

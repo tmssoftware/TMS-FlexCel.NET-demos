@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.tmssoftware.flexcelnet.langwars" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="23" />
+	<application android:label="LangWars" android:icon="@drawable/icon">
+		<provider android:name="android.support.v4.content.FileProvider" android:grantUriPermissions="true" android:exported="false" android:authorities="${applicationId}.fileprovider">
+			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_provider_paths" />
+		</provider>
+	</application>
+	<uses-permission android:name="android.permission.INTERNET" />
+</manifest>
