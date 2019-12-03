@@ -88,6 +88,7 @@ namespace GenericReports2
             Report.AddTable(dataSet);
             Report.SetValue("Date", DateTime.Now);
             Report.SetValue("ReportCaption", SQL);
+            Report.SetUserFunction("datatype", new DataTypeImp());
 
             DataPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + Path.DirectorySeparatorChar; //First try to find the template on exe folder.
 
@@ -114,6 +115,24 @@ namespace GenericReports2
                     Process.Start(saveFileDialog1.FileName);
                 }
             }
+        }
+    }
+
+    /// <summary>
+    /// A small used-defined function to know the type of the value inserted.
+    /// </summary>
+    public class DataTypeImp: TFlexCelUserFunction
+    {
+        public override object Evaluate(object[] parameters)
+        {
+            if (parameters == null || parameters.Length != 1)
+            {
+                throw new Exception("DataType must be called with 1 parameter.");
+            }
+
+            if (parameters[0] is double) return "double";
+            if (parameters[0] is DateTime) return "datetime";
+            return "";
         }
     }
 }

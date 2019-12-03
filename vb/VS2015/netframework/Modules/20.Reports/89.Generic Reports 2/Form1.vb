@@ -79,6 +79,7 @@ Namespace GenericReports2
 			Report.AddTable(dataSet)
 			Report.SetValue("Date", Date.Now)
 			Report.SetValue("ReportCaption", SQL)
+			Report.SetUserFunction("datatype", New DataTypeImp())
 
 			DataPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) & Path.DirectorySeparatorChar 'First try to find the template on exe folder.
 
@@ -103,5 +104,26 @@ Namespace GenericReports2
 				End If
 			End If
 		End Sub
+	End Class
+
+	''' <summary>
+	''' A small used-defined function to know the type of the value inserted.
+	''' </summary>
+	Public Class DataTypeImp
+		Inherits TFlexCelUserFunction
+
+		Public Overrides Function Evaluate(ByVal parameters() As Object) As Object
+			If parameters Is Nothing OrElse parameters.Length <> 1 Then
+				Throw New Exception("DataType must be called with 1 parameter.")
+			End If
+
+			If TypeOf parameters(0) Is Double Then
+				Return "double"
+			End If
+			If TypeOf parameters(0) Is Date Then
+				Return "datetime"
+			End If
+			Return ""
+		End Function
 	End Class
 End Namespace
