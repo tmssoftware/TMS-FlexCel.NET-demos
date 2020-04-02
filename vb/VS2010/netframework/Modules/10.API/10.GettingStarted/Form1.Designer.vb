@@ -40,25 +40,26 @@ Namespace GettingStarted
 			' button1
 			' 
 			Me.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-			Me.button1.Location = New System.Drawing.Point(48, 160)
+			Me.button1.Location = New System.Drawing.Point(78, 160)
 			Me.button1.Name = "button1"
+			Me.button1.Size = New System.Drawing.Size(75, 23)
 			Me.button1.TabIndex = 0
 			Me.button1.Text = "GO!"
 '			Me.button1.Click += New System.EventHandler(Me.button1_Click)
 			' 
 			' saveFileDialog1
 			' 
-			Me.saveFileDialog1.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm|Excel 97/2003|*.xls|Excel 2007|*.xlsx;*.xlsm|All files|*.*"
+			Me.saveFileDialog1.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm|Excel 97/2003|*.xls|Excel 2007|*.xlsx;*.xlsm|All " & "files|*.*"
 			Me.saveFileDialog1.RestoreDirectory = True
 			' 
 			' label1
 			' 
 			Me.label1.Anchor = (CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) Or System.Windows.Forms.AnchorStyles.Left) Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles))
-			Me.label1.BackColor = System.Drawing.Color.FromArgb((CByte(255)), (CByte(255)), (CByte(192)))
+			Me.label1.BackColor = System.Drawing.Color.FromArgb((CInt((CByte(255)))), (CInt((CByte(255)))), (CInt((CByte(192)))))
 			Me.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
 			Me.label1.Location = New System.Drawing.Point(16, 16)
 			Me.label1.Name = "label1"
-			Me.label1.Size = New System.Drawing.Size(144, 80)
+			Me.label1.Size = New System.Drawing.Size(205, 80)
 			Me.label1.TabIndex = 1
 			Me.label1.Text = "A first demo on how to create basic things with FlexCel API."
 			' 
@@ -74,12 +75,12 @@ Namespace GettingStarted
 			' 
 			Me.AutoScaleDimensions = New System.Drawing.SizeF(6F, 13F)
 			Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-			Me.ClientSize = New System.Drawing.Size(168, 197)
+			Me.ClientSize = New System.Drawing.Size(229, 197)
 			Me.Controls.Add(Me.cbAutoOpen)
 			Me.Controls.Add(Me.label1)
 			Me.Controls.Add(Me.button1)
 			Me.Name = "mainForm"
-			Me.Text = "Form1"
+			Me.Text = "Getting Started"
 			Me.ResumeLayout(False)
 
 		End Sub

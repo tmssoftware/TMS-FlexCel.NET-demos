@@ -53,9 +53,14 @@ namespace SigningPdfs
                 pdf.FontEmbed = TFontEmbed.Embed;
 
                 //Load the certificate and create a signer.
-                X509Certificate2 Cert = new X509Certificate2(DataPath + "flexcel.pfx", "password");  //In this example we just have the password in clear. It should be kept in a SecureString.
+                //In this example we just have the password in clear. It should be kept in a SecureString.
+                //Also make sure to set the flag X509KeyStorageFlags.EphemeralKeySet to avoid files created
+                //on disk: https://snede.net/the-most-dangerous-constructor-in-net/
+                //As X509KeyStorageFlags.EphemeralKeySet only exists in .NET 4.8 or newer, for older versions we will 
+                //define it as (X509KeyStorageFlags)32. For .NET 4.8 or newer and  NET Core, you can use X509KeyStorageFlags.EphemeralKeySet
+                  X509Certificate2 Cert = new X509Certificate2(DataPath + "flexcel.pfx", "password", X509KeyStorageFlags.EphemeralKeySet);  
 
-                //Note that to use the CmsSigner class you need to add a refrence to System.Security dll. 
+                //Note that to use the CmsSigner class you need to add a reference to System.Security dll. 
                 //It is *not* enough to add it to the using clauses, you need to add a reference to the dll.
                 CmsSigner Signer = new CmsSigner(Cert);
 
