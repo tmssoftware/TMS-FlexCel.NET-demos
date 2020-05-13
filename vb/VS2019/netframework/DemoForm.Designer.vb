@@ -20,7 +20,6 @@ Namespace MainDemo
 		Private panel4 As System.Windows.Forms.Panel
 		Private panel5 As System.Windows.Forms.Panel
 		Private label1 As System.Windows.Forms.Label
-		Private WithEvents descriptionText As System.Windows.Forms.RichTextBox
 		Private WithEvents modulesList As System.Windows.Forms.TreeView
 		Private pageSetupDialog1 As System.Windows.Forms.PageSetupDialog
 		Private WithEvents menuRunSelected As System.Windows.Forms.MenuItem
@@ -57,7 +56,6 @@ Namespace MainDemo
 			Me.panel5 = New System.Windows.Forms.Panel()
 			Me.label1 = New System.Windows.Forms.Label()
 			Me.panel3 = New System.Windows.Forms.Panel()
-			Me.descriptionText = New System.Windows.Forms.RichTextBox()
 			Me.splitter1 = New System.Windows.Forms.Splitter()
 			Me.panel4 = New System.Windows.Forms.Panel()
 			Me.statusBar1 = New System.Windows.Forms.StatusBar()
@@ -74,15 +72,15 @@ Namespace MainDemo
 			Me.pageSetupDialog1 = New System.Windows.Forms.PageSetupDialog()
 			Me.SearchTip = New System.Windows.Forms.ToolTip(Me.components)
 			Me.mainToolbar = New System.Windows.Forms.ToolStrip()
-			Me.toolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-			Me.toolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-			Me.sdSearch = New System.Windows.Forms.ToolStripTextBox()
 			Me.btnRunSelected = New System.Windows.Forms.ToolStripButton()
+			Me.toolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
 			Me.btnViewTemplate = New System.Windows.Forms.ToolStripButton()
 			Me.btnOpenFolder = New System.Windows.Forms.ToolStripButton()
 			Me.btnOpenProject = New System.Windows.Forms.ToolStripButton()
+			Me.toolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
 			Me.btnExit = New System.Windows.Forms.ToolStripButton()
 			Me.btnAbout = New System.Windows.Forms.ToolStripButton()
+			Me.sdSearch = New System.Windows.Forms.ToolStripTextBox()
 			Me.panel1.SuspendLayout()
 			Me.panel5.SuspendLayout()
 			Me.panel3.SuspendLayout()
@@ -94,18 +92,20 @@ Namespace MainDemo
 			Me.panel1.Controls.Add(Me.modulesList)
 			Me.panel1.Controls.Add(Me.panel5)
 			Me.panel1.Dock = System.Windows.Forms.DockStyle.Left
-			Me.panel1.Location = New System.Drawing.Point(0, 46)
+			Me.panel1.Location = New System.Drawing.Point(0, 63)
+			Me.panel1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
 			Me.panel1.Name = "panel1"
-			Me.panel1.Size = New System.Drawing.Size(232, 446)
+			Me.panel1.Size = New System.Drawing.Size(464, 883)
 			Me.panel1.TabIndex = 0
 			' 
 			' modulesList
 			' 
 			Me.modulesList.Dock = System.Windows.Forms.DockStyle.Fill
 			Me.modulesList.HideSelection = False
-			Me.modulesList.Location = New System.Drawing.Point(0, 24)
+			Me.modulesList.Location = New System.Drawing.Point(0, 42)
+			Me.modulesList.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
 			Me.modulesList.Name = "modulesList"
-			Me.modulesList.Size = New System.Drawing.Size(232, 422)
+			Me.modulesList.Size = New System.Drawing.Size(464, 841)
 			Me.modulesList.TabIndex = 4
 '			Me.modulesList.AfterSelect += New System.Windows.Forms.TreeViewEventHandler(Me.modulesList_AfterSelect)
 			' 
@@ -117,48 +117,39 @@ Namespace MainDemo
 			Me.panel5.Dock = System.Windows.Forms.DockStyle.Top
 			Me.panel5.ForeColor = System.Drawing.Color.White
 			Me.panel5.Location = New System.Drawing.Point(0, 0)
+			Me.panel5.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
 			Me.panel5.Name = "panel5"
-			Me.panel5.Size = New System.Drawing.Size(232, 24)
+			Me.panel5.Size = New System.Drawing.Size(464, 42)
 			Me.panel5.TabIndex = 3
 			' 
 			' label1
 			' 
 			Me.label1.Font = New System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, (CByte(0)))
-			Me.label1.Location = New System.Drawing.Point(1, 4)
+			Me.label1.Location = New System.Drawing.Point(2, 8)
+			Me.label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
 			Me.label1.Name = "label1"
-			Me.label1.Size = New System.Drawing.Size(100, 23)
+			Me.label1.Size = New System.Drawing.Size(200, 44)
 			Me.label1.TabIndex = 0
 			Me.label1.Text = "Select a Demo"
 			' 
 			' panel3
 			' 
-			Me.panel3.Controls.Add(Me.descriptionText)
 			Me.panel3.Controls.Add(Me.splitter1)
 			Me.panel3.Controls.Add(Me.panel4)
 			Me.panel3.Dock = System.Windows.Forms.DockStyle.Fill
-			Me.panel3.Location = New System.Drawing.Point(232, 46)
+			Me.panel3.Location = New System.Drawing.Point(464, 63)
+			Me.panel3.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
 			Me.panel3.Name = "panel3"
-			Me.panel3.Size = New System.Drawing.Size(616, 446)
+			Me.panel3.Size = New System.Drawing.Size(1232, 883)
 			Me.panel3.TabIndex = 2
-			' 
-			' descriptionText
-			' 
-			Me.descriptionText.BackColor = System.Drawing.SystemColors.Window
-			Me.descriptionText.Dock = System.Windows.Forms.DockStyle.Fill
-			Me.descriptionText.Location = New System.Drawing.Point(3, 24)
-			Me.descriptionText.Name = "descriptionText"
-			Me.descriptionText.ReadOnly = True
-			Me.descriptionText.Size = New System.Drawing.Size(613, 422)
-			Me.descriptionText.TabIndex = 1
-			Me.descriptionText.Text = ""
-'			Me.descriptionText.LinkClicked += New System.Windows.Forms.LinkClickedEventHandler(Me.descriptionText_LinkClicked)
 			' 
 			' splitter1
 			' 
 			Me.splitter1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-			Me.splitter1.Location = New System.Drawing.Point(0, 24)
+			Me.splitter1.Location = New System.Drawing.Point(0, 42)
+			Me.splitter1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
 			Me.splitter1.Name = "splitter1"
-			Me.splitter1.Size = New System.Drawing.Size(3, 422)
+			Me.splitter1.Size = New System.Drawing.Size(4, 841)
 			Me.splitter1.TabIndex = 0
 			Me.splitter1.TabStop = False
 			' 
@@ -169,16 +160,18 @@ Namespace MainDemo
 			Me.panel4.Dock = System.Windows.Forms.DockStyle.Top
 			Me.panel4.ForeColor = System.Drawing.Color.White
 			Me.panel4.Location = New System.Drawing.Point(0, 0)
+			Me.panel4.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
 			Me.panel4.Name = "panel4"
-			Me.panel4.Size = New System.Drawing.Size(616, 24)
+			Me.panel4.Size = New System.Drawing.Size(1232, 42)
 			Me.panel4.TabIndex = 2
 			Me.panel4.Visible = False
 			' 
 			' statusBar1
 			' 
-			Me.statusBar1.Location = New System.Drawing.Point(0, 492)
+			Me.statusBar1.Location = New System.Drawing.Point(0, 946)
+			Me.statusBar1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
 			Me.statusBar1.Name = "statusBar1"
-			Me.statusBar1.Size = New System.Drawing.Size(848, 22)
+			Me.statusBar1.Size = New System.Drawing.Size(1696, 42)
 			Me.statusBar1.TabIndex = 3
 			Me.statusBar1.Text = "statusBar1"
 			' 
@@ -246,46 +239,32 @@ Namespace MainDemo
 			Me.mainToolbar.Items.AddRange(New System.Windows.Forms.ToolStripItem() { Me.btnRunSelected, Me.toolStripSeparator2, Me.btnViewTemplate, Me.btnOpenFolder, Me.btnOpenProject, Me.toolStripSeparator1, Me.btnExit, Me.btnAbout, Me.sdSearch})
 			Me.mainToolbar.Location = New System.Drawing.Point(0, 0)
 			Me.mainToolbar.Name = "mainToolbar"
-			Me.mainToolbar.Size = New System.Drawing.Size(848, 46)
+			Me.mainToolbar.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+			Me.mainToolbar.Size = New System.Drawing.Size(1696, 63)
 			Me.mainToolbar.TabIndex = 11
 			Me.mainToolbar.Text = "toolStrip1"
-			' 
-			' toolStripSeparator2
-			' 
-			Me.toolStripSeparator2.Name = "toolStripSeparator2"
-			Me.toolStripSeparator2.Size = New System.Drawing.Size(6, 46)
-			' 
-			' toolStripSeparator1
-			' 
-			Me.toolStripSeparator1.Name = "toolStripSeparator1"
-			Me.toolStripSeparator1.Size = New System.Drawing.Size(6, 46)
-			' 
-			' sdSearch
-			' 
-			Me.sdSearch.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-			Me.sdSearch.Margin = New System.Windows.Forms.Padding(1, 0, 20, 0)
-			Me.sdSearch.Name = "sdSearch"
-			Me.sdSearch.Size = New System.Drawing.Size(160, 46)
-'			Me.sdSearch.Enter += New System.EventHandler(Me.sdSearch_Enter)
-'			Me.sdSearch.Leave += New System.EventHandler(Me.sdSearch_Leave)
-'			Me.sdSearch.TextChanged += New System.EventHandler(Me.sdSearch_TextChanged)
 			' 
 			' btnRunSelected
 			' 
 			Me.btnRunSelected.Image = (CType(resources.GetObject("btnRunSelected.Image"), System.Drawing.Image))
 			Me.btnRunSelected.ImageTransparentColor = System.Drawing.Color.Magenta
 			Me.btnRunSelected.Name = "btnRunSelected"
-			Me.btnRunSelected.Size = New System.Drawing.Size(79, 43)
+			Me.btnRunSelected.Size = New System.Drawing.Size(159, 60)
 			Me.btnRunSelected.Text = "&Run Selected"
 			Me.btnRunSelected.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
 '			Me.btnRunSelected.Click += New System.EventHandler(Me.RunSelected_Click)
+			' 
+			' toolStripSeparator2
+			' 
+			Me.toolStripSeparator2.Name = "toolStripSeparator2"
+			Me.toolStripSeparator2.Size = New System.Drawing.Size(6, 63)
 			' 
 			' btnViewTemplate
 			' 
 			Me.btnViewTemplate.Image = (CType(resources.GetObject("btnViewTemplate.Image"), System.Drawing.Image))
 			Me.btnViewTemplate.ImageTransparentColor = System.Drawing.Color.Magenta
 			Me.btnViewTemplate.Name = "btnViewTemplate"
-			Me.btnViewTemplate.Size = New System.Drawing.Size(89, 43)
+			Me.btnViewTemplate.Size = New System.Drawing.Size(175, 60)
 			Me.btnViewTemplate.Text = "View &Template"
 			Me.btnViewTemplate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
 '			Me.btnViewTemplate.Click += New System.EventHandler(Me.ViewTemplate_Click)
@@ -295,7 +274,7 @@ Namespace MainDemo
 			Me.btnOpenFolder.Image = (CType(resources.GetObject("btnOpenFolder.Image"), System.Drawing.Image))
 			Me.btnOpenFolder.ImageTransparentColor = System.Drawing.Color.Magenta
 			Me.btnOpenFolder.Name = "btnOpenFolder"
-			Me.btnOpenFolder.Size = New System.Drawing.Size(76, 43)
+			Me.btnOpenFolder.Size = New System.Drawing.Size(152, 60)
 			Me.btnOpenFolder.Text = "&Open Folder"
 			Me.btnOpenFolder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
 '			Me.btnOpenFolder.Click += New System.EventHandler(Me.btnOpenFolder_Click)
@@ -305,10 +284,15 @@ Namespace MainDemo
 			Me.btnOpenProject.Image = (CType(resources.GetObject("btnOpenProject.Image"), System.Drawing.Image))
 			Me.btnOpenProject.ImageTransparentColor = System.Drawing.Color.Magenta
 			Me.btnOpenProject.Name = "btnOpenProject"
-			Me.btnOpenProject.Size = New System.Drawing.Size(80, 43)
+			Me.btnOpenProject.Size = New System.Drawing.Size(158, 60)
 			Me.btnOpenProject.Text = "Open &Project"
 			Me.btnOpenProject.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
 '			Me.btnOpenProject.Click += New System.EventHandler(Me.btnOpenProject_Click)
+			' 
+			' toolStripSeparator1
+			' 
+			Me.toolStripSeparator1.Name = "toolStripSeparator1"
+			Me.toolStripSeparator1.Size = New System.Drawing.Size(6, 63)
 			' 
 			' btnExit
 			' 
@@ -316,7 +300,7 @@ Namespace MainDemo
 			Me.btnExit.Image = (CType(resources.GetObject("btnExit.Image"), System.Drawing.Image))
 			Me.btnExit.ImageTransparentColor = System.Drawing.Color.Magenta
 			Me.btnExit.Name = "btnExit"
-			Me.btnExit.Size = New System.Drawing.Size(59, 43)
+			Me.btnExit.Size = New System.Drawing.Size(126, 60)
 			Me.btnExit.Text = "     E&xit     "
 			Me.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
 '			Me.btnExit.Click += New System.EventHandler(Me.Exit_Click)
@@ -327,21 +311,32 @@ Namespace MainDemo
 			Me.btnAbout.Image = (CType(resources.GetObject("btnAbout.Image"), System.Drawing.Image))
 			Me.btnAbout.ImageTransparentColor = System.Drawing.Color.Magenta
 			Me.btnAbout.Name = "btnAbout"
-			Me.btnAbout.Size = New System.Drawing.Size(56, 43)
+			Me.btnAbout.Size = New System.Drawing.Size(112, 60)
 			Me.btnAbout.Text = "  About  "
 			Me.btnAbout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
 '			Me.btnAbout.Click += New System.EventHandler(Me.About_Click)
 			' 
+			' sdSearch
+			' 
+			Me.sdSearch.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+			Me.sdSearch.Margin = New System.Windows.Forms.Padding(1, 0, 20, 0)
+			Me.sdSearch.Name = "sdSearch"
+			Me.sdSearch.Size = New System.Drawing.Size(160, 63)
+'			Me.sdSearch.Enter += New System.EventHandler(Me.sdSearch_Enter)
+'			Me.sdSearch.Leave += New System.EventHandler(Me.sdSearch_Leave)
+'			Me.sdSearch.TextChanged += New System.EventHandler(Me.sdSearch_TextChanged)
+			' 
 			' DemoForm
 			' 
-			Me.AutoScaleDimensions = New System.Drawing.SizeF(6F, 13F)
+			Me.AutoScaleDimensions = New System.Drawing.SizeF(12F, 25F)
 			Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-			Me.ClientSize = New System.Drawing.Size(848, 514)
+			Me.ClientSize = New System.Drawing.Size(1696, 988)
 			Me.Controls.Add(Me.panel3)
 			Me.Controls.Add(Me.panel1)
 			Me.Controls.Add(Me.statusBar1)
 			Me.Controls.Add(Me.mainToolbar)
 			Me.Icon = (CType(resources.GetObject("$this.Icon"), System.Drawing.Icon))
+			Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
 			Me.Menu = Me.mainMenu1
 			Me.Name = "DemoForm"
 			Me.Text = "FlexCel Well"

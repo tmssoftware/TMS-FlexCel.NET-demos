@@ -9,6 +9,7 @@ using System.Globalization;
 using System.Resources;
 using System.Threading;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace MainDemo
 {
@@ -17,15 +18,33 @@ namespace MainDemo
     /// </summary>
     public partial class DemoForm: System.Windows.Forms.Form
     {
+        private RichTextBox50 descriptionText;
 
         public DemoForm()
         {
             InitializeComponent();
+            CreateBoxDescription();
             ResizeToolbar(mainToolbar);
 
             CleanSearchbox();
             LoadModules();
             FilterTree(null);
+        }
+
+        private void CreateBoxDescription()
+        {
+            //Until .NET 4.7, the rich text box would show hyperlinks badly.
+            this.descriptionText = new RichTextBox50();
+            this.descriptionText.BackColor = System.Drawing.SystemColors.Window;
+            this.descriptionText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.descriptionText.Location = new System.Drawing.Point(3, 24);
+            this.descriptionText.Name = "descriptionText";
+            this.descriptionText.ReadOnly = true;
+            this.descriptionText.TabIndex = 1;
+            this.descriptionText.Text = "";
+            this.descriptionText.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.descriptionText_LinkClicked);
+            this.descriptionText.Parent = panel3;
+
         }
 
         private void ResizeToolbar(ToolStrip toolbar)
@@ -84,7 +103,7 @@ namespace MainDemo
             if (moduleName.IndexOf('.') < 1) return; //Do not process folders without the convention xx.name
 
             string NodePath = null;
-            if (File.Exists(Path.Combine(modulePath, shortModule + ".rtf")))
+            if (File.Exists(Path.Combine(modulePath, "README.rtf")))
             {
                 NodePath = Path.Combine(modulePath, shortModule);
             }
@@ -101,7 +120,7 @@ namespace MainDemo
         private void modulesList_AfterSelect(object sender, System.Windows.Forms.TreeViewEventArgs e)
         {
             if (e.Node.Tag == null) descriptionText.Clear();
-            else descriptionText.LoadFile(((string)e.Node.Tag) + ".rtf");
+            else descriptionText.LoadFile(Path.Combine(Path.GetDirectoryName((string)e.Node.Tag), "README.rtf"));
 
             statusBar1.Text = e.Node.FullPath;
 
@@ -451,6 +470,37 @@ namespace MainDemo
             NodePath = aNodePath;
             Children = new List<TTreeNode>();
         }
+    }
+
+    public class RichTextBox50 : RichTextBox
+    {
+        //This class is not needed after .NET 4.7
+        [DllImport("kernel32.dll", EntryPoint = "LoadLibraryW",
+            CharSet = CharSet.Unicode, SetLastError = true)]
+        private static extern IntPtr LoadLibraryW(string s_File);
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int wMsg, IntPtr wParam, IntPtr lParam);
+
+        public RichTextBox50()
+        {
+            const int EM_SETMARGINS = 211;
+            IntPtr EC_LEFTMARGIN = (IntPtr)1;
+            SendMessage(Handle, EM_SETMARGINS, EC_LEFTMARGIN, (IntPtr)40);
+
+        }
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                LoadLibraryW("MsftEdit.dll");
+                cp.ClassName = "RichEdit50W";
+                return cp;
+            }
+        }
+
+
     }
 }
 

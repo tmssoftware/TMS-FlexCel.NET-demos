@@ -2,42 +2,40 @@
 
 Here you can find all the demos for [FlexCel Studio for .NET](http://www.tmssoftware.com/site/flexcelnet.asp)
 
-You can find a description of each demo in the [documentation](http://www.tmssoftware.biz/flexcel/doc/net/index.html)
+You can find a description of each demo in the [documentation](https://download.tmssoftware.com/flexcel/doc/net/index.html)
 **All the demos here are also available when you install FlexCel using the setup.**
 
 **:book: Note** We update this repository automatically every time we release a new FlexCel version. So if you have notifications integrated with github, you can subscribe to this feed to be notified of new releases.
 
 
-## New in v 7.5 - April 2020
+## New in v 7.6 - May 2020
 
 
-- **Support for adding charts to a sheet with the API (xlsx files only).** A new method [AddChart](http://www.tmssoftware.biz/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsxFile/AddChart.html) will allow you to add a chart to a sheet in xlsx files, which you can then customize with other methods like [AddSeries](http://www.tmssoftware.biz/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsxChart/AddSeries.html). There is a new demo [Chart API](http://www.tmssoftware.biz/flexcel/doc/net/samples/csharp/netframework/api/chart-api/index.html), and as usual, **APIMate** will show how to add a chart similar to one in Excel. Note that this method will work only in xlsx files, not xls.
+- **Support for rendering logarithmic charts.** Now FlexCel will render logarithmic charts to PDF or HTML.
 
-- **New  methods SetTitle, SetOptions, SetChartLegend, SubchartCount, GetSeriesInSubchart, SetSeriesInSubchart and AddSubchart in ExcelChart.** The new method [SetTitle](http://www.tmssoftware.biz/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsxChart/SetTitle.html) will allow  you to set the title of a chart. [SetOptions](http://www.tmssoftware.biz/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsxChart/SetOptions.html) will allow you to customize the properties of the chart. [SetChartLegend](http://www.tmssoftware.biz/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsxChart/SetChartLegend.html) customizes the legend or adds a new one.  [SubchartCount](http://www.tmssoftware.biz/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsxChart/SubchartCount.html) will tell you how many subcharts there are in the main chart.  [GetSeriesInSubchart](http://www.tmssoftware.biz/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsxChart/GetSeriesInSubchart.html) and [SetSeriesInSubchart](http://www.tmssoftware.biz/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsxChart/SetSeriesInSubchart.html) allow you to read or set one series of one subchart. [AddSubchart](http://www.tmssoftware.biz/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsxChart/AddSubchart.html) adds a new subchart to the chart. Note that the methods are only for xlsx files.
+- **When rendering pages to PDF and PNG, if an image or chart goes over the columns or rows in a page, now it won't overflow.** In previous FlexCel versions, if an image spilled over to the next page, it would also go over the last cell in the current page.
 
-- **New set method in the properties PlotArea, Background  in ExcelChart.** [PlotArea](http://www.tmssoftware.biz/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsxChart/PlotArea.html) can now change the properties of the plot area like the position or fill color. [Background](http://www.tmssoftware.biz/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsxChart/Background.html) can now change the background of the chart. Note that all the methods here will only work in xlsx files.
+- **SkiaSharp used by .NET Core updated to 1.68.2.1.** We've updated the .NET Core code so it uses SkiaSharp 1.68.2.1
 
-- **Now SetSeries and AddSeries, DeleteSeries work also in xlsx charts.** [SetSeries](http://www.tmssoftware.biz/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsxChart/SetSeries.html), [AddSeries](http://www.tmssoftware.biz/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsxChart/AddSeries.html) and [DeleteSeries](http://www.tmssoftware.biz/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsxChart/DeleteSeries.html) now work in xlsx charts the same as they work in xls charts.
+- **Now FlexCel will search in c:\Windows\Fonts and %localappdata%\Microsoft\Windows\Fonts for fonts when exporting to PDF.** Windows 10 version 1809 introduced the concept of "local fonts", that is fonts that are installed for the current user only. (see [https://blogs.windows.com/windowsexperience/2018/06/27/announcing-windows-10-insider-preview-build-17704/](https://blogs.windows.com/windowsexperience/2018/06/27/announcing-windows-10-insider-preview-build-17704/) ) So now FlexCel will search in the traditional Windows fonts folder and the current-user-font-folder by default. You can always change the behavior with the [GetFontFolder](https://download.tmssoftware.com/flexcel/doc/net/api/FlexCel.Render/FlexCelPdfExport/GetFontFolder.html) event. See [the new section about fonts in Windows inside the PDF exporting guide](https://download.tmssoftware.com/flexcel/doc/net/guides/pdf-exporting-guide.html#fonts-in-windows)
 
-- **Support for calculating the upcoming XLookup, XMatch, RandArray and Sequence functions.** FlexCel can now calculate the functions [XLookup](https://support.office.com/en-us/article/xlookup-function-b7fd680e-6d10-43e6-84f9-88eae8bf5929?ui=en-US&rs=en-US&ad=US), [XMatch](https://support.office.com/en-us/article/xmatch-function-d966da31-7a6b-4a13-a1c6-5a33ed6a0312?ui=en-US&rs=en-US&ad=US), [RandArray](https://support.microsoft.com/en-us/office/randarray-function-21261e55-3bec-4885-86a6-8b0a47fd4d33) and [Sequence](https://support.microsoft.com/en-us/office/sequence-function-57467a98-57e0-4817-9f14-2eb78519ca90) which are coming to Excel in July 2020.
+- **Now FlexCel won't throw an Exception if a Font folder in the PDF FontFolder path doesn't exist.** Now when you specify multiple paths in the [GetFontFolder](https://download.tmssoftware.com/flexcel/doc/net/api/FlexCel.Render/FlexCelPdfExport/GetFontFolder.html) event, FlexCel won't show an error unless none of those paths exist. In previous version, if you returned for example "c:\mypath1;c:\mypath2" and mypath2 didn't exist, FlexCel would shown an error. Now it will only show an error if both mypath1 and mypath2 don't exist. You can change this behavior with the new property [OnFontFolderNotFound](https://download.tmssoftware.com/flexcel/doc/net/api/FlexCel.Render/FlexCelPdfExport/OnFontFolderNotFound.html)
 
-- **Better chart rendering when there are date axis.** Now in some cases of date axis, FlexCel should render them better.
+- **Improved handling of chart gaps when there are null values.** In Excel 2003, an area chart would never have a gap: Null values would be considered 0. After Excel 2007, area charts can have gaps. FlexCel behaved like Excel 2003, never showing gaps for area charts. Now FlexCel will behave like Excel 2007 when reading newer xls/x files, while still behaving like 2003 when reading old xls files.
 
-- **Support for .NET Core 3.1.** Now there is a specific dll for .NET Core 3.1.
+- **Bug Fix.** Sometimes when calling RenderObjects the border of a chart would not be exported to PDF or PNG.
 
-- **Breaking Change: Removed support for .NET Core 1.0 and .NET Standard 1.5.** We've deprecated support for .NET Core 1.0 and .NET Standard 1.5 as both reached end of life.
+- **Bug Fix.** Leader lines in stacked bar charts were wrong when the axis was reversed
 
-- **Support for importing bullet lists when importing html.** Now when calling [SetCellFromHtml](http://www.tmssoftware.biz/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsFile/SetCellFromHtml.html), doing reports from html strings, or in general when importing html into a cell, FlexCel will import ordered and unordered bullet lists (<ol> and <ul>).
+- **Bug Fix.** Manually positioned labels in stacked bar charts were a little offset from their manual position.
 
-- **Preserving and adapting single cell mappings in XML Maps in xlsx files.** Now FlexCel will preserve and modify the references to single cells in an XML map inside an xlsx file.
+- **Bug Fix.** Now FlexCel will draw a maximum of 10000 ticks per axis in charts, to avoid taking too long drawing too many ticks that aren't visible anyway.
 
-- **Improved compatibility with invalid third party files.** Now FlexCel will ignore some parts of the xlsx file that should exist but might not when the xlsx files are manually edited. This will allow you to open those files anyway if there are no more errors besides that one.
+- **Bug Fix.** Xlsm files containing macros and with sheet names starting with a number and bigger than 24 characters, could generate invalid files when saved in FlexCel.
 
-- **Bug Fix.** FlexCel wasn't calculating conditional formats if the formulas defining the conditions were array formulas.
+- **Bug Fix.** Now FlexCel will validate when manually setting a sheet codename, that the name is ASCII and starts with a letter.
 
-- **Bug Fix.** FlexCel could fail to process some files where a shape had an ending coordinate smaller than the starting coordinate.
+- **Bug Fix.** Bidirectional reports could fail to delete rows or columns in complex reports.
 
-- **Bug Fix.** When rendering charts you could get an index out of bounds in some corner cases.
-
-- **FlexCel will ignore invalid themes when reading xls files.** Now when an xls file has an invalid theme, FlexCel will ignore it and just use the default theme instead of throwing an exception. This is the way Excel behaves.
+- **Bug Fix.** FlexCel would consider a protected range title containing a "?" invalid. This would prevent it from loading files that used "?" in protected ranges.
 

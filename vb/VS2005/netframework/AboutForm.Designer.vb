@@ -81,7 +81,7 @@ Namespace MainDemo
 			Me.linkLabel1.Size = New System.Drawing.Size(176, 16)
 			Me.linkLabel1.TabIndex = 2
 			Me.linkLabel1.TabStop = True
-			Me.linkLabel1.Text = "http://www.tmssoftware.com"
+			Me.linkLabel1.Text = "https://www.tmssoftware.com"
 '			Me.linkLabel1.LinkClicked += New System.Windows.Forms.LinkLabelLinkClickedEventHandler(Me.linkLabel1_LinkClicked)
 			' 
 			' label2

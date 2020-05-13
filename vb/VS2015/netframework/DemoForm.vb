@@ -4,6 +4,7 @@ Imports System.Reflection
 Imports System.Globalization
 Imports System.Resources
 Imports System.Threading
+Imports System.Runtime.InteropServices
 
 Namespace MainDemo
 	''' <summary>
@@ -12,13 +13,31 @@ Namespace MainDemo
 	Partial Public Class DemoForm
 		Inherits System.Windows.Forms.Form
 
-		Public Sub New()
+        Private WithEvents descriptionText As RichTextBox50
+
+        Public Sub New()
 			InitializeComponent()
+			CreateBoxDescription()
 			ResizeToolbar(mainToolbar)
-			descriptionText.BackColor = System.Drawing.SystemColors.Window 'It is lost when converting to .NET 2.0
+
 			CleanSearchbox()
 			LoadModules()
 			FilterTree(Nothing)
+		End Sub
+
+		Private Sub CreateBoxDescription()
+			'Until .NET 4.7, the rich text box would show hyperlinks badly.
+			Me.descriptionText = New RichTextBox50()
+			Me.descriptionText.BackColor = System.Drawing.SystemColors.Window
+			Me.descriptionText.Dock = System.Windows.Forms.DockStyle.Fill
+			Me.descriptionText.Location = New System.Drawing.Point(3, 24)
+			Me.descriptionText.Name = "descriptionText"
+			Me.descriptionText.ReadOnly = True
+			Me.descriptionText.TabIndex = 1
+			Me.descriptionText.Text = ""
+			AddHandler descriptionText.LinkClicked, AddressOf descriptionText_LinkClicked
+			Me.descriptionText.Parent = panel3
+
 		End Sub
 
 		Private Sub ResizeToolbar(ByVal toolbar As ToolStrip)
@@ -76,7 +95,7 @@ Namespace MainDemo
 			End If
 
 			Dim NodePath As String = Nothing
-			If File.Exists(Path.Combine(modulePath, shortModule & ".rtf")) Then
+			If File.Exists(Path.Combine(modulePath, "README.rtf")) Then
 				NodePath = Path.Combine(modulePath, shortModule)
 			End If
 
@@ -94,7 +113,7 @@ Namespace MainDemo
 			If e.Node.Tag Is Nothing Then
 				descriptionText.Clear()
 			Else
-				descriptionText.LoadFile((CStr(e.Node.Tag)) & ".rtf")
+				descriptionText.LoadFile(Path.Combine(Path.GetDirectoryName(CStr(e.Node.Tag)), "README.rtf"))
 			End If
 
 			statusBar1.Text = e.Node.FullPath
@@ -412,6 +431,36 @@ Namespace MainDemo
 			NodePath = aNodePath
 			Children = New List(Of TTreeNode)()
 		End Sub
+	End Class
+
+	Public Class RichTextBox50
+		Inherits RichTextBox
+
+		'This class is not needed after .NET 4.7
+		<DllImport("kernel32.dll", EntryPoint := "LoadLibraryW", CharSet := CharSet.Unicode, SetLastError := True)> _
+		Private Shared Function LoadLibraryW(ByVal s_File As String) As IntPtr
+		End Function
+		<DllImport("user32.dll")> _
+		Public Shared Function SendMessage(ByVal hWnd As IntPtr, ByVal wMsg As Integer, ByVal wParam As IntPtr, ByVal lParam As IntPtr) As Integer
+		End Function
+
+		Public Sub New()
+			Const EM_SETMARGINS As Integer = 211
+			Dim EC_LEFTMARGIN As IntPtr = New IntPtr(1)
+			SendMessage(Handle, EM_SETMARGINS, EC_LEFTMARGIN, New IntPtr(40))
+
+		End Sub
+
+		Protected Overrides ReadOnly Property CreateParams() As CreateParams
+			Get
+                Dim cp As CreateParams = MyBase.CreateParams
+                LoadLibraryW("MsftEdit.dll")
+				cp.ClassName = "RichEdit50W"
+				Return cp
+			End Get
+		End Property
+
+
 	End Class
 End Namespace
 

@@ -50,7 +50,7 @@ namespace MetaTemplates
 
         private FeedData[] Feeds =
                 {
-                new FeedData("TMS", "http://www.tmssoftware.com/rss/tms.xml", "tms.gif"),
+                new FeedData("TMS", "https://www.tmssoftware.com/rss/tms.xml", "tms.gif"),
                 new FeedData("MSDN","https://sxpdata.microsoft.com/feeds/3.0/msdntn/MSDNMagazine_enus", "msdn.jpg"),
                 new FeedData("SLASHDOT" , "http://rss.slashdot.org/Slashdot/slashdot", "slashdot.gif")
                 };

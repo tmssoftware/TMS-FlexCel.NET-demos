@@ -10,4 +10,4 @@ attachment, press "Share", and select "FlexView". FlexView will convert that fil
 Once you have the file in FlexView, you can export the generated pdf back to mail, or dropbox, or any
 other app that can handle pdf files in your device. You can also print the pdf file.
 
-There is a step-by-step tutorial on how this app was created available at http://www.tmssoftware.biz/flexcel/doc/net/tutorials/ios-tutorial.html
+There is a step-by-step tutorial on how this app was created available at https://download.tmssoftware.com/flexcel/doc/net/tutorials/ios-tutorial.html

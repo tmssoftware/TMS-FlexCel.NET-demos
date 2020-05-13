@@ -88,7 +88,7 @@ namespace MainDemo
             this.linkLabel1.Size = new System.Drawing.Size(176, 16);
             this.linkLabel1.TabIndex = 2;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "http://www.tmssoftware.com";
+            this.linkLabel1.Text = "https://www.tmssoftware.com";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label2

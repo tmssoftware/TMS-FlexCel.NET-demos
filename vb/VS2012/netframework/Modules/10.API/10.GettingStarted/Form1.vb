@@ -4,6 +4,7 @@ Imports FlexCel.Core
 Imports FlexCel.XlsAdapter
 Imports System.IO
 Imports System.Reflection
+Imports System.Threading
 
 Namespace GettingStarted
 	''' <summary>
@@ -114,30 +115,36 @@ Namespace GettingStarted
 		End Sub
 
 		'This method will use a "trick" to create a temporary file and delete it even when it is open on Excel.
-		'We will create a "template" (xlt file), and tell Excel to create a new file based on this template.
-		'Then we can safely delete the xlt file, since Excel opened a copy.
+		'We will create a "template" (xlt/x file), and tell Excel to create a new file based on this template.
+		'Then we can safely delete the xlt/x file, since Excel opened a copy.
 		Private Sub AutoOpen(ByVal Xls As ExcelFile)
-			Dim FilePath As String = Path.GetTempPath() 'GetTempFileName does not allow us to specify the "xlt" extension.
-			Dim FileName As String = Path.Combine(FilePath, Guid.NewGuid().ToString() & ".xlt") 'xlt is the extension for excel templates.
+			Dim FilePath As String = Path.GetTempPath() 'GetTempFileName does not allow us to specify the "xltx" extension.
+			Dim FileName As String = Path.Combine(FilePath, Guid.NewGuid().ToString() & ".xltx") 'xltx is the extension for excel templates.
 			Try
-				Using OutStream As New FileStream(FileName, FileMode.Create, FileAccess.Write)
-					Dim Fi As New FileInfo(FileName)
-					Fi.Attributes = FileAttributes.Temporary
-					Xls.IsXltTemplate = True 'Make it an xlt template.
+				Using OutStream As New FileStream(FileName, FileMode.Create, FileAccess.ReadWrite)
+					Xls.IsXltTemplate = True 'Make it an xltx template.
 					Xls.Save(OutStream)
 				End Using
 				Process.Start(FileName)
 			Finally
-				File.Delete(FileName) 'As it is an xlt file, we can delete it even when it is open on Excel.
-			End Try
-		End Sub
+                'For .Net 4 and newer you can use Task.Run here. See https://download.tmssoftware.com/flexcel/doc/net/tips/automatically-open-generated-excel-files.html
+                Dim t As New Thread(AddressOf RemoveTempAfterUse)
+                t.Start(FileName)
+            End Try
+        End Sub
 
-		''' <summary>
-		''' This is the method that will be called by the ASP.NET front end. It returns an array of bytes 
-		''' with the report data, so the ASP.NET application can stream it to the client.
-		''' </summary>
-		''' <returns>The generated file as a byte array.</returns>
-		Public Function WebRun() As Byte()
+        Private Sub RemoveTempAfterUse(ByVal FileName As Object)
+            'As it is an xltx file, we can delete it even when it is open on Excel. - wait for 30 secs to give Excel time to start.
+            Thread.Sleep(30000)
+            File.Delete(CType(FileName, String))
+        End Sub
+
+        ''' <summary>
+        ''' This is the method that will be called by the ASP.NET front end. It returns an array of bytes 
+        ''' with the report data, so the ASP.NET application can stream it to the client.
+        ''' </summary>
+        ''' <returns>The generated file as a byte array.</returns>
+        Public Function WebRun() As Byte()
 			Dim Xls As ExcelFile = New XlsFile(True)
 			AddData(Xls)
 

@@ -7,6 +7,7 @@ using System.Data;
 using System.IO;
 using System.Diagnostics;
 using System.Reflection;
+using System.Threading;
 using FlexCel.Core;
 using FlexCel.XlsAdapter;
 using FlexCel.Report;
@@ -77,24 +78,28 @@ namespace GettingStartedReports
             Setup(edName.Text, edUrl.Text, DataPath);
 
             XlsFile Xls = new XlsFile();
-            Xls.Open(Path.Combine(DataPath, "Getting Started Reports.template.xls"));
+            Xls.Open(Path.Combine(DataPath, "Getting Started Reports.template.xlsx"));
             reportStart.Run(Xls);
 
-            string FilePath = Path.GetTempPath();  //GetTempFileName does not allow us to specify the "xlt" extension.
-            string FileName = Path.Combine(FilePath, Guid.NewGuid().ToString() + ".xlt");  //xlt is the extension for excel templates.
+            string FilePath = Path.GetTempPath();  //GetTempFileName does not allow us to specify the "xltx" extension.
+            string FileName = Path.Combine(FilePath, Guid.NewGuid().ToString() + ".xltx");  //xltx is the extension for excel templates.
             try
             {
-                using (FileStream OutStream = new FileStream(FileName, FileMode.Create, FileAccess.Write))
+                using (FileStream OutStream = new FileStream(FileName, FileMode.Create, FileAccess.ReadWrite))
                 {
-                    FileInfo Fi = new FileInfo(FileName);
-                    Fi.Attributes = FileAttributes.Temporary;
+                    Xls.IsXltTemplate = true; //Make it an xltx template.
                     Xls.Save(OutStream);
                 }
                 Process.Start(FileName);
             }
             finally
             {
-                File.Delete(FileName);  //As it is an xlt file, we can delete it.			
+                //For .Net 4 and newer you can use Task.Run here. See https://download.tmssoftware.com/flexcel/doc/net/tips/automatically-open-generated-excel-files.html
+                new Thread(delegate()
+                {
+                    Thread.Sleep(30000); //wait for 30 secs to give Excel time to start.
+                    File.Delete(FileName);  //As it is an xltx file, we can delete it even when it is open on Excel.         
+                });         
             }
         }
 

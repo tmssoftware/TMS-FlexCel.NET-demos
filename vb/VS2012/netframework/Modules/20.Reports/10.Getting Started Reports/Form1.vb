@@ -2,6 +2,7 @@
 Imports System.ComponentModel
 Imports System.IO
 Imports System.Reflection
+Imports System.Threading
 Imports FlexCel.Core
 Imports FlexCel.XlsAdapter
 Imports FlexCel.Report
@@ -59,53 +60,60 @@ Namespace GettingStartedReports
 
 
 
-		Private Sub AutoOpenRun()
-			Dim DataPath As String = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)
-			DataPath = Path.Combine(DataPath, "..")
-			DataPath = Path.Combine(DataPath, "..")
-			Setup(edName.Text, edUrl.Text, DataPath)
+        Private Sub AutoOpenRun()
+            Dim DataPath As String = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)
+            DataPath = Path.Combine(DataPath, "..")
+            DataPath = Path.Combine(DataPath, "..")
+            Setup(edName.Text, edUrl.Text, DataPath)
 
-			Dim Xls As New XlsFile()
-			Xls.Open(Path.Combine(DataPath, "Getting Started Reports.template.xls"))
-			reportStart.Run(Xls)
+            Dim Xls As New XlsFile()
+            Xls.Open(Path.Combine(DataPath, "Getting Started Reports.template.xlsx"))
+            reportStart.Run(Xls)
 
-			Dim FilePath As String = Path.GetTempPath() 'GetTempFileName does not allow us to specify the "xlt" extension.
-			Dim FileName As String = Path.Combine(FilePath, Guid.NewGuid().ToString() & ".xlt") 'xlt is the extension for excel templates.
-			Try
-				Using OutStream As New FileStream(FileName, FileMode.Create, FileAccess.Write)
-					Dim Fi As New FileInfo(FileName)
-					Fi.Attributes = FileAttributes.Temporary
-					Xls.Save(OutStream)
-				End Using
-				Process.Start(FileName)
-			Finally
-				File.Delete(FileName) 'As it is an xlt file, we can delete it.
-			End Try
+            Dim FilePath As String = Path.GetTempPath() 'GetTempFileName does not allow us to specify the "xltx" extension.
+            Dim FileName As String = Path.Combine(FilePath, Guid.NewGuid().ToString() & ".xltx") 'xltx is the extension for excel templates.
+            Try
+                Using OutStream As New FileStream(FileName, FileMode.Create, FileAccess.ReadWrite)
+                    Xls.IsXltTemplate = True 'Make it an xltx template.
+                    Xls.Save(OutStream)
+                End Using
+                Process.Start(FileName)
+            Finally
+                'For .Net 4 and newer you can use Task.Run here. See https://download.tmssoftware.com/flexcel/doc/net/tips/automatically-open-generated-excel-files.html
+                Dim t As New Thread(AddressOf RemoveTempAfterUse)
+                t.Start(FileName)
+            End Try
 		End Sub
 
-		''' <summary>
-		''' This is the method that will be called by the ASP.NET front end. It returns an array of bytes 
-		''' with the report data, so the ASP.NET application can stream it to the client.
-		''' </summary>
-		''' <param name="UserName"></param>
-		''' <param name="UserUrl"></param>
-		''' <returns>The generated file as a byte array.</returns>
-		Public Function WebRun(ByVal UserName As String, ByVal UserUrl As String) As Byte()
-			Dim DataPath As String = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)
-			DataPath = Path.Combine(DataPath, "..")
-			DataPath = Path.Combine(DataPath, "..")
-			Setup(UserName, UserUrl, DataPath)
+        Private Sub RemoveTempAfterUse(ByVal FileName As Object)
+            'As it is an xltx file, we can delete it even when it is open on Excel. - wait for 30 secs to give Excel time to start.
+            Thread.Sleep(30000)
+            File.Delete(CType(FileName, String))
+        End Sub
 
-			Using OutStream As New MemoryStream()
-				Using InStream As New FileStream(Path.Combine(DataPath, "Getting Started Reports.template.xls"), FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
-					reportStart.Run(InStream, OutStream)
-					Return OutStream.ToArray()
-				End Using
-			End Using
-		End Function
+        ''' <summary>
+        ''' This is the method that will be called by the ASP.NET front end. It returns an array of bytes 
+        ''' with the report data, so the ASP.NET application can stream it to the client.
+        ''' </summary>
+        ''' <param name="UserName"></param>
+        ''' <param name="UserUrl"></param>
+        ''' <returns>The generated file as a byte array.</returns>
+        Public Function WebRun(ByVal UserName As String, ByVal UserUrl As String) As Byte()
+            Dim DataPath As String = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)
+            DataPath = Path.Combine(DataPath, "..")
+            DataPath = Path.Combine(DataPath, "..")
+            Setup(UserName, UserUrl, DataPath)
+
+            Using OutStream As New MemoryStream()
+                Using InStream As New FileStream(Path.Combine(DataPath, "Getting Started Reports.template.xls"), FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+                    reportStart.Run(InStream, OutStream)
+                    Return OutStream.ToArray()
+                End Using
+            End Using
+        End Function
 
 
-		Private Sub btnCancel_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnCancel.Click
+        Private Sub btnCancel_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnCancel.Click
 			Close()
 		End Sub
 

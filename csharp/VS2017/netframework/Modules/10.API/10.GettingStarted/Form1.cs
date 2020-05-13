@@ -9,6 +9,7 @@ using FlexCel.XlsAdapter;
 using System.IO;
 using System.Diagnostics;
 using System.Reflection;
+using System.Threading;
 
 namespace GettingStarted
 {
@@ -133,26 +134,29 @@ namespace GettingStarted
         }
 
         //This method will use a "trick" to create a temporary file and delete it even when it is open on Excel.
-        //We will create a "template" (xlt file), and tell Excel to create a new file based on this template.
-        //Then we can safely delete the xlt file, since Excel opened a copy.
+        //We will create a "template" (xlt/x file), and tell Excel to create a new file based on this template.
+        //Then we can safely delete the xlt/x file, since Excel opened a copy.
         private void AutoOpen(ExcelFile Xls)
         {
-            string FilePath = Path.GetTempPath();  //GetTempFileName does not allow us to specify the "xlt" extension.
-            string FileName = Path.Combine(FilePath, Guid.NewGuid().ToString() + ".xlt");  //xlt is the extension for excel templates.
+            string FilePath = Path.GetTempPath();  //GetTempFileName does not allow us to specify the "xltx" extension.
+            string FileName = Path.Combine(FilePath, Guid.NewGuid().ToString() + ".xltx");  //xltx is the extension for excel templates.
             try
             {
-                using (FileStream OutStream = new FileStream(FileName, FileMode.Create, FileAccess.Write))
+                using (FileStream OutStream = new FileStream(FileName, FileMode.Create, FileAccess.ReadWrite))
                 {
-                    FileInfo Fi = new FileInfo(FileName);
-                    Fi.Attributes = FileAttributes.Temporary;
-                    Xls.IsXltTemplate = true; //Make it an xlt template.
+                    Xls.IsXltTemplate = true; //Make it an xltx template.
                     Xls.Save(OutStream);
                 }
                 Process.Start(FileName);
             }
             finally
             {
-                File.Delete(FileName);  //As it is an xlt file, we can delete it even when it is open on Excel.			
+                //For .Net 4 and newer you can use Task.Run here. See https://download.tmssoftware.com/flexcel/doc/net/tips/automatically-open-generated-excel-files.html
+                new Thread(delegate()
+                {
+                    Thread.Sleep(30000); //wait for 30 secs to give Excel time to start.
+                    File.Delete(FileName);  //As it is an xltx file, we can delete it even when it is open on Excel.         
+                });			
             }
         }
 

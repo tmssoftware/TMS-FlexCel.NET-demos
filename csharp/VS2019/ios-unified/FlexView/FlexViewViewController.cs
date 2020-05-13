@@ -35,7 +35,7 @@ namespace FlexView
             base.ViewDidLoad();
             Viewer.LoadHtmlString("<html><h1>Please share an xls or xlsx file <br>from other app into FlexView.<br/ >" + 
                                   "For help on how to use this example, please read the " + "" +
-                                  "<a href=\"http://www.tmssoftware.com/flexcel/docs/net/FlexCelViewTutorial.pdf\">tutorial</a></h1></html>", null);
+                                  "<a href=\"https://www.tmssoftware.com/flexcel/docs/net/FlexCelViewTutorial.pdf\">tutorial</a></h1></html>", null);
 			
         }
 

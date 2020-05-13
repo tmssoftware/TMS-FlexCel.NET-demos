@@ -163,7 +163,6 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
     </EmbeddedResource>
     <None Include="App.config" />
-    <None Include="MainDemo.rtf" />
     <Compile Include="AboutForm.Designer.vb">
       <DependentUpon>AboutForm.vb</DependentUpon>
     </Compile>

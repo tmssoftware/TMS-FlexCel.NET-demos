@@ -39,7 +39,7 @@ Namespace MetaTemplates
 		End Structure
 
 		Private Feeds() As FeedData = { _
-			New FeedData("TMS", "http://www.tmssoftware.com/rss/tms.xml", "tms.gif"), _
+			New FeedData("TMS", "https://www.tmssoftware.com/rss/tms.xml", "tms.gif"), _
 			New FeedData("MSDN","https://sxpdata.microsoft.com/feeds/3.0/msdntn/MSDNMagazine_enus", "msdn.jpg"), _
 			New FeedData("SLASHDOT", "http://rss.slashdot.org/Slashdot/slashdot", "slashdot.gif") _
 		}
