@@ -207,7 +207,7 @@ namespace LangWars
         async void SendFile()
         {
             // To send the file, we need to define a file provider in AndrodiManifest.xml
-            // See https://download.tmssoftware.com/flexcel/doc/net/guides/android-guide.html#sharing-files
+            // See https://doc.tmssoftware.com/flexcel/net/guides/android-guide.html#sharing-files
             if (!File.Exists(TempXlsPath))
             {
                 if (!await TryCreateReport()) return;

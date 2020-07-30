@@ -2,7 +2,7 @@
 
 Here we will see how to define a user function to calculate the number
 of orders by employee and shipper. This example is similar to the 
-[Pivot Tables](https://download.tmssoftware.com/flexcel/doc/net/samples/csharp/netframework/reports/pivot-tables/index.html) example, but using only static normal cells.
+[Pivot Tables](https://doc.tmssoftware.com/flexcel/net/samples/csharp/netframework/reports/pivot-tables/index.html) example, but using only static normal cells.
 
 ## Concepts
 

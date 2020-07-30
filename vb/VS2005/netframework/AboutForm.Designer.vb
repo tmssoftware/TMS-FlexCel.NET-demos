@@ -70,29 +70,29 @@ Namespace MainDemo
 			Me.label1.Name = "label1"
 			Me.label1.Size = New System.Drawing.Size(384, 23)
 			Me.label1.TabIndex = 1
-			Me.label1.Text = "FLEXCEL WELL"
+			Me.label1.Text = "FLEXCEL DOCUMENT BROWSER"
 			' 
 			' linkLabel1
 			' 
 			Me.linkLabel1.Anchor = (CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles))
 			Me.linkLabel1.BackColor = System.Drawing.Color.Transparent
-			Me.linkLabel1.Location = New System.Drawing.Point(88, 136)
+			Me.linkLabel1.Location = New System.Drawing.Point(88, 131)
 			Me.linkLabel1.Name = "linkLabel1"
-			Me.linkLabel1.Size = New System.Drawing.Size(176, 16)
+			Me.linkLabel1.Size = New System.Drawing.Size(318, 16)
 			Me.linkLabel1.TabIndex = 2
 			Me.linkLabel1.TabStop = True
-			Me.linkLabel1.Text = "https://www.tmssoftware.com"
+			Me.linkLabel1.Text = "https://doc.tmssoftware.com/flexcel/net/index.html"
 '			Me.linkLabel1.LinkClicked += New System.Windows.Forms.LinkLabelLinkClickedEventHandler(Me.linkLabel1_LinkClicked)
 			' 
 			' label2
 			' 
 			Me.label2.Anchor = (CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) Or System.Windows.Forms.AnchorStyles.Left) Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles))
 			Me.label2.BackColor = System.Drawing.Color.Transparent
-			Me.label2.Location = New System.Drawing.Point(40, 64)
+			Me.label2.Location = New System.Drawing.Point(44, 60)
 			Me.label2.Name = "label2"
 			Me.label2.Size = New System.Drawing.Size(400, 16)
 			Me.label2.TabIndex = 3
-			Me.label2.Text = "A repository with demos and documentation about flexcel."
+			Me.label2.Text = "A repository with examples about FlexCel."
 			' 
 			' button1
 			' 
@@ -113,12 +113,12 @@ Namespace MainDemo
 			' 
 			Me.linkLabel2.Anchor = (CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles))
 			Me.linkLabel2.BackColor = System.Drawing.Color.Transparent
-			Me.linkLabel2.Location = New System.Drawing.Point(88, 160)
+			Me.linkLabel2.Location = New System.Drawing.Point(88, 147)
 			Me.linkLabel2.Name = "linkLabel2"
-			Me.linkLabel2.Size = New System.Drawing.Size(176, 16)
+			Me.linkLabel2.Size = New System.Drawing.Size(318, 16)
 			Me.linkLabel2.TabIndex = 5
 			Me.linkLabel2.TabStop = True
-			Me.linkLabel2.Text = "mailto:help@tmssoftware.com"
+			Me.linkLabel2.Text = "https://support.tmssoftware.com/c/flexcel/tms-flexcel-net/33"
 '			Me.linkLabel2.LinkClicked += New System.Windows.Forms.LinkLabelLinkClickedEventHandler(Me.linkLabel2_LinkClicked)
 			' 
 			' label3
@@ -126,17 +126,17 @@ Namespace MainDemo
 			Me.label3.Anchor = (CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) Or System.Windows.Forms.AnchorStyles.Left) Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles))
 			Me.label3.BackColor = System.Drawing.Color.Transparent
 			Me.label3.Font = New System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, (CByte(0)))
-			Me.label3.Location = New System.Drawing.Point(32, 112)
+			Me.label3.Location = New System.Drawing.Point(42, 106)
 			Me.label3.Name = "label3"
 			Me.label3.Size = New System.Drawing.Size(400, 18)
 			Me.label3.TabIndex = 7
-			Me.label3.Text = "For more information:"
+			Me.label3.Text = "More information:"
 			' 
 			' lblVersion
 			' 
 			Me.lblVersion.Anchor = (CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) Or System.Windows.Forms.AnchorStyles.Left) Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles))
 			Me.lblVersion.BackColor = System.Drawing.Color.Transparent
-			Me.lblVersion.Location = New System.Drawing.Point(40, 88)
+			Me.lblVersion.Location = New System.Drawing.Point(40, 85)
 			Me.lblVersion.Name = "lblVersion"
 			Me.lblVersion.Size = New System.Drawing.Size(400, 16)
 			Me.lblVersion.TabIndex = 8

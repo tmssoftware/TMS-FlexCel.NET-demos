@@ -15,13 +15,13 @@ recalculate them.
 
   2. If you don\'t know which files (if any) you are going to need, you
      can use an event to load them on demand. This is the approach we
-     use in the [Validate Recalc](https://download.tmssoftware.com/flexcel/doc/net/samples/csharp/netframework/api/validate-recalc/index.html) example, since it deals with arbitrary
+     use in the [Validate Recalc](https://doc.tmssoftware.com/flexcel/net/samples/csharp/netframework/api/validate-recalc/index.html) example, since it deals with arbitrary
      files. Whenever you know which files are needed, it is better to
      use the first method.
 
 - **Workspaces can take a lot of memory**. Make sure you make them
-  nullfree them{/vcl}} after recalculating, and also the XlsFiles used in it. If you
+  null after recalculating, and also the XlsFiles used in it. If you
   keep the files, those files will point to the workspace even if
-  you make it nullfree it{/vcl}}, and it will not be released. You can also
-  Clear() the workspace before making it nullfreeing it{/vcl}} to make sure you leave
+  you make it null, and it will not be released. You can also
+  Clear() the workspace before making it null to make sure you leave
   no references to it.

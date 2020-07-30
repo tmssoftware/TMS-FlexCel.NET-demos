@@ -151,7 +151,7 @@ namespace GettingStarted
             }
             finally
             {
-                //For .Net 4 and newer you can use Task.Run here. See https://download.tmssoftware.com/flexcel/doc/net/tips/automatically-open-generated-excel-files.html
+                //For .Net 4 and newer you can use Task.Run here. See https://doc.tmssoftware.com/flexcel/net/tips/automatically-open-generated-excel-files.html
                 new Thread(delegate()
                 {
                     Thread.Sleep(30000); //wait for 30 secs to give Excel time to start.

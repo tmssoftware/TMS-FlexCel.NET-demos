@@ -4,17 +4,17 @@ A demo showing how to read the contents of an Excel file using FlexCel.
 
 ## Concepts
 
-- To read an Excel file you use the [XlsFile](https://download.tmssoftware.com/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsFile/index.html) class, from where you
+- To read an Excel file you use the [XlsFile](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.XlsAdapter/XlsFile/index.html) class, from where you
   can read and write to any Excel 2.0 or newer
   file.
 
-- To get the value for a single cell, use [XlsFile.GetCellValue](https://download.tmssoftware.com/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsFile/GetCellValue.html).
+- To get the value for a single cell, use [XlsFile.GetCellValue](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.XlsAdapter/XlsFile/GetCellValue.html).
 
 - To get the value for a cell when looping a full sheet, use
-  [XlsFile.GetCellValueIndexed](https://download.tmssoftware.com/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsFile/GetCellValueIndexed.html). It is faster than using
+  [XlsFile.GetCellValueIndexed](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.XlsAdapter/XlsFile/GetCellValueIndexed.html). It is faster than using
   GetCellValue since you will only read the used cells.
 
-- [XlsFile.GetCellValue](https://download.tmssoftware.com/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsFile/GetCellValue.html) and [XlsFile.GetCellValueIndexed](https://download.tmssoftware.com/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsFile/GetCellValueIndexed.html) can return one of the following
+- [XlsFile.GetCellValue](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.XlsAdapter/XlsFile/GetCellValue.html) and [XlsFile.GetCellValueIndexed](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.XlsAdapter/XlsFile/GetCellValueIndexed.html) can return one of the following
   objects:
 
   - null
@@ -25,9 +25,9 @@ A demo showing how to read the contents of an Excel file using FlexCel.
 
   - String
 
-  - [TRichString](https://download.tmssoftware.com/flexcel/doc/net/api/FlexCel.Core/TRichString/index.html)
+  - [TRichString](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Core/TRichString/index.html)
 
-  - [TFormula](https://download.tmssoftware.com/flexcel/doc/net/api/FlexCel.Core/TFormula/index.html)
+  - [TFormula](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Core/TFormula/index.html)
 
   - 
 
@@ -39,7 +39,7 @@ A demo showing how to read the contents of an Excel file using FlexCel.
   display 2.00 instead of 2), you need to use other methods. There
   are 2 ways to do it:
 
-   1. [XlsFile.GetStringFromCell](https://download.tmssoftware.com/flexcel/doc/net/api/FlexCel.XlsAdapter/XlsFile/GetStringFromCell.html) will return a rich string with the
+   1. [XlsFile.GetStringFromCell](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.XlsAdapter/XlsFile/GetStringFromCell.html) will return a rich string with the
    cell formatted.
 
    2. FormatValue will format an object with a
@@ -51,4 +51,4 @@ A demo showing how to read the contents of an Excel file using FlexCel.
   and a double is on the format on the cell. With
   FormatValue you can get the actual string that is
   displayed on Excel. Also, to convert this double to a DateTime,
-  you can use [FlxDateTime.FromOADate](https://download.tmssoftware.com/flexcel/doc/net/api/FlexCel.Core/FlxDateTime/FromOADate.html).
+  you can use [FlxDateTime.FromOADate](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Core/FlxDateTime/FromOADate.html).

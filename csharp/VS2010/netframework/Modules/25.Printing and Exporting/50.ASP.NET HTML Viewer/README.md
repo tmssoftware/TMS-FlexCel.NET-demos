@@ -45,7 +45,7 @@ Viewer folder.
   handles images, (make sure you read the [
     >) it might not scale enough if you do not provide
   a custom image handler.
-](https://download.tmssoftware.com/flexcel/doc/net/guides/html-exporting-guide.html#
+](https://doc.tmssoftware.com/flexcel/net/guides/html-exporting-guide.html#
 -----it-might-not-scale-enough-if-you-do-not-provide
 --a-custom-image-handler
 )

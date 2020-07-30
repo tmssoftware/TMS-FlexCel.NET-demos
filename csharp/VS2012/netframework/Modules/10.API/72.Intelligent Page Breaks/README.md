@@ -5,7 +5,7 @@ FlexCel has the capacity to add page breaks to your file, so you can keep
 interesting sections together.
 
 **Make sure to read the conceptual documentation 
-about [Intelligent Page Breaks](https://download.tmssoftware.com/flexcel/doc/net/guides/api-developer-guide.html#intelligent-page-breaks)
+about [Intelligent Page Breaks](https://doc.tmssoftware.com/flexcel/net/guides/api-developer-guide.html#intelligent-page-breaks)
 to better understand what we are doing here.**
 
 ## Concepts
@@ -23,6 +23,6 @@ to better understand what we are doing here.**
   Each \"{\" sign in the source file means higher level of \"keep
   together\", and each \"}\" decreases the level.
 
-- The method [ExcelFile.AutoPageBreaks](https://download.tmssoftware.com/flexcel/doc/net/api/FlexCel.Core/ExcelFile/AutoPageBreaks.html) must be called after everything is
+- The method [ExcelFile.AutoPageBreaks](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Core/ExcelFile/AutoPageBreaks.html) must be called after everything is
   done, so the sheet is in a final state when applying the page
   breaks.

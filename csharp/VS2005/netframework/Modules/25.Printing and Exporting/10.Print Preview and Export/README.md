@@ -1,13 +1,13 @@
 # Printing, previewing and exporting
 
-A small demo on how to use [FlexCelPrintDocument](https://download.tmssoftware.com/flexcel/doc/net/api/FlexCel.Render/FlexCelPrintDocument/index.html) to natively print
+A small demo on how to use [FlexCelPrintDocument](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Render/FlexCelPrintDocument/index.html) to natively print
 and preview any existing Excel File, and on how to use
-[FlexCelImgExport](https://download.tmssoftware.com/flexcel/doc/net/api/FlexCel.Render/FlexCelImgExport/index.html) to convert any Excel file to images. Pdf
+[FlexCelImgExport](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Render/FlexCelImgExport/index.html) to convert any Excel file to images. Pdf
 export is not shown here, but it is on other examples.
 
 ## Concepts
 
-- [FlexCelPrintDocument](https://download.tmssoftware.com/flexcel/doc/net/api/FlexCel.Render/FlexCelPrintDocument/index.html) output is not 100% identical to Excel output,
+- [FlexCelPrintDocument](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Render/FlexCelPrintDocument/index.html) output is not 100% identical to Excel output,
   and it can\'t be that way. But it is very similar, and this
   includes fonts, colors, margins, headers/footers/images, etc. It
   can print cells with multiple fonts, it can replace the macros on

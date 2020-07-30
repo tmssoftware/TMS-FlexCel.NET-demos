@@ -3,7 +3,7 @@
 Regular expressions give you both the power to transform the text in
 your reports in any way you like, and also to obfuscate and make
 unmaintainable your templates if you abuse them. The \<\#regex()\> tag
-lets you write your own [Regular Expressions](https://download.tmssoftware.com/flexcel/doc/net/guides/reports-tag-reference.html#regular-expressions) in a FlexCel report.
+lets you write your own [Regular Expressions](https://doc.tmssoftware.com/flexcel/net/guides/reports-tag-reference.html#regular-expressions) in a FlexCel report.
 
 ## Concepts
 
@@ -25,7 +25,7 @@ lets you write your own [Regular Expressions](https://download.tmssoftware.com/f
   are just invaluable to get your desired output, but on other times
   they can make maintaining the templates a lot of work. Depending
   on the case, you might find better to define your own user
-  function to do a complex transformation. (See the [User Defined Functions](https://download.tmssoftware.com/flexcel/doc/net/samples/csharp/netframework/reports/user-defined-functions/index.html) example)
+  function to do a complex transformation. (See the [User Defined Functions](https://doc.tmssoftware.com/flexcel/net/samples/csharp/netframework/reports/user-defined-functions/index.html) example)
 
 - Regular Expressions are a complex subject, and we will not explain
   how to use them here. There is a lot of information out there available on them.

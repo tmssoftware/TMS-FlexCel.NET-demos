@@ -9,7 +9,7 @@ focus is in the Excel templates, not so much in the data layer. But you
 can use any IQueryable\<T\> collection as a datasource in a FlexCel
 report, and this is what we will show here.
 
-This demo shows some features not shown in the [Linq](https://download.tmssoftware.com/flexcel/doc/net/samples/vb/netframework/reports/linq/index.html) example.
+This demo shows some features not shown in the [Linq](https://doc.tmssoftware.com/flexcel/net/samples/vb/netframework/reports/linq/index.html) example.
 
 ## Concepts
 
@@ -18,7 +18,7 @@ This demo shows some features not shown in the [Linq](https://download.tmssoftwa
   a **People** class, and the People class has a list of
   **Language** objects. If People was a List\<\> inside Country and
   you wanted to use that list, you would just define a
-  **\_\_People\_\_** band (this is shown in the [Linq](https://download.tmssoftware.com/flexcel/doc/net/samples/vb/netframework/reports/linq/index.html) example). But
+  **\_\_People\_\_** band (this is shown in the [Linq](https://doc.tmssoftware.com/flexcel/net/samples/vb/netframework/reports/linq/index.html) example). But
   as the List\<\> is inside People which in turn is inside Country,
   you need to define a **\_\_People.Language\_\_** band.
 

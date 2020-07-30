@@ -29,5 +29,5 @@ vertically.
   insert as many columns as the maximum numbers of orders for any
   customer.
 
-- You can look at the [User Defined Functions](https://download.tmssoftware.com/flexcel/doc/net/samples/csharp/netframework/reports/user-defined-functions/index.html) example for another
+- You can look at the [User Defined Functions](https://doc.tmssoftware.com/flexcel/net/samples/csharp/netframework/reports/user-defined-functions/index.html) example for another
   demo on how bidirectional reports work.

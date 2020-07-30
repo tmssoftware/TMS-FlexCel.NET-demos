@@ -77,31 +77,31 @@ namespace MainDemo
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(384, 23);
             this.label1.TabIndex = 1;
-            this.label1.Text = "FLEXCEL WELL";
+            this.label1.Text = "FLEXCEL DOCUMENT BROWSER";
             // 
             // linkLabel1
             // 
             this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Location = new System.Drawing.Point(88, 136);
+            this.linkLabel1.Location = new System.Drawing.Point(88, 131);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(176, 16);
+            this.linkLabel1.Size = new System.Drawing.Size(318, 16);
             this.linkLabel1.TabIndex = 2;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "https://www.tmssoftware.com";
+            this.linkLabel1.Text = "https://doc.tmssoftware.com/flexcel/net/index.html";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(40, 64);
+            this.label2.Location = new System.Drawing.Point(44, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(400, 16);
             this.label2.TabIndex = 3;
-            this.label2.Text = "A repository with demos and documentation about flexcel.";
+            this.label2.Text = "A repository with examples about FlexCel.";
             // 
             // button1
             // 
@@ -122,34 +122,34 @@ namespace MainDemo
             // 
             this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel2.Location = new System.Drawing.Point(88, 160);
+            this.linkLabel2.Location = new System.Drawing.Point(88, 147);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(176, 16);
+            this.linkLabel2.Size = new System.Drawing.Size(318, 16);
             this.linkLabel2.TabIndex = 5;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "mailto:help@tmssoftware.com";
+            this.linkLabel2.Text = "https://support.tmssoftware.com/c/flexcel/tms-flexcel-net/33";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(32, 112);
+            this.label3.Location = new System.Drawing.Point(42, 106);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(400, 18);
             this.label3.TabIndex = 7;
-            this.label3.Text = "For more information:";
+            this.label3.Text = "More information:";
             // 
             // lblVersion
             // 
-            this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVersion.BackColor = System.Drawing.Color.Transparent;
-            this.lblVersion.Location = new System.Drawing.Point(40, 88);
+            this.lblVersion.Location = new System.Drawing.Point(40, 85);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(400, 16);
             this.lblVersion.TabIndex = 8;

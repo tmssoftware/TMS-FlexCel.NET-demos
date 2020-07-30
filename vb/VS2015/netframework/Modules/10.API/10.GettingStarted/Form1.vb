@@ -127,7 +127,7 @@ Namespace GettingStarted
 				End Using
 				Process.Start(FileName)
 			Finally
-                'For .Net 4 and newer you can use Task.Run here. See https://download.tmssoftware.com/flexcel/doc/net/tips/automatically-open-generated-excel-files.html
+                'For .Net 4 and newer you can use Task.Run here. See https://doc.tmssoftware.com/flexcel/net/tips/automatically-open-generated-excel-files.html
                 Dim t As New Thread(AddressOf RemoveTempAfterUse)
                 t.Start(FileName)
             End Try

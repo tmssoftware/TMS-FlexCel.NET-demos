@@ -6,7 +6,7 @@ or recalculating files containing UDFs. But you need to create .NET
 functions that will mimic the UDF behavior, and add them to the FlexCel
 recalculation engine.
 
-**Make sure you read [Using Excel's User-defined Functions (UDF)](https://download.tmssoftware.com/flexcel/doc/net/guides/api-developer-guide.html#using-excels-user-defined-functions-udf) in the API developers guide for a conceptual explanation
+**Make sure you read [Using Excel's User-defined Functions (UDF)](https://doc.tmssoftware.com/flexcel/net/guides/api-developer-guide.html#using-excels-user-defined-functions-udf) in the API developers guide for a conceptual explanation
 of what we are doing here.**
 
 ## Concepts

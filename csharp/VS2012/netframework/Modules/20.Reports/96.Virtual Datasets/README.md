@@ -10,7 +10,7 @@ own **VirtualDataset** and **VirtualDatasetState** descendants to do
 this task.
 
 This is an advanced topic. Remember to read the  [Appendix: Virtual DataSets
- on](https://download.tmssoftware.com/flexcel/doc/net/guides/reports-developer-guide.html#appendix:-virtual-datasets
+ on](https://doc.tmssoftware.com/flexcel/net/guides/reports-developer-guide.html#appendix:-virtual-datasets
 -on) the Reports developer guide.
 
 ## Concepts

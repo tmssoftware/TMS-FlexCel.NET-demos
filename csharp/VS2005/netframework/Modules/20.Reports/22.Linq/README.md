@@ -28,4 +28,4 @@ report, and this is what we will show here.
   you will normally use implicit relationships, you can also relate
   any two collections of objects with a relationship, as you could
   with datasets. In this example, \"ElementName\" is explicitly
-  related to \"Elements\" with a call to [FlexCelReport.AddRelationship](https://download.tmssoftware.com/flexcel/doc/net/api/FlexCel.Report/FlexCelReport/AddRelationship.html).
+  related to \"Elements\" with a call to [FlexCelReport.AddRelationship](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Report/FlexCelReport/AddRelationship.html).

@@ -26,6 +26,6 @@ to a generated PDF file.
   crypto classes**.** You can still create your own signature engine
   by using a third party cryptography library or by calling
   CryptoApi in windows via p/invoke. This is explained in the section
-  [Signing PDF Files](https://download.tmssoftware.com/flexcel/doc/net/guides/pdf-exporting-guide.html#signing-pdf-files) in the 
+  [Signing PDF Files](https://doc.tmssoftware.com/flexcel/net/guides/pdf-exporting-guide.html#signing-pdf-files) in the 
   PDF exporting guide.
 

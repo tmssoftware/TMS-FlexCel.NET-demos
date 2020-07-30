@@ -365,7 +365,7 @@ namespace MainDemo
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Menu = this.mainMenu1;
             this.Name = "DemoForm";
-            this.Text = "FlexCel Well";
+            this.Text = "FlexCel Demo Browser";
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

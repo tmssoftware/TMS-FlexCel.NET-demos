@@ -339,7 +339,7 @@ Namespace MainDemo
 			Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
 			Me.Menu = Me.mainMenu1
 			Me.Name = "DemoForm"
-			Me.Text = "FlexCel Well"
+			Me.Text = "FlexCel Demo Browser"
 			Me.panel1.ResumeLayout(False)
 			Me.panel5.ResumeLayout(False)
 			Me.panel3.ResumeLayout(False)
