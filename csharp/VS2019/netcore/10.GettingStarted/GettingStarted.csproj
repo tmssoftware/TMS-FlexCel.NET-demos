@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <AssemblyName>GettingStarted</AssemblyName>
     <RootNamespace>GettingStarted</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="TMS.FlexCel" Version="7.7.0" />
+    <PackageReference Include="TMS.FlexCel" Version="7.8.0" />
   </ItemGroup>
 </Project>
