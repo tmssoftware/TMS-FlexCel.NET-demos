@@ -8,18 +8,52 @@ You can find a description of each demo in the [documentation](https://doc.tmsso
 **:book: Note** We update this repository automatically every time we release a new FlexCel version. So if you have notifications integrated with github, you can subscribe to this feed to be notified of new releases.
 
 
-## New in v 7.8 - November 2020
+## New in v 7.9 - April 2021
 
 
-- **.NET 5 Support.** The codebase has been updated to support .NET 5. **Important** :  To use FlexCel in .NET 5, please update to at least this FlexCel version. .NET 5 changed string handing in Windows to use ICU, and that causes problems with older versions of FlexCel in Windows. See [https://github.com/dotnet/runtime/issues/43736](https://github.com/dotnet/runtime/issues/43736)
+- **Support for functions LAMBDA and LET.** We've reworked the recalculation engine to add support for [LAMBDA](https://www.microsoft.com/en-us/research/blog/lambda-the-ultimatae-excel-worksheet-function/) and [LET](https://support.microsoft.com/en-us/office/let-function-34842dd8-b92b-4d3f-b325-b8b8f9908999) functions. With Lambda, the calculation engine is now turing-complete.
 
-- **Breaking Change: Removed support for .NET Core 2.0 and 3.0.** We removed support for .NET Core 2.0 and 3.0 as both reached end of life. We keep supporting .NET Core 2.1 and 3.1. See   [https://dotnet.microsoft.com/platform/support/policy/dotnet-core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)
+- **Support for functions SINGLE, VALUETOTEXT and VALUETOARRAY.** Added support for [SINGLE](https://support.microsoft.com/en-us/office/implicit-intersection-operator-ce3be07b-0101-4450-a24e-c1c999be2b34), [VALUETOTEXT](https://support.microsoft.com/en-us/office/valuetotext-function-5fff61a2-301a-4ab2-9ffa-0a5242a08fea) and [ARRAYTOTEXT](https://support.microsoft.com/en-us/office/arraytotext-function-9cdcad46-2fa5-4c6b-ac92-14e7bc862b8b) functions.
 
-- **Support for switching Graphics engines in .NET Core or .NET 5.** There is a new property in FlexCelConfig: [GraphicFramework](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Core/FlexCelConfig/GraphicFramework) which allows you to select between using GDI+ in Windows (native) or SKIA (better compatibility with other platforms which use SKIA)
+- **Breaking Change: Deprecated Android support in Visual Studio 2017.** As google Play is now requiring a target framework of Android 10, we can't ship Android support in VS 2017 since it supports up to Android 9. To deploy FlexCel to android,  you will need to upgrade to Visual Studio 2019 or compile it manually with an older target framework.
 
-- **Support for reading fonts from the disk even if the graphics library returns that information.** There is a new property in FlexCelConfig: [ForcePdfFontsFromDisk](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Core/FlexCelConfig/ForcePdfFontsFromDisk) which allows you to select if FlexCel should use the font data returned by the graphics library if possible, or always scan a folder with fonts.
+- **Support for rendering multi-level labels in category axis.** In Excel you can set a category axis to have more than one row/column, and Excel will render those multi-level ranges in a different way than normal ranges. Now FlexCel will behave the same.
 
-- **Improved performance in the SKIA graphics backend for .NET 5.** Now SKIA is faster than GDI+ in windows if you use it as the graphics library.
+- **Support for legend keys in chart labels.** Now when exporting to PDF/HTML, if the option "Legend key" is enabled in the label options of a chart, FlexCel will render them.
 
-- **Improved compatibility with invalid xls files.** Now FlexCel can ignore invalid ministreams when reading corrupt/invalid xls files.
+- **Support for "Label contains Value from range" option in charts.** Now FlexCel will correctly handle the "Label Contains: " "Value from Cells" options for chart labels available in newer Excel versions. They will be exported to PDF/HTML and APIMate will show the code to create them in your programs.
+
+- **Improved drawing of x-axis in charts.** Now FlexCel will automatically adjust the x-axis labels to 45 degrees if needed, and also take the space from near labels if those are empty.
+
+- **TXls3DRange now supports an external filename.** The object [TXls3DRange](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Core/TXls3DRange/index.html) now has a property with the filename, in case that the range is from another file. This allows to use external files in user-defined functions.
+
+- **Hyperlink Base support.** Now FlexCel will correctly preserve [Hyperlink Base](https://support.microsoft.com/en-us/office/work-with-links-in-excel-7fc80d8d-68f9-482f-ab01-584c44d72b3e) in xlsx files (it was already preserved in xls). Now the hyperlink base is also used when exporting to HTML, SVG or PDF.
+
+- **Support for using an expression like &lt;#joinedtable.tablejoined.\*> to make a generic report in only one of the joined tables.** Now when you join tables in the template you can use &lt;#joinedtable.tablejoined.\*> or &lt;#joinedtable.tablejoined.\**> to create a generic report only in the fields of that subtable.
+
+- **The &lt;#ref> tag can now use tags in its parameters.** Now you can write something like &lt;#ref(&lt;#dataset.#rowcount>,3)>. Before this version tags were not allowed as parameters.
+
+- **New property "IsCameraObject" in TImageProperties.** The new property [IsCameraObject](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Core/TImageProperties/IsCameraObject.html) lets you know if an image is a camera object or not.
+
+- **Improved compatibility with xlsx files created by SoftMarker Office.** SoftMaker office adds many extensibility points in places of the xlsx where they are not allowed. FlexCel complained about that, but in the new version we ignore the ones we could identify.
+
+- **Axis labels will now render with a background color if they have one.** Now the axis labels will render the background color if you assign a color to them.
+
+- **Bug Fix.** FlexCel would always render labels in the category axis as not "linked to source" even if they were.
+
+- **Bug Fix.** Labels which come from cells that are formatted to show negative values in different colors show with that color in Excel, except in pie charts. FlexCel used to ignore that color, not it will display it.
+
+- **Bug Fix.** When rendering xlsx charts, labels which were manually positioned would ignore the default  numeric formatting.
+
+- **Bug Fix.** Structured references with text formatting could be saved wrong to new xlsx files.
+
+- **Bug Fix.** Rotated labels in charts could a little below or above from where they should go.
+
+- **Bug Fix.** FlexCel could fail to parse a formula where the sheet name started with some Unicode characters, like for example "※MySheet"
+
+- **Bug Fix.** When reading structured references in Virtual Mode, the structure reference text would be wrong since it wasn't calculated until after the sheet was loaded.
+
+- **Bug Fix.** FlexCel didn't preserve or render text linked to cells in shapes inside charts.
+
+- **Bug Fix.** FlexCel would allow you to name a sheet starting with a single quote ('), and that would cause an invalid file. Now the quote at the start of the name will be replaced by a "_" as other invalid characters do.
 

@@ -1,4 +1,0 @@
-This example will not run from main demo, because it requires a nuget refresh.
-To run this example, open it alone in Visual Studio and run it from there.
-
-You can press the "Open Project" button in the MainDemo toolbar to open the example in Visual Studio.
