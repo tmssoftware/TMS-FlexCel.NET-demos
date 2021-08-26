@@ -48,7 +48,7 @@
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
-    <DefineConstants>GDIPLUS;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45</DefineConstants>
+    <DefineConstants>GDIPLUS;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47</DefineConstants>
     <DocumentationFile>
     </DocumentationFile>
     <DebugSymbols>true</DebugSymbols>
@@ -71,7 +71,7 @@
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
-    <DefineConstants>GDIPLUS;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45</DefineConstants>
+    <DefineConstants>GDIPLUS;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47</DefineConstants>
     <DocumentationFile>
     </DocumentationFile>
     <DebugSymbols>false</DebugSymbols>

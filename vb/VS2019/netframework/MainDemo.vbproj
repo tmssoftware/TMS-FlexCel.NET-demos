@@ -51,7 +51,7 @@
     </ConfigurationOverrideFile>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <DefineConstants>GDIPLUS=true,FRAMEWORK20=true,FRAMEWORK30=true,FRAMEWORK40=true,FRAMEWORK45=true</DefineConstants>
+    <DefineConstants>GDIPLUS=true,FRAMEWORK20=true,FRAMEWORK30=true,FRAMEWORK40=true,FRAMEWORK45=true,FRAMEWORK46=true,FRAMEWORK47=true</DefineConstants>
     <DocumentationFile>
     </DocumentationFile>
     <DebugSymbols>true</DebugSymbols>
@@ -75,7 +75,7 @@
     </ConfigurationOverrideFile>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <DefineConstants>GDIPLUS=true,FRAMEWORK20=true,FRAMEWORK30=true,FRAMEWORK40=true,FRAMEWORK45=true</DefineConstants>
+    <DefineConstants>GDIPLUS=true,FRAMEWORK20=true,FRAMEWORK30=true,FRAMEWORK40=true,FRAMEWORK45=true,FRAMEWORK46=true,FRAMEWORK47=true</DefineConstants>
     <DocumentationFile>
     </DocumentationFile>
     <DebugSymbols>false</DebugSymbols>

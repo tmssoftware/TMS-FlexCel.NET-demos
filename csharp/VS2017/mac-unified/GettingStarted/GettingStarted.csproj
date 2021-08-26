@@ -17,7 +17,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>MONO;MONOMAC;XAMUNIFIEDAPI;OSX;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45</DefineConstants>
+    <DefineConstants>MONO;MONOMAC;XAMUNIFIEDAPI;OSX;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>

@@ -186,6 +186,8 @@ namespace LangWars
 
         void LoadHTML()
         {
+            ResultsWindow.Settings.AllowContentAccess = true;
+            ResultsWindow.Settings.AllowFileAccess = true;
             if (!HTMLLoaded)
             {
                 ResultsWindow.LoadUrl(new Uri(TempHtmlPath).AbsoluteUri);
