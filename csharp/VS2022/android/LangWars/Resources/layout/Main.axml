@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1">
+            <Button
+                android:text="Fight!"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/FightButton" />
+            <CheckBox
+                android:text="Online"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/OnlineSwitch"
+                android:layout_marginRight="18.7dp" />
+            <Button
+                android:text="Share"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                    android:id="@+id/ShareButton" />
+        </LinearLayout>
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ResultsWindow"
+            android:layout_marginBottom="0.0dp" />
+    </LinearLayout>
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height= "match_parent"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateOnly="true"
+        android:id="@+id/LoadSpinner"
+        android:indeterminate="true"
+        android:focusableInTouchMode="false"
+        android:clickable="false" 
+    />
+</AbsoluteLayout>

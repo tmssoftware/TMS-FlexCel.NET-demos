@@ -6,6 +6,6 @@
     <RootNamespace>GettingStarted</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="TMS.FlexCel" Version="7.10.0" />
+    <PackageReference Include="TMS.FlexCel" Version="7.11.0" />
   </ItemGroup>
 </Project>
