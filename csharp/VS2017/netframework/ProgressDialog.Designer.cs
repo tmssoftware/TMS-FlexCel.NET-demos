@@ -52,13 +52,13 @@ namespace MainDemo
             // 
             // statusBar1
             // 
-            this.statusBar1.Location = new System.Drawing.Point(0, 140);
+            this.statusBar1.Location = new System.Drawing.Point(0, 142);
             this.statusBar1.Name = "statusBar1";
             this.statusBar1.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
             this.statusBarPanel1,
             this.statusBarPanelTime});
             this.statusBar1.ShowPanels = true;
-            this.statusBar1.Size = new System.Drawing.Size(444, 22);
+            this.statusBar1.Size = new System.Drawing.Size(450, 22);
             this.statusBar1.TabIndex = 1;
             // 
             // statusBarPanel1
@@ -76,13 +76,13 @@ namespace MainDemo
             // 
             // labelCaption
             // 
-            this.labelCaption.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.labelCaption.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCaption.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCaption.Location = new System.Drawing.Point(16, 16);
             this.labelCaption.Name = "labelCaption";
-            this.labelCaption.Size = new System.Drawing.Size(408, 72);
+            this.labelCaption.Size = new System.Drawing.Size(418, 78);
             this.labelCaption.TabIndex = 2;
             this.labelCaption.Text = resources.GetString("labelCaption.Text");
             // 
@@ -96,7 +96,7 @@ namespace MainDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 162);
+            this.ClientSize = new System.Drawing.Size(450, 164);
             this.ControlBox = false;
             this.Controls.Add(this.labelCaption);
             this.Controls.Add(this.statusBar1);

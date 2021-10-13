@@ -100,20 +100,18 @@ namespace MainDemo
             this.panel1.Controls.Add(this.modulesList);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 63);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Location = new System.Drawing.Point(0, 46);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(464, 883);
+            this.panel1.Size = new System.Drawing.Size(232, 390);
             this.panel1.TabIndex = 0;
             // 
             // modulesList
             // 
             this.modulesList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.modulesList.HideSelection = false;
-            this.modulesList.Location = new System.Drawing.Point(0, 42);
-            this.modulesList.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.modulesList.Location = new System.Drawing.Point(0, 24);
             this.modulesList.Name = "modulesList";
-            this.modulesList.Size = new System.Drawing.Size(464, 841);
+            this.modulesList.Size = new System.Drawing.Size(232, 366);
             this.modulesList.TabIndex = 4;
             this.modulesList.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.modulesList_AfterSelect);
             // 
@@ -125,18 +123,16 @@ namespace MainDemo
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.ForeColor = System.Drawing.Color.White;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(464, 42);
+            this.panel5.Size = new System.Drawing.Size(232, 24);
             this.panel5.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(2, 8);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(1, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 44);
+            this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Select a Demo";
             // 
@@ -145,19 +141,17 @@ namespace MainDemo
             this.panel3.Controls.Add(this.splitter1);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(464, 63);
-            this.panel3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel3.Location = new System.Drawing.Point(232, 46);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1232, 883);
+            this.panel3.Size = new System.Drawing.Size(490, 390);
             this.panel3.TabIndex = 2;
             // 
             // splitter1
             // 
             this.splitter1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.splitter1.Location = new System.Drawing.Point(0, 42);
-            this.splitter1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.splitter1.Location = new System.Drawing.Point(0, 24);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(4, 841);
+            this.splitter1.Size = new System.Drawing.Size(3, 366);
             this.splitter1.TabIndex = 0;
             this.splitter1.TabStop = false;
             // 
@@ -168,18 +162,16 @@ namespace MainDemo
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.ForeColor = System.Drawing.Color.White;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1232, 42);
+            this.panel4.Size = new System.Drawing.Size(490, 24);
             this.panel4.TabIndex = 2;
             this.panel4.Visible = false;
             // 
             // statusBar1
             // 
-            this.statusBar1.Location = new System.Drawing.Point(0, 946);
-            this.statusBar1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.statusBar1.Location = new System.Drawing.Point(0, 436);
             this.statusBar1.Name = "statusBar1";
-            this.statusBar1.Size = new System.Drawing.Size(1696, 42);
+            this.statusBar1.Size = new System.Drawing.Size(722, 22);
             this.statusBar1.TabIndex = 3;
             this.statusBar1.Text = "statusBar1";
             // 
@@ -265,8 +257,7 @@ namespace MainDemo
             this.sdSearch});
             this.mainToolbar.Location = new System.Drawing.Point(0, 0);
             this.mainToolbar.Name = "mainToolbar";
-            this.mainToolbar.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.mainToolbar.Size = new System.Drawing.Size(1696, 63);
+            this.mainToolbar.Size = new System.Drawing.Size(722, 46);
             this.mainToolbar.TabIndex = 11;
             this.mainToolbar.Text = "toolStrip1";
             // 
@@ -275,7 +266,7 @@ namespace MainDemo
             this.btnRunSelected.Image = ((System.Drawing.Image)(resources.GetObject("btnRunSelected.Image")));
             this.btnRunSelected.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRunSelected.Name = "btnRunSelected";
-            this.btnRunSelected.Size = new System.Drawing.Size(159, 60);
+            this.btnRunSelected.Size = new System.Drawing.Size(79, 43);
             this.btnRunSelected.Text = "&Run Selected";
             this.btnRunSelected.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnRunSelected.Click += new System.EventHandler(this.RunSelected_Click);
@@ -283,14 +274,14 @@ namespace MainDemo
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 63);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 46);
             // 
             // btnViewTemplate
             // 
             this.btnViewTemplate.Image = ((System.Drawing.Image)(resources.GetObject("btnViewTemplate.Image")));
             this.btnViewTemplate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnViewTemplate.Name = "btnViewTemplate";
-            this.btnViewTemplate.Size = new System.Drawing.Size(175, 60);
+            this.btnViewTemplate.Size = new System.Drawing.Size(87, 43);
             this.btnViewTemplate.Text = "View &Template";
             this.btnViewTemplate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnViewTemplate.Click += new System.EventHandler(this.ViewTemplate_Click);
@@ -300,7 +291,7 @@ namespace MainDemo
             this.btnOpenFolder.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenFolder.Image")));
             this.btnOpenFolder.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnOpenFolder.Name = "btnOpenFolder";
-            this.btnOpenFolder.Size = new System.Drawing.Size(152, 60);
+            this.btnOpenFolder.Size = new System.Drawing.Size(76, 43);
             this.btnOpenFolder.Text = "&Open Folder";
             this.btnOpenFolder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnOpenFolder.Click += new System.EventHandler(this.btnOpenFolder_Click);
@@ -310,7 +301,7 @@ namespace MainDemo
             this.btnOpenProject.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenProject.Image")));
             this.btnOpenProject.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnOpenProject.Name = "btnOpenProject";
-            this.btnOpenProject.Size = new System.Drawing.Size(158, 60);
+            this.btnOpenProject.Size = new System.Drawing.Size(80, 43);
             this.btnOpenProject.Text = "Open &Project";
             this.btnOpenProject.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnOpenProject.Click += new System.EventHandler(this.btnOpenProject_Click);
@@ -318,7 +309,7 @@ namespace MainDemo
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 63);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 46);
             // 
             // btnExit
             // 
@@ -326,7 +317,7 @@ namespace MainDemo
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(126, 60);
+            this.btnExit.Size = new System.Drawing.Size(60, 43);
             this.btnExit.Text = "     E&xit     ";
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnExit.Click += new System.EventHandler(this.Exit_Click);
@@ -337,7 +328,7 @@ namespace MainDemo
             this.btnAbout.Image = ((System.Drawing.Image)(resources.GetObject("btnAbout.Image")));
             this.btnAbout.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(112, 60);
+            this.btnAbout.Size = new System.Drawing.Size(56, 43);
             this.btnAbout.Text = "  About  ";
             this.btnAbout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAbout.Click += new System.EventHandler(this.About_Click);
@@ -345,24 +336,25 @@ namespace MainDemo
             // sdSearch
             // 
             this.sdSearch.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.sdSearch.AutoSize = false;
             this.sdSearch.Margin = new System.Windows.Forms.Padding(1, 0, 20, 0);
             this.sdSearch.Name = "sdSearch";
-            this.sdSearch.Size = new System.Drawing.Size(160, 63);
+            this.sdSearch.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
+            this.sdSearch.Size = new System.Drawing.Size(150, 46);
             this.sdSearch.Enter += new System.EventHandler(this.sdSearch_Enter);
             this.sdSearch.Leave += new System.EventHandler(this.sdSearch_Leave);
             this.sdSearch.TextChanged += new System.EventHandler(this.sdSearch_TextChanged);
             // 
             // DemoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1696, 988);
+            this.ClientSize = new System.Drawing.Size(722, 458);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusBar1);
             this.Controls.Add(this.mainToolbar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Menu = this.mainMenu1;
             this.Name = "DemoForm";
             this.Text = "FlexCel Demo Browser";
