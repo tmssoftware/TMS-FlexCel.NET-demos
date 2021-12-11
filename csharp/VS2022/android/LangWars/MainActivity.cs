@@ -218,7 +218,7 @@ namespace LangWars
             Intent Sender = new Intent(Intent.ActionSend);
             Sender.SetType(StandardMimeType.Xls);
             Java.IO.File xlsFile = new Java.IO.File(TempXlsPath);
-            var contentUri = Android.Support.V4.Content.FileProvider.GetUriForFile(this, ApplicationContext.PackageName + ".fileprovider", xlsFile);
+            var contentUri = AndroidX.Core.Content.FileProvider.GetUriForFile(this, ApplicationContext.PackageName + ".fileprovider", xlsFile);
             Sender.PutExtra(Intent.ExtraStream, contentUri);
             Sender.SetFlags(ActivityFlags.GrantReadUriPermission);
             StartActivity(Intent.CreateChooser(Sender, "Select application"));

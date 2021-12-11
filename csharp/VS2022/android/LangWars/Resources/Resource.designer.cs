@@ -14,7 +14,7 @@ namespace LangWars
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "12.1.0.11")]
 	public partial class Resource
 	{
 		
@@ -26,7 +26,6 @@ namespace LangWars
 		public static void UpdateIdValues()
 		{
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::LangWars.Resource.Attribute.alpha;
-			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::LangWars.Resource.Attribute.coordinatorLayoutStyle;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::LangWars.Resource.Attribute.font;
 			global::Xamarin.Essentials.Resource.Attribute.fontProviderAuthority = global::LangWars.Resource.Attribute.fontProviderAuthority;
 			global::Xamarin.Essentials.Resource.Attribute.fontProviderCerts = global::LangWars.Resource.Attribute.fontProviderCerts;
@@ -37,23 +36,15 @@ namespace LangWars
 			global::Xamarin.Essentials.Resource.Attribute.fontStyle = global::LangWars.Resource.Attribute.fontStyle;
 			global::Xamarin.Essentials.Resource.Attribute.fontVariationSettings = global::LangWars.Resource.Attribute.fontVariationSettings;
 			global::Xamarin.Essentials.Resource.Attribute.fontWeight = global::LangWars.Resource.Attribute.fontWeight;
-			global::Xamarin.Essentials.Resource.Attribute.keylines = global::LangWars.Resource.Attribute.keylines;
-			global::Xamarin.Essentials.Resource.Attribute.layout_anchor = global::LangWars.Resource.Attribute.layout_anchor;
-			global::Xamarin.Essentials.Resource.Attribute.layout_anchorGravity = global::LangWars.Resource.Attribute.layout_anchorGravity;
-			global::Xamarin.Essentials.Resource.Attribute.layout_behavior = global::LangWars.Resource.Attribute.layout_behavior;
-			global::Xamarin.Essentials.Resource.Attribute.layout_dodgeInsetEdges = global::LangWars.Resource.Attribute.layout_dodgeInsetEdges;
-			global::Xamarin.Essentials.Resource.Attribute.layout_insetEdge = global::LangWars.Resource.Attribute.layout_insetEdge;
-			global::Xamarin.Essentials.Resource.Attribute.layout_keyline = global::LangWars.Resource.Attribute.layout_keyline;
-			global::Xamarin.Essentials.Resource.Attribute.statusBarBackground = global::LangWars.Resource.Attribute.statusBarBackground;
 			global::Xamarin.Essentials.Resource.Attribute.ttcIndex = global::LangWars.Resource.Attribute.ttcIndex;
+			global::Xamarin.Essentials.Resource.Color.androidx_core_ripple_material_light = global::LangWars.Resource.Color.androidx_core_ripple_material_light;
+			global::Xamarin.Essentials.Resource.Color.androidx_core_secondary_text_default_material_light = global::LangWars.Resource.Color.androidx_core_secondary_text_default_material_light;
 			global::Xamarin.Essentials.Resource.Color.browser_actions_bg_grey = global::LangWars.Resource.Color.browser_actions_bg_grey;
 			global::Xamarin.Essentials.Resource.Color.browser_actions_divider_color = global::LangWars.Resource.Color.browser_actions_divider_color;
 			global::Xamarin.Essentials.Resource.Color.browser_actions_text_color = global::LangWars.Resource.Color.browser_actions_text_color;
 			global::Xamarin.Essentials.Resource.Color.browser_actions_title_color = global::LangWars.Resource.Color.browser_actions_title_color;
 			global::Xamarin.Essentials.Resource.Color.notification_action_color_filter = global::LangWars.Resource.Color.notification_action_color_filter;
 			global::Xamarin.Essentials.Resource.Color.notification_icon_bg_color = global::LangWars.Resource.Color.notification_icon_bg_color;
-			global::Xamarin.Essentials.Resource.Color.ripple_material_light = global::LangWars.Resource.Color.ripple_material_light;
-			global::Xamarin.Essentials.Resource.Color.secondary_text_default_material_light = global::LangWars.Resource.Color.secondary_text_default_material_light;
 			global::Xamarin.Essentials.Resource.Dimension.browser_actions_context_menu_max_width = global::LangWars.Resource.Dimension.browser_actions_context_menu_max_width;
 			global::Xamarin.Essentials.Resource.Dimension.browser_actions_context_menu_min_padding = global::LangWars.Resource.Dimension.browser_actions_context_menu_min_padding;
 			global::Xamarin.Essentials.Resource.Dimension.compat_button_inset_horizontal_material = global::LangWars.Resource.Dimension.compat_button_inset_horizontal_material;
@@ -90,47 +81,71 @@ namespace LangWars
 			global::Xamarin.Essentials.Resource.Drawable.notification_template_icon_low_bg = global::LangWars.Resource.Drawable.notification_template_icon_low_bg;
 			global::Xamarin.Essentials.Resource.Drawable.notification_tile_bg = global::LangWars.Resource.Drawable.notification_tile_bg;
 			global::Xamarin.Essentials.Resource.Drawable.notify_panel_notification_icon_bg = global::LangWars.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Xamarin.Essentials.Resource.Id.accessibility_action_clickable_span = global::LangWars.Resource.Id.accessibility_action_clickable_span;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_0 = global::LangWars.Resource.Id.accessibility_custom_action_0;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_1 = global::LangWars.Resource.Id.accessibility_custom_action_1;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_10 = global::LangWars.Resource.Id.accessibility_custom_action_10;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_11 = global::LangWars.Resource.Id.accessibility_custom_action_11;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_12 = global::LangWars.Resource.Id.accessibility_custom_action_12;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_13 = global::LangWars.Resource.Id.accessibility_custom_action_13;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_14 = global::LangWars.Resource.Id.accessibility_custom_action_14;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_15 = global::LangWars.Resource.Id.accessibility_custom_action_15;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_16 = global::LangWars.Resource.Id.accessibility_custom_action_16;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_17 = global::LangWars.Resource.Id.accessibility_custom_action_17;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_18 = global::LangWars.Resource.Id.accessibility_custom_action_18;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_19 = global::LangWars.Resource.Id.accessibility_custom_action_19;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_2 = global::LangWars.Resource.Id.accessibility_custom_action_2;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_20 = global::LangWars.Resource.Id.accessibility_custom_action_20;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_21 = global::LangWars.Resource.Id.accessibility_custom_action_21;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_22 = global::LangWars.Resource.Id.accessibility_custom_action_22;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_23 = global::LangWars.Resource.Id.accessibility_custom_action_23;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_24 = global::LangWars.Resource.Id.accessibility_custom_action_24;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_25 = global::LangWars.Resource.Id.accessibility_custom_action_25;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_26 = global::LangWars.Resource.Id.accessibility_custom_action_26;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_27 = global::LangWars.Resource.Id.accessibility_custom_action_27;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_28 = global::LangWars.Resource.Id.accessibility_custom_action_28;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_29 = global::LangWars.Resource.Id.accessibility_custom_action_29;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_3 = global::LangWars.Resource.Id.accessibility_custom_action_3;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_30 = global::LangWars.Resource.Id.accessibility_custom_action_30;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_31 = global::LangWars.Resource.Id.accessibility_custom_action_31;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_4 = global::LangWars.Resource.Id.accessibility_custom_action_4;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_5 = global::LangWars.Resource.Id.accessibility_custom_action_5;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_6 = global::LangWars.Resource.Id.accessibility_custom_action_6;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_7 = global::LangWars.Resource.Id.accessibility_custom_action_7;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_8 = global::LangWars.Resource.Id.accessibility_custom_action_8;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_9 = global::LangWars.Resource.Id.accessibility_custom_action_9;
+			global::Xamarin.Essentials.Resource.Id.actions = global::LangWars.Resource.Id.actions;
 			global::Xamarin.Essentials.Resource.Id.action_container = global::LangWars.Resource.Id.action_container;
 			global::Xamarin.Essentials.Resource.Id.action_divider = global::LangWars.Resource.Id.action_divider;
 			global::Xamarin.Essentials.Resource.Id.action_image = global::LangWars.Resource.Id.action_image;
 			global::Xamarin.Essentials.Resource.Id.action_text = global::LangWars.Resource.Id.action_text;
-			global::Xamarin.Essentials.Resource.Id.actions = global::LangWars.Resource.Id.actions;
-			global::Xamarin.Essentials.Resource.Id.all = global::LangWars.Resource.Id.all;
 			global::Xamarin.Essentials.Resource.Id.async = global::LangWars.Resource.Id.async;
 			global::Xamarin.Essentials.Resource.Id.blocking = global::LangWars.Resource.Id.blocking;
-			global::Xamarin.Essentials.Resource.Id.bottom = global::LangWars.Resource.Id.bottom;
 			global::Xamarin.Essentials.Resource.Id.browser_actions_header_text = global::LangWars.Resource.Id.browser_actions_header_text;
+			global::Xamarin.Essentials.Resource.Id.browser_actions_menu_items = global::LangWars.Resource.Id.browser_actions_menu_items;
 			global::Xamarin.Essentials.Resource.Id.browser_actions_menu_item_icon = global::LangWars.Resource.Id.browser_actions_menu_item_icon;
 			global::Xamarin.Essentials.Resource.Id.browser_actions_menu_item_text = global::LangWars.Resource.Id.browser_actions_menu_item_text;
-			global::Xamarin.Essentials.Resource.Id.browser_actions_menu_items = global::LangWars.Resource.Id.browser_actions_menu_items;
 			global::Xamarin.Essentials.Resource.Id.browser_actions_menu_view = global::LangWars.Resource.Id.browser_actions_menu_view;
-			global::Xamarin.Essentials.Resource.Id.center = global::LangWars.Resource.Id.center;
-			global::Xamarin.Essentials.Resource.Id.center_horizontal = global::LangWars.Resource.Id.center_horizontal;
-			global::Xamarin.Essentials.Resource.Id.center_vertical = global::LangWars.Resource.Id.center_vertical;
 			global::Xamarin.Essentials.Resource.Id.chronometer = global::LangWars.Resource.Id.chronometer;
-			global::Xamarin.Essentials.Resource.Id.clip_horizontal = global::LangWars.Resource.Id.clip_horizontal;
-			global::Xamarin.Essentials.Resource.Id.clip_vertical = global::LangWars.Resource.Id.clip_vertical;
-			global::Xamarin.Essentials.Resource.Id.end = global::LangWars.Resource.Id.end;
-			global::Xamarin.Essentials.Resource.Id.fill = global::LangWars.Resource.Id.fill;
-			global::Xamarin.Essentials.Resource.Id.fill_horizontal = global::LangWars.Resource.Id.fill_horizontal;
-			global::Xamarin.Essentials.Resource.Id.fill_vertical = global::LangWars.Resource.Id.fill_vertical;
+			global::Xamarin.Essentials.Resource.Id.dialog_button = global::LangWars.Resource.Id.dialog_button;
 			global::Xamarin.Essentials.Resource.Id.forever = global::LangWars.Resource.Id.forever;
 			global::Xamarin.Essentials.Resource.Id.icon = global::LangWars.Resource.Id.icon;
 			global::Xamarin.Essentials.Resource.Id.icon_group = global::LangWars.Resource.Id.icon_group;
 			global::Xamarin.Essentials.Resource.Id.info = global::LangWars.Resource.Id.info;
 			global::Xamarin.Essentials.Resource.Id.italic = global::LangWars.Resource.Id.italic;
-			global::Xamarin.Essentials.Resource.Id.left = global::LangWars.Resource.Id.left;
 			global::Xamarin.Essentials.Resource.Id.line1 = global::LangWars.Resource.Id.line1;
 			global::Xamarin.Essentials.Resource.Id.line3 = global::LangWars.Resource.Id.line3;
-			global::Xamarin.Essentials.Resource.Id.none = global::LangWars.Resource.Id.none;
 			global::Xamarin.Essentials.Resource.Id.normal = global::LangWars.Resource.Id.normal;
 			global::Xamarin.Essentials.Resource.Id.notification_background = global::LangWars.Resource.Id.notification_background;
 			global::Xamarin.Essentials.Resource.Id.notification_main_column = global::LangWars.Resource.Id.notification_main_column;
 			global::Xamarin.Essentials.Resource.Id.notification_main_column_container = global::LangWars.Resource.Id.notification_main_column_container;
-			global::Xamarin.Essentials.Resource.Id.right = global::LangWars.Resource.Id.right;
 			global::Xamarin.Essentials.Resource.Id.right_icon = global::LangWars.Resource.Id.right_icon;
 			global::Xamarin.Essentials.Resource.Id.right_side = global::LangWars.Resource.Id.right_side;
-			global::Xamarin.Essentials.Resource.Id.start = global::LangWars.Resource.Id.start;
+			global::Xamarin.Essentials.Resource.Id.tag_accessibility_actions = global::LangWars.Resource.Id.tag_accessibility_actions;
+			global::Xamarin.Essentials.Resource.Id.tag_accessibility_clickable_spans = global::LangWars.Resource.Id.tag_accessibility_clickable_spans;
+			global::Xamarin.Essentials.Resource.Id.tag_accessibility_heading = global::LangWars.Resource.Id.tag_accessibility_heading;
+			global::Xamarin.Essentials.Resource.Id.tag_accessibility_pane_title = global::LangWars.Resource.Id.tag_accessibility_pane_title;
+			global::Xamarin.Essentials.Resource.Id.tag_screen_reader_focusable = global::LangWars.Resource.Id.tag_screen_reader_focusable;
 			global::Xamarin.Essentials.Resource.Id.tag_transition_group = global::LangWars.Resource.Id.tag_transition_group;
 			global::Xamarin.Essentials.Resource.Id.tag_unhandled_key_event_manager = global::LangWars.Resource.Id.tag_unhandled_key_event_manager;
 			global::Xamarin.Essentials.Resource.Id.tag_unhandled_key_listeners = global::LangWars.Resource.Id.tag_unhandled_key_listeners;
@@ -138,16 +153,21 @@ namespace LangWars
 			global::Xamarin.Essentials.Resource.Id.text2 = global::LangWars.Resource.Id.text2;
 			global::Xamarin.Essentials.Resource.Id.time = global::LangWars.Resource.Id.time;
 			global::Xamarin.Essentials.Resource.Id.title = global::LangWars.Resource.Id.title;
-			global::Xamarin.Essentials.Resource.Id.top = global::LangWars.Resource.Id.top;
+			global::Xamarin.Essentials.Resource.Id.view_tree_lifecycle_owner = global::LangWars.Resource.Id.view_tree_lifecycle_owner;
 			global::Xamarin.Essentials.Resource.Integer.status_bar_notification_info_maxnum = global::LangWars.Resource.Integer.status_bar_notification_info_maxnum;
 			global::Xamarin.Essentials.Resource.Layout.browser_actions_context_menu_page = global::LangWars.Resource.Layout.browser_actions_context_menu_page;
 			global::Xamarin.Essentials.Resource.Layout.browser_actions_context_menu_row = global::LangWars.Resource.Layout.browser_actions_context_menu_row;
+			global::Xamarin.Essentials.Resource.Layout.custom_dialog = global::LangWars.Resource.Layout.custom_dialog;
 			global::Xamarin.Essentials.Resource.Layout.notification_action = global::LangWars.Resource.Layout.notification_action;
 			global::Xamarin.Essentials.Resource.Layout.notification_action_tombstone = global::LangWars.Resource.Layout.notification_action_tombstone;
 			global::Xamarin.Essentials.Resource.Layout.notification_template_custom_big = global::LangWars.Resource.Layout.notification_template_custom_big;
 			global::Xamarin.Essentials.Resource.Layout.notification_template_icon_group = global::LangWars.Resource.Layout.notification_template_icon_group;
 			global::Xamarin.Essentials.Resource.Layout.notification_template_part_chronometer = global::LangWars.Resource.Layout.notification_template_part_chronometer;
 			global::Xamarin.Essentials.Resource.Layout.notification_template_part_time = global::LangWars.Resource.Layout.notification_template_part_time;
+			global::Xamarin.Essentials.Resource.String.copy_toast_msg = global::LangWars.Resource.String.copy_toast_msg;
+			global::Xamarin.Essentials.Resource.String.fallback_menu_item_copy_link = global::LangWars.Resource.String.fallback_menu_item_copy_link;
+			global::Xamarin.Essentials.Resource.String.fallback_menu_item_open_in_browser = global::LangWars.Resource.String.fallback_menu_item_open_in_browser;
+			global::Xamarin.Essentials.Resource.String.fallback_menu_item_share_link = global::LangWars.Resource.String.fallback_menu_item_share_link;
 			global::Xamarin.Essentials.Resource.String.status_bar_notification_info_overflow = global::LangWars.Resource.String.status_bar_notification_info_overflow;
 			global::Xamarin.Essentials.Resource.Style.TextAppearance_Compat_Notification = global::LangWars.Resource.Style.TextAppearance_Compat_Notification;
 			global::Xamarin.Essentials.Resource.Style.TextAppearance_Compat_Notification_Info = global::LangWars.Resource.Style.TextAppearance_Compat_Notification_Info;
@@ -156,30 +176,11 @@ namespace LangWars
 			global::Xamarin.Essentials.Resource.Style.TextAppearance_Compat_Notification_Title = global::LangWars.Resource.Style.TextAppearance_Compat_Notification_Title;
 			global::Xamarin.Essentials.Resource.Style.Widget_Compat_NotificationActionContainer = global::LangWars.Resource.Style.Widget_Compat_NotificationActionContainer;
 			global::Xamarin.Essentials.Resource.Style.Widget_Compat_NotificationActionText = global::LangWars.Resource.Style.Widget_Compat_NotificationActionText;
-			global::Xamarin.Essentials.Resource.Style.Widget_Support_CoordinatorLayout = global::LangWars.Resource.Style.Widget_Support_CoordinatorLayout;
-			global::Xamarin.Essentials.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::LangWars.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
 			global::Xamarin.Essentials.Resource.Styleable.ColorStateListItem = global::LangWars.Resource.Styleable.ColorStateListItem;
 			global::Xamarin.Essentials.Resource.Styleable.ColorStateListItem_alpha = global::LangWars.Resource.Styleable.ColorStateListItem_alpha;
 			global::Xamarin.Essentials.Resource.Styleable.ColorStateListItem_android_alpha = global::LangWars.Resource.Styleable.ColorStateListItem_android_alpha;
 			global::Xamarin.Essentials.Resource.Styleable.ColorStateListItem_android_color = global::LangWars.Resource.Styleable.ColorStateListItem_android_color;
-			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout = global::LangWars.Resource.Styleable.CoordinatorLayout;
-			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_keylines = global::LangWars.Resource.Styleable.CoordinatorLayout_keylines;
-			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::LangWars.Resource.Styleable.CoordinatorLayout_statusBarBackground;
-			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout = global::LangWars.Resource.Styleable.CoordinatorLayout_Layout;
-			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::LangWars.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
-			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::LangWars.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
-			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::LangWars.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
-			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::LangWars.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
-			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::LangWars.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
-			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::LangWars.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
-			global::Xamarin.Essentials.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::LangWars.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
 			global::Xamarin.Essentials.Resource.Styleable.FontFamily = global::LangWars.Resource.Styleable.FontFamily;
-			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderAuthority = global::LangWars.Resource.Styleable.FontFamily_fontProviderAuthority;
-			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderCerts = global::LangWars.Resource.Styleable.FontFamily_fontProviderCerts;
-			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::LangWars.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
-			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::LangWars.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
-			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderPackage = global::LangWars.Resource.Styleable.FontFamily_fontProviderPackage;
-			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderQuery = global::LangWars.Resource.Styleable.FontFamily_fontProviderQuery;
 			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont = global::LangWars.Resource.Styleable.FontFamilyFont;
 			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_android_font = global::LangWars.Resource.Styleable.FontFamilyFont_android_font;
 			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_android_fontStyle = global::LangWars.Resource.Styleable.FontFamilyFont_android_fontStyle;
@@ -191,7 +192,16 @@ namespace LangWars
 			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::LangWars.Resource.Styleable.FontFamilyFont_fontVariationSettings;
 			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_fontWeight = global::LangWars.Resource.Styleable.FontFamilyFont_fontWeight;
 			global::Xamarin.Essentials.Resource.Styleable.FontFamilyFont_ttcIndex = global::LangWars.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderAuthority = global::LangWars.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderCerts = global::LangWars.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::LangWars.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::LangWars.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderPackage = global::LangWars.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Xamarin.Essentials.Resource.Styleable.FontFamily_fontProviderQuery = global::LangWars.Resource.Styleable.FontFamily_fontProviderQuery;
 			global::Xamarin.Essentials.Resource.Styleable.GradientColor = global::LangWars.Resource.Styleable.GradientColor;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColorItem = global::LangWars.Resource.Styleable.GradientColorItem;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColorItem_android_color = global::LangWars.Resource.Styleable.GradientColorItem_android_color;
+			global::Xamarin.Essentials.Resource.Styleable.GradientColorItem_android_offset = global::LangWars.Resource.Styleable.GradientColorItem_android_offset;
 			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_centerColor = global::LangWars.Resource.Styleable.GradientColor_android_centerColor;
 			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_centerX = global::LangWars.Resource.Styleable.GradientColor_android_centerX;
 			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_centerY = global::LangWars.Resource.Styleable.GradientColor_android_centerY;
@@ -204,9 +214,8 @@ namespace LangWars
 			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_startY = global::LangWars.Resource.Styleable.GradientColor_android_startY;
 			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_tileMode = global::LangWars.Resource.Styleable.GradientColor_android_tileMode;
 			global::Xamarin.Essentials.Resource.Styleable.GradientColor_android_type = global::LangWars.Resource.Styleable.GradientColor_android_type;
-			global::Xamarin.Essentials.Resource.Styleable.GradientColorItem = global::LangWars.Resource.Styleable.GradientColorItem;
-			global::Xamarin.Essentials.Resource.Styleable.GradientColorItem_android_color = global::LangWars.Resource.Styleable.GradientColorItem_android_color;
-			global::Xamarin.Essentials.Resource.Styleable.GradientColorItem_android_offset = global::LangWars.Resource.Styleable.GradientColorItem_android_offset;
+			global::Xamarin.Essentials.Resource.Xml.image_share_filepaths = global::LangWars.Resource.Xml.image_share_filepaths;
+			global::Xamarin.Essentials.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::LangWars.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
 		}
 		
 		public partial class Attribute
@@ -216,28 +225,28 @@ namespace LangWars
 			public const int alpha = 2130771968;
 			
 			// aapt resource value: 0x7F010001
-			public const int coordinatorLayoutStyle = 2130771969;
+			public const int font = 2130771969;
 			
 			// aapt resource value: 0x7F010002
-			public const int font = 2130771970;
+			public const int fontProviderAuthority = 2130771970;
 			
 			// aapt resource value: 0x7F010003
-			public const int fontProviderAuthority = 2130771971;
+			public const int fontProviderCerts = 2130771971;
 			
 			// aapt resource value: 0x7F010004
-			public const int fontProviderCerts = 2130771972;
+			public const int fontProviderFetchStrategy = 2130771972;
 			
 			// aapt resource value: 0x7F010005
-			public const int fontProviderFetchStrategy = 2130771973;
+			public const int fontProviderFetchTimeout = 2130771973;
 			
 			// aapt resource value: 0x7F010006
-			public const int fontProviderFetchTimeout = 2130771974;
+			public const int fontProviderPackage = 2130771974;
 			
 			// aapt resource value: 0x7F010007
-			public const int fontProviderPackage = 2130771975;
+			public const int fontProviderQuery = 2130771975;
 			
 			// aapt resource value: 0x7F010008
-			public const int fontProviderQuery = 2130771976;
+			public const int fontProviderSystemFontFamily = 2130771976;
 			
 			// aapt resource value: 0x7F010009
 			public const int fontStyle = 2130771977;
@@ -249,31 +258,16 @@ namespace LangWars
 			public const int fontWeight = 2130771979;
 			
 			// aapt resource value: 0x7F01000C
-			public const int keylines = 2130771980;
+			public const int nestedScrollViewStyle = 2130771980;
 			
 			// aapt resource value: 0x7F01000D
-			public const int layout_anchor = 2130771981;
+			public const int queryPatterns = 2130771981;
 			
 			// aapt resource value: 0x7F01000E
-			public const int layout_anchorGravity = 2130771982;
+			public const int shortcutMatchRequired = 2130771982;
 			
 			// aapt resource value: 0x7F01000F
-			public const int layout_behavior = 2130771983;
-			
-			// aapt resource value: 0x7F010010
-			public const int layout_dodgeInsetEdges = 2130771984;
-			
-			// aapt resource value: 0x7F010011
-			public const int layout_insetEdge = 2130771985;
-			
-			// aapt resource value: 0x7F010012
-			public const int layout_keyline = 2130771986;
-			
-			// aapt resource value: 0x7F010013
-			public const int statusBarBackground = 2130771987;
-			
-			// aapt resource value: 0x7F010014
-			public const int ttcIndex = 2130771988;
+			public const int ttcIndex = 2130771983;
 			
 			static Attribute()
 			{
@@ -289,28 +283,28 @@ namespace LangWars
 		{
 			
 			// aapt resource value: 0x7F020000
-			public const int browser_actions_bg_grey = 2130837504;
+			public const int androidx_core_ripple_material_light = 2130837504;
 			
 			// aapt resource value: 0x7F020001
-			public const int browser_actions_divider_color = 2130837505;
+			public const int androidx_core_secondary_text_default_material_light = 2130837505;
 			
 			// aapt resource value: 0x7F020002
-			public const int browser_actions_text_color = 2130837506;
+			public const int browser_actions_bg_grey = 2130837506;
 			
 			// aapt resource value: 0x7F020003
-			public const int browser_actions_title_color = 2130837507;
+			public const int browser_actions_divider_color = 2130837507;
 			
 			// aapt resource value: 0x7F020004
-			public const int notification_action_color_filter = 2130837508;
+			public const int browser_actions_text_color = 2130837508;
 			
 			// aapt resource value: 0x7F020005
-			public const int notification_icon_bg_color = 2130837509;
+			public const int browser_actions_title_color = 2130837509;
 			
 			// aapt resource value: 0x7F020006
-			public const int ripple_material_light = 2130837510;
+			public const int notification_action_color_filter = 2130837510;
 			
 			// aapt resource value: 0x7F020007
-			public const int secondary_text_default_material_light = 2130837511;
+			public const int notification_icon_bg_color = 2130837511;
 			
 			static Color()
 			{
@@ -462,125 +456,188 @@ namespace LangWars
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7F050009
-			public const int actions = 2131034121;
-			
 			// aapt resource value: 0x7F050005
-			public const int action_container = 2131034117;
+			public const int accessibility_action_clickable_span = 2131034117;
 			
 			// aapt resource value: 0x7F050006
-			public const int action_divider = 2131034118;
+			public const int accessibility_custom_action_0 = 2131034118;
 			
 			// aapt resource value: 0x7F050007
-			public const int action_image = 2131034119;
+			public const int accessibility_custom_action_1 = 2131034119;
 			
 			// aapt resource value: 0x7F050008
-			public const int action_text = 2131034120;
+			public const int accessibility_custom_action_10 = 2131034120;
+			
+			// aapt resource value: 0x7F050009
+			public const int accessibility_custom_action_11 = 2131034121;
 			
 			// aapt resource value: 0x7F05000A
-			public const int all = 2131034122;
+			public const int accessibility_custom_action_12 = 2131034122;
 			
 			// aapt resource value: 0x7F05000B
-			public const int async = 2131034123;
+			public const int accessibility_custom_action_13 = 2131034123;
 			
 			// aapt resource value: 0x7F05000C
-			public const int blocking = 2131034124;
+			public const int accessibility_custom_action_14 = 2131034124;
 			
 			// aapt resource value: 0x7F05000D
-			public const int bottom = 2131034125;
+			public const int accessibility_custom_action_15 = 2131034125;
 			
 			// aapt resource value: 0x7F05000E
-			public const int browser_actions_header_text = 2131034126;
-			
-			// aapt resource value: 0x7F050011
-			public const int browser_actions_menu_items = 2131034129;
+			public const int accessibility_custom_action_16 = 2131034126;
 			
 			// aapt resource value: 0x7F05000F
-			public const int browser_actions_menu_item_icon = 2131034127;
+			public const int accessibility_custom_action_17 = 2131034127;
 			
 			// aapt resource value: 0x7F050010
-			public const int browser_actions_menu_item_text = 2131034128;
+			public const int accessibility_custom_action_18 = 2131034128;
+			
+			// aapt resource value: 0x7F050011
+			public const int accessibility_custom_action_19 = 2131034129;
 			
 			// aapt resource value: 0x7F050012
-			public const int browser_actions_menu_view = 2131034130;
+			public const int accessibility_custom_action_2 = 2131034130;
 			
 			// aapt resource value: 0x7F050013
-			public const int center = 2131034131;
+			public const int accessibility_custom_action_20 = 2131034131;
 			
 			// aapt resource value: 0x7F050014
-			public const int center_horizontal = 2131034132;
+			public const int accessibility_custom_action_21 = 2131034132;
 			
 			// aapt resource value: 0x7F050015
-			public const int center_vertical = 2131034133;
+			public const int accessibility_custom_action_22 = 2131034133;
 			
 			// aapt resource value: 0x7F050016
-			public const int chronometer = 2131034134;
+			public const int accessibility_custom_action_23 = 2131034134;
 			
 			// aapt resource value: 0x7F050017
-			public const int clip_horizontal = 2131034135;
+			public const int accessibility_custom_action_24 = 2131034135;
 			
 			// aapt resource value: 0x7F050018
-			public const int clip_vertical = 2131034136;
+			public const int accessibility_custom_action_25 = 2131034136;
 			
 			// aapt resource value: 0x7F050019
-			public const int end = 2131034137;
+			public const int accessibility_custom_action_26 = 2131034137;
+			
+			// aapt resource value: 0x7F05001A
+			public const int accessibility_custom_action_27 = 2131034138;
+			
+			// aapt resource value: 0x7F05001B
+			public const int accessibility_custom_action_28 = 2131034139;
+			
+			// aapt resource value: 0x7F05001C
+			public const int accessibility_custom_action_29 = 2131034140;
+			
+			// aapt resource value: 0x7F05001D
+			public const int accessibility_custom_action_3 = 2131034141;
+			
+			// aapt resource value: 0x7F05001E
+			public const int accessibility_custom_action_30 = 2131034142;
+			
+			// aapt resource value: 0x7F05001F
+			public const int accessibility_custom_action_31 = 2131034143;
+			
+			// aapt resource value: 0x7F050020
+			public const int accessibility_custom_action_4 = 2131034144;
+			
+			// aapt resource value: 0x7F050021
+			public const int accessibility_custom_action_5 = 2131034145;
+			
+			// aapt resource value: 0x7F050022
+			public const int accessibility_custom_action_6 = 2131034146;
+			
+			// aapt resource value: 0x7F050023
+			public const int accessibility_custom_action_7 = 2131034147;
+			
+			// aapt resource value: 0x7F050024
+			public const int accessibility_custom_action_8 = 2131034148;
+			
+			// aapt resource value: 0x7F050025
+			public const int accessibility_custom_action_9 = 2131034149;
+			
+			// aapt resource value: 0x7F05002A
+			public const int actions = 2131034154;
+			
+			// aapt resource value: 0x7F050026
+			public const int action_container = 2131034150;
+			
+			// aapt resource value: 0x7F050027
+			public const int action_divider = 2131034151;
+			
+			// aapt resource value: 0x7F050028
+			public const int action_image = 2131034152;
+			
+			// aapt resource value: 0x7F050029
+			public const int action_text = 2131034153;
+			
+			// aapt resource value: 0x7F05002B
+			public const int async = 2131034155;
+			
+			// aapt resource value: 0x7F05002C
+			public const int blocking = 2131034156;
+			
+			// aapt resource value: 0x7F05002D
+			public const int browser_actions_header_text = 2131034157;
+			
+			// aapt resource value: 0x7F050030
+			public const int browser_actions_menu_items = 2131034160;
+			
+			// aapt resource value: 0x7F05002E
+			public const int browser_actions_menu_item_icon = 2131034158;
+			
+			// aapt resource value: 0x7F05002F
+			public const int browser_actions_menu_item_text = 2131034159;
+			
+			// aapt resource value: 0x7F050031
+			public const int browser_actions_menu_view = 2131034161;
+			
+			// aapt resource value: 0x7F050032
+			public const int chronometer = 2131034162;
+			
+			// aapt resource value: 0x7F050033
+			public const int dialog_button = 2131034163;
 			
 			// aapt resource value: 0x7F050000
 			public const int FightButton = 2131034112;
 			
-			// aapt resource value: 0x7F05001A
-			public const int fill = 2131034138;
+			// aapt resource value: 0x7F050034
+			public const int forever = 2131034164;
 			
-			// aapt resource value: 0x7F05001B
-			public const int fill_horizontal = 2131034139;
+			// aapt resource value: 0x7F050035
+			public const int icon = 2131034165;
 			
-			// aapt resource value: 0x7F05001C
-			public const int fill_vertical = 2131034140;
+			// aapt resource value: 0x7F050036
+			public const int icon_group = 2131034166;
 			
-			// aapt resource value: 0x7F05001D
-			public const int forever = 2131034141;
+			// aapt resource value: 0x7F050037
+			public const int info = 2131034167;
 			
-			// aapt resource value: 0x7F05001E
-			public const int icon = 2131034142;
+			// aapt resource value: 0x7F050038
+			public const int italic = 2131034168;
 			
-			// aapt resource value: 0x7F05001F
-			public const int icon_group = 2131034143;
+			// aapt resource value: 0x7F050039
+			public const int line1 = 2131034169;
 			
-			// aapt resource value: 0x7F050020
-			public const int info = 2131034144;
+			// aapt resource value: 0x7F05003A
+			public const int line3 = 2131034170;
 			
-			// aapt resource value: 0x7F050021
-			public const int italic = 2131034145;
-			
-			// aapt resource value: 0x7F050022
-			public const int left = 2131034146;
-			
-			// aapt resource value: 0x7F050023
-			public const int line1 = 2131034147;
-			
-			// aapt resource value: 0x7F050024
-			public const int line3 = 2131034148;
-			
-			// aapt resource value: 0x7F050025
-			public const int linearLayout1 = 2131034149;
+			// aapt resource value: 0x7F05003B
+			public const int linearLayout1 = 2131034171;
 			
 			// aapt resource value: 0x7F050001
 			public const int LoadSpinner = 2131034113;
 			
-			// aapt resource value: 0x7F050026
-			public const int none = 2131034150;
+			// aapt resource value: 0x7F05003C
+			public const int normal = 2131034172;
 			
-			// aapt resource value: 0x7F050027
-			public const int normal = 2131034151;
+			// aapt resource value: 0x7F05003D
+			public const int notification_background = 2131034173;
 			
-			// aapt resource value: 0x7F050028
-			public const int notification_background = 2131034152;
+			// aapt resource value: 0x7F05003E
+			public const int notification_main_column = 2131034174;
 			
-			// aapt resource value: 0x7F050029
-			public const int notification_main_column = 2131034153;
-			
-			// aapt resource value: 0x7F05002A
-			public const int notification_main_column_container = 2131034154;
+			// aapt resource value: 0x7F05003F
+			public const int notification_main_column_container = 2131034175;
 			
 			// aapt resource value: 0x7F050002
 			public const int OnlineSwitch = 2131034114;
@@ -588,44 +645,68 @@ namespace LangWars
 			// aapt resource value: 0x7F050003
 			public const int ResultsWindow = 2131034115;
 			
-			// aapt resource value: 0x7F05002B
-			public const int right = 2131034155;
+			// aapt resource value: 0x7F050040
+			public const int right_icon = 2131034176;
 			
-			// aapt resource value: 0x7F05002C
-			public const int right_icon = 2131034156;
-			
-			// aapt resource value: 0x7F05002D
-			public const int right_side = 2131034157;
+			// aapt resource value: 0x7F050041
+			public const int right_side = 2131034177;
 			
 			// aapt resource value: 0x7F050004
 			public const int ShareButton = 2131034116;
 			
-			// aapt resource value: 0x7F05002E
-			public const int start = 2131034158;
+			// aapt resource value: 0x7F050042
+			public const int tag_accessibility_actions = 2131034178;
 			
-			// aapt resource value: 0x7F05002F
-			public const int tag_transition_group = 2131034159;
+			// aapt resource value: 0x7F050043
+			public const int tag_accessibility_clickable_spans = 2131034179;
 			
-			// aapt resource value: 0x7F050030
-			public const int tag_unhandled_key_event_manager = 2131034160;
+			// aapt resource value: 0x7F050044
+			public const int tag_accessibility_heading = 2131034180;
 			
-			// aapt resource value: 0x7F050031
-			public const int tag_unhandled_key_listeners = 2131034161;
+			// aapt resource value: 0x7F050045
+			public const int tag_accessibility_pane_title = 2131034181;
 			
-			// aapt resource value: 0x7F050032
-			public const int text = 2131034162;
+			// aapt resource value: 0x7F050046
+			public const int tag_on_apply_window_listener = 2131034182;
 			
-			// aapt resource value: 0x7F050033
-			public const int text2 = 2131034163;
+			// aapt resource value: 0x7F050047
+			public const int tag_on_receive_content_listener = 2131034183;
 			
-			// aapt resource value: 0x7F050034
-			public const int time = 2131034164;
+			// aapt resource value: 0x7F050048
+			public const int tag_on_receive_content_mime_types = 2131034184;
 			
-			// aapt resource value: 0x7F050035
-			public const int title = 2131034165;
+			// aapt resource value: 0x7F050049
+			public const int tag_screen_reader_focusable = 2131034185;
 			
-			// aapt resource value: 0x7F050036
-			public const int top = 2131034166;
+			// aapt resource value: 0x7F05004A
+			public const int tag_state_description = 2131034186;
+			
+			// aapt resource value: 0x7F05004B
+			public const int tag_transition_group = 2131034187;
+			
+			// aapt resource value: 0x7F05004C
+			public const int tag_unhandled_key_event_manager = 2131034188;
+			
+			// aapt resource value: 0x7F05004D
+			public const int tag_unhandled_key_listeners = 2131034189;
+			
+			// aapt resource value: 0x7F05004E
+			public const int tag_window_insets_animation_callback = 2131034190;
+			
+			// aapt resource value: 0x7F05004F
+			public const int text = 2131034191;
+			
+			// aapt resource value: 0x7F050050
+			public const int text2 = 2131034192;
+			
+			// aapt resource value: 0x7F050051
+			public const int time = 2131034193;
+			
+			// aapt resource value: 0x7F050052
+			public const int title = 2131034194;
+			
+			// aapt resource value: 0x7F050053
+			public const int view_tree_lifecycle_owner = 2131034195;
 			
 			static Id()
 			{
@@ -663,25 +744,28 @@ namespace LangWars
 			public const int browser_actions_context_menu_row = 2131165185;
 			
 			// aapt resource value: 0x7F070002
-			public const int Main = 2131165186;
+			public const int custom_dialog = 2131165186;
 			
 			// aapt resource value: 0x7F070003
-			public const int notification_action = 2131165187;
+			public const int Main = 2131165187;
 			
 			// aapt resource value: 0x7F070004
-			public const int notification_action_tombstone = 2131165188;
+			public const int notification_action = 2131165188;
 			
 			// aapt resource value: 0x7F070005
-			public const int notification_template_custom_big = 2131165189;
+			public const int notification_action_tombstone = 2131165189;
 			
 			// aapt resource value: 0x7F070006
-			public const int notification_template_icon_group = 2131165190;
+			public const int notification_template_custom_big = 2131165190;
 			
 			// aapt resource value: 0x7F070007
-			public const int notification_template_part_chronometer = 2131165191;
+			public const int notification_template_icon_group = 2131165191;
 			
 			// aapt resource value: 0x7F070008
-			public const int notification_template_part_time = 2131165192;
+			public const int notification_template_part_chronometer = 2131165192;
+			
+			// aapt resource value: 0x7F070009
+			public const int notification_template_part_time = 2131165193;
 			
 			static Layout()
 			{
@@ -700,13 +784,25 @@ namespace LangWars
 			public const int app_name = 2131230720;
 			
 			// aapt resource value: 0x7F080001
-			public const int hello = 2131230721;
+			public const int copy_toast_msg = 2131230721;
 			
 			// aapt resource value: 0x7F080002
-			public const int online = 2131230722;
+			public const int fallback_menu_item_copy_link = 2131230722;
 			
 			// aapt resource value: 0x7F080003
-			public const int status_bar_notification_info_overflow = 2131230723;
+			public const int fallback_menu_item_open_in_browser = 2131230723;
+			
+			// aapt resource value: 0x7F080004
+			public const int fallback_menu_item_share_link = 2131230724;
+			
+			// aapt resource value: 0x7F080005
+			public const int hello = 2131230725;
+			
+			// aapt resource value: 0x7F080006
+			public const int online = 2131230726;
+			
+			// aapt resource value: 0x7F080007
+			public const int status_bar_notification_info_overflow = 2131230727;
 			
 			static String()
 			{
@@ -742,9 +838,6 @@ namespace LangWars
 			// aapt resource value: 0x7F090006
 			public const int Widget_Compat_NotificationActionText = 2131296262;
 			
-			// aapt resource value: 0x7F090007
-			public const int Widget_Support_CoordinatorLayout = 2131296263;
-			
 			static Style()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -757,6 +850,17 @@ namespace LangWars
 		
 		public partial class Styleable
 		{
+			
+			// aapt resource value: { 0x7F01000D,0x7F01000E }
+			public static int[] Capability = new int[] {
+					2130771981,
+					2130771982};
+			
+			// aapt resource value: 0
+			public const int Capability_queryPatterns = 0;
+			
+			// aapt resource value: 1
+			public const int Capability_shortcutMatchRequired = 1;
 			
 			// aapt resource value: { 0x10101A5,0x101031F,0x7F010000 }
 			public static int[] ColorStateListItem = new int[] {
@@ -773,50 +877,9 @@ namespace LangWars
 			// aapt resource value: 0
 			public const int ColorStateListItem_android_color = 0;
 			
-			// aapt resource value: { 0x7F01000C,0x7F010013 }
-			public static int[] CoordinatorLayout = new int[] {
-					2130771980,
-					2130771987};
-			
-			// aapt resource value: 0
-			public const int CoordinatorLayout_keylines = 0;
-			
-			// aapt resource value: { 0x10100B3,0x7F01000D,0x7F01000E,0x7F01000F,0x7F010010,0x7F010011,0x7F010012 }
-			public static int[] CoordinatorLayout_Layout = new int[] {
-					16842931,
-					2130771981,
-					2130771982,
-					2130771983,
-					2130771984,
-					2130771985,
-					2130771986};
-			
-			// aapt resource value: 0
-			public const int CoordinatorLayout_Layout_android_layout_gravity = 0;
-			
-			// aapt resource value: 1
-			public const int CoordinatorLayout_Layout_layout_anchor = 1;
-			
-			// aapt resource value: 2
-			public const int CoordinatorLayout_Layout_layout_anchorGravity = 2;
-			
-			// aapt resource value: 3
-			public const int CoordinatorLayout_Layout_layout_behavior = 3;
-			
-			// aapt resource value: 4
-			public const int CoordinatorLayout_Layout_layout_dodgeInsetEdges = 4;
-			
-			// aapt resource value: 5
-			public const int CoordinatorLayout_Layout_layout_insetEdge = 5;
-			
-			// aapt resource value: 6
-			public const int CoordinatorLayout_Layout_layout_keyline = 6;
-			
-			// aapt resource value: 1
-			public const int CoordinatorLayout_statusBarBackground = 1;
-			
-			// aapt resource value: { 0x7F010003,0x7F010004,0x7F010005,0x7F010006,0x7F010007,0x7F010008 }
+			// aapt resource value: { 0x7F010002,0x7F010003,0x7F010004,0x7F010005,0x7F010006,0x7F010007,0x7F010008 }
 			public static int[] FontFamily = new int[] {
+					2130771970,
 					2130771971,
 					2130771972,
 					2130771973,
@@ -824,18 +887,18 @@ namespace LangWars
 					2130771975,
 					2130771976};
 			
-			// aapt resource value: { 0x1010532,0x1010533,0x101053F,0x101056F,0x1010570,0x7F010002,0x7F010009,0x7F01000A,0x7F01000B,0x7F010014 }
+			// aapt resource value: { 0x1010532,0x1010533,0x101053F,0x101056F,0x1010570,0x7F010001,0x7F010009,0x7F01000A,0x7F01000B,0x7F01000F }
 			public static int[] FontFamilyFont = new int[] {
 					16844082,
 					16844083,
 					16844095,
 					16844143,
 					16844144,
-					2130771970,
+					2130771969,
 					2130771977,
 					2130771978,
 					2130771979,
-					2130771988};
+					2130771983};
 			
 			// aapt resource value: 0
 			public const int FontFamilyFont_android_font = 0;
@@ -884,6 +947,9 @@ namespace LangWars
 			
 			// aapt resource value: 5
 			public const int FontFamily_fontProviderQuery = 5;
+			
+			// aapt resource value: 6
+			public const int FontFamily_fontProviderSystemFontFamily = 6;
 			
 			// aapt resource value: { 0x101019D,0x101019E,0x10101A1,0x10101A2,0x10101A3,0x10101A4,0x1010201,0x101020B,0x1010510,0x1010511,0x1010512,0x1010513 }
 			public static int[] GradientColor = new int[] {
@@ -964,7 +1030,10 @@ namespace LangWars
 			public const int file_provider_paths = 2131427328;
 			
 			// aapt resource value: 0x7F0B0001
-			public const int xamarin_essentials_fileprovider_file_paths = 2131427329;
+			public const int image_share_filepaths = 2131427329;
+			
+			// aapt resource value: 0x7F0B0002
+			public const int xamarin_essentials_fileprovider_file_paths = 2131427330;
 			
 			static Xml()
 			{

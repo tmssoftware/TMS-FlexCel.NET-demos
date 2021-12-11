@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.0.31612.314
+VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStarted", "GettingStarted\GettingStarted.csproj", "{4DE2B7CA-FE34-489A-B1B8-6501C6B7E320}"
 EndProject
@@ -22,6 +22,6 @@ Global
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = GettingStarted\GettingStarted.csproj
-		version = 7.12.1.0
+		version = 7.13.0.0
 	EndGlobalSection
 EndGlobal
