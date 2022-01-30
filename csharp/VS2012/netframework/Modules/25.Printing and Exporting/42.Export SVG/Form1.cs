@@ -138,7 +138,7 @@ namespace ExportSVG
             SVG.AllVisibleSheets = cbExportObject.SelectedIndex == 0;
 
             SVG.SaveAsImage(
-                   (x) =>
+                    (x) =>
                     {
                         x.FileName = Path.ChangeExtension(exportDialog.FileName, "") + "_" + x.Workbook.SheetName + "_" + x.SheetPageNumber.ToString() + ".svg";
                     });

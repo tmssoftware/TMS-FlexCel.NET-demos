@@ -101,7 +101,7 @@ namespace PDFA
                 if (EmbedSource)
                 {
                     pdf.AttachFile("Report.xlsx", StandardMimeType.Xlsx, "This is the source file used to create the PDF", DateTime.Now, TPdfAttachmentKind.Source,
-                       (attachWriter) =>
+                        (attachWriter) =>
                         {
                             using (MemoryStream ms = new MemoryStream())
                             {

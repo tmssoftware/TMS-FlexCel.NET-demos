@@ -126,6 +126,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fixed Footer", "Modules\20.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chart API", "Modules\10.API\16.Chart API\Chart API.csproj", "{9A4E0C14-8AA2-4300-A0E3-B7C803260091}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Charts With Dynamic Series", "Modules\20.Reports\75.Charts With Dynamic Series\Charts With Dynamic Series.csproj", "{B2137B6F-6DD5-468F-8BB7-B0210904F686}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Modules\20.Reports\22.Linq\Linq.csproj", "{6794F628-E850-412C-83AD-6A068D46B0F8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advanced Linq", "Modules\20.Reports\22b.Advanced Linq\Advanced Linq.csproj", "{33418E23-1F3D-4B3F-A84A-0B1DBA5FF5B9}"
@@ -494,6 +496,12 @@ GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{9A4E0C14-8AA2-4300-A0E3-B7C803260091}.Release Testing|Any CPU.Build.0 = Release|Any CPU
 		{9A4E0C14-8AA2-4300-A0E3-B7C803260091}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A4E0C14-8AA2-4300-A0E3-B7C803260091}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2137B6F-6DD5-468F-8BB7-B0210904F686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2137B6F-6DD5-468F-8BB7-B0210904F686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2137B6F-6DD5-468F-8BB7-B0210904F686}.Release Testing|Any CPU.ActiveCfg = Release|Any CPU
+		{B2137B6F-6DD5-468F-8BB7-B0210904F686}.Release Testing|Any CPU.Build.0 = Release|Any CPU
+		{B2137B6F-6DD5-468F-8BB7-B0210904F686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2137B6F-6DD5-468F-8BB7-B0210904F686}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6794F628-E850-412C-83AD-6A068D46B0F8}".Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6794F628-E850-412C-83AD-6A068D46B0F8}".Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6794F628-E850-412C-83AD-6A068D46B0F8}".Release|Any CPU.ActiveCfg = Release|Any CPU

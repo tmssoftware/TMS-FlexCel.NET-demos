@@ -31,6 +31,8 @@ Namespace ChartAPI
 			'probably fill this data from some database.
 			Dim fileName As String = Path.Combine(PathToExe, "git-stats.xlsx")
 			Dim Xls As ExcelFile = New XlsFile(fileName, True)
+
+			'Add a new empty sheet for adding the chart.
 			Xls.InsertAndCopySheets(0, 1, 1)
 			Xls.ActiveSheet = 1
 			Xls.SheetName = "Chart"
@@ -118,7 +120,7 @@ Namespace ChartAPI
 					shade -= 0.05
 				End If
 					LastYear = Year
-                Dim SeriesColor As TDrawingColor = TDrawingColor.FromTheme(CType(TThemeColor.Accent1 + (Year Mod 6), TThemeColor), New TColorTransform(TColorTransformType.Shade, shade))
+				Dim SeriesColor As TDrawingColor = TDrawingColor.FromTheme(CType(TThemeColor.Accent1 + (Year Mod 6), TThemeColor), New TColorTransform(TColorTransformType.Shade, shade))
 
 
 				Dim SeriesFill As New ChartSeriesFillOptions(New TShapeFill(New TSolidFill(SeriesColor), True, TFormattingType.Subtle, Nothing, False), Nothing, False, False)

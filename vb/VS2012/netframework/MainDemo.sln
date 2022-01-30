@@ -22,6 +22,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Multiple sheet report", "Mo
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Charts", "Modules\20.Reports\70.Charts\Charts.vbproj", "{226AC2E3-0125-4477-8872-97192C447D7C}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Charts With Dynamic Series", "Modules\20.Reports\75.Charts With Dynamic Series\Charts With Dynamic Series.csproj, "{B2137B6F-6DD5-468F-8BB7-B0210904F686}"
+EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Images", "Modules\20.Reports\65.Images\Images.vbproj", "{5D9E4987-17DB-452B-9FD9-FA66DD90B4DE}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Templates On The Exe", "Modules\20.Reports\60.Templates On The Exe\Templates On The Exe.vbproj", "{B0623810-92B4-43AA-BF83-3C22860D2C5D}"
