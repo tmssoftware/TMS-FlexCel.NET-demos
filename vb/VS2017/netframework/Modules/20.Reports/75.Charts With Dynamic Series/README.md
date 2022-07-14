@@ -1,6 +1,6 @@
 # Charts With Dynamic Series
 
-Examples of how to create a chart with one series per row. **Charts with one series per row are not a common thing to do.** You will normally want your series in columns, as shown in the example [Charts](https://doc.tmssoftware.com/flexcel/net/samples/csharp/netframework/reports/charts/index.html). But if you need to do it, you can use this example as a base.
+Examples of how to create a chart with one series per row. **Charts with one series per row are not a common thing to do.** You will normally want your series in columns, as shown in the example [Charts](https://doc.tmssoftware.com/flexcel/net/samples/vb/netframework/reports/charts/index.html). Even for this demo, the charts would probably look better if we had them with one series per column. But if you need to do it, you can use this example as a base.
 
 ## Concepts
 

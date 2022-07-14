@@ -8,34 +8,46 @@ You can find a description of each demo in the [documentation](https://doc.tmsso
 **:book: Note** We update this repository automatically every time we release a new FlexCel version. So if you have notifications integrated with github, you can subscribe to this feed to be notified of new releases.
 
 
-## New in v 7.14 - January 2022
+## New in v 7.15 - July 2022
 
 
-- **Improved floating point handing in .NET Core 3.0 or newer, .NET 5 or newer.** .Net 3.0 [completely rewrote the floating point parsing and formatting](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) and this lead to many small but noticeable changes in how FlexCel rendered files. For example, in .NET Core 3 the code `Console.WriteLine((-1.0/3.0).ToString("0"));` will write "-0" instead of "0" as before. Or  `Console.WriteLine((4.5).ToString("F0"));` will write "4" instead of "5" as before. There are many other similar changes. We've done a big review of the code to try to ensure we behave like Excel, not like .NET Core 3 when rendering a file.
+- **Support for functions FILTER, SORT, SORTBY, and UNIQUE.** There is now support for the [functions introduced in office 2021](https://doc.tmssoftware.com/flexcel/net/about/supported-excel-functions.html#added-functions-in-office-2021) : [FILTER](https://support.microsoft.com/en-us/office/filter-function-f4f7cb66-82eb-4767-8f7c-4877ad80c759), [SORT](https://support.microsoft.com/en-us/office/sort-function-22f63bd0-ccc8-492f-953d-c20e8e44b86c), [SORTBY](https://support.microsoft.com/en-us/office/sortby-function-cd2d7a62-1b93-435c-b561-d6a35134f28f), and [UNIQUE](https://support.microsoft.com/en-us/office/unique-function-c5ab87fd-30a3-4ce9-9d1a-40204fb85e1e).
 
-- **Removed support for .NET framework 2.0.** Now the minimum .NET version supported is 3.5
+- **Support for functions MAP, REDUCE, SCAN, MAKEARRAY, BYROW, and BYCOL.** There is now support for the [functions introduced in office 365](https://doc.tmssoftware.com/flexcel/net/about/supported-excel-functions.html#added-functions-in-office-365) : [MAP](https://support.microsoft.com/en-us/office/map-function-48006093-f97c-47c1-bfcc-749263bb1f01), [REDUCE](https://support.microsoft.com/en-us/office/reduce-function-42e39910-b345-45f3-84b8-0642b568b7cb), [SCAN](https://support.microsoft.com/en-us/office/scan-function-d58dfd11-9969-4439-b2dc-e7062724de29), [MAKEARRAY](https://support.microsoft.com/en-us/office/makearray-function-b80da5ad-b338-4149-a523-5b221da09097), [BYROW](https://support.microsoft.com/en-us/office/byrow-function-2e04c677-78c8-4e6b-8c10-a4602f2602bb), and [BYCOL](https://support.microsoft.com/en-us/office/bycol-function-58463999-7de5-49ce-8f38-b7f7a2192bfb).
 
-- **Support for bubble charts.** Now [FlexCel can render Bubble charts](https://doc.tmssoftware.com/flexcel/net/about/supported-excel-charts.html#bubble). You can also enter them with the API and APIMate will show you the code to do it.
+- **Support for functions TEXTBEFORE, TEXTAFTER, TEXTSPLIT, HSTACK, VSTACK, TOROW, TOCOL, WRAPROWS, WRAPCOLS, TAKE, DROP, CHOOSEROWS, CHOOSECOLS, and EXPAND.** There is now support for the new [functions introduced in office 365 beta](https://doc.tmssoftware.com/flexcel/net/about/supported-excel-functions.html#added-functions-in-office-365) : [TEXTBEFORE](https://support.microsoft.com/en-us/office/textbefore-function-d099c28a-dba8-448e-ac6c-f086d0fa1b29), [TEXTAFTER](https://support.microsoft.com/en-us/office/textafter-function-c8db2546-5b51-416a-9690-c7e6722e90b4), [TEXTSPLIT](https://support.microsoft.com/en-us/office/textsplit-function-b1ca414e-4c21-4ca0-b1b7-bdecace8a6e7), [HSTACK](https://support.microsoft.com/en-us/office/hstack-function-98c4ab76-10fe-4b4f-8d5f-af1c125fe8c2), [VSTACK](https://support.microsoft.com/en-us/office/vstack-function-a4b86897-be0f-48fc-adca-fcc10d795a9c), [TOROW](https://support.microsoft.com/en-us/office/torow-function-b90d0964-a7d9-44b7-816b-ffa5c2fe2289), [TOCOL](https://support.microsoft.com/en-us/office/tocol-function-22839d9b-0b55-4fc1-b4e6-2761f8f122ed), [WRAPROWS](https://support.microsoft.com/en-us/office/wraprows-function-796825f3-975a-4cee-9c84-1bbddf60ade0), [WRAPCOLS](https://support.microsoft.com/en-us/office/wrapcols-function-d038b05a-57b7-4ee0-be94-ded0792511e2), [TAKE](https://support.microsoft.com/en-us/office/take-function-25382ff1-5da1-4f78-ab43-f33bd2e4e003), [DROP](https://support.microsoft.com/en-us/office/drop-function-1cb4e151-9e17-4838-abe5-9ba48d8c6a34), [CHOOSEROWS](https://support.microsoft.com/en-us/office/chooserows-function-51ace882-9bab-4a44-9625-7274ef7507a3), [CHOOSECOLS](https://support.microsoft.com/en-us/office/choosecols-function-bf117976-2722-4466-9b9a-1c01ed9aebff), and [EXPAND](https://support.microsoft.com/en-us/office/expand-function-7433fba5-4ad1-41da-a904-d5d95808bc38).
 
-- **New &lt;#Swap Series> tag for reports.** The new [&lt;#Swap Series>](https://doc.tmssoftware.com/flexcel/net/guides/reports-tag-reference.html#swap-series) tag allows you to create charts that grow or decrease their number of series according to the data available.
+- **New SHEET VISIBLE tag that allows to change the visibility of a sheet in a report.** You can now use the new [Sheet Visible](https://doc.tmssoftware.com/flexcel/net/guides/reports-tag-reference.html#sheet-visible) tag to hide or unhide sheets. See [https://support.tmssoftware.com/t/hide-worksheet-in-report-tags/18336/2](https://support.tmssoftware.com/t/hide-worksheet-in-report-tags/18336/2)
 
-- **New CustomizeChart event for reports.** The new [CustomizeChart](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Report/FlexCelReport/CustomizeChart.html) event allows you to further customize the charts in the report once they have been generated.
+- **You can now run reports on List&lt;primitive> like  List&lt;double>.** Now you can use a list of a primitive type like List&lt;string> in reports. You have to write &lt;#list.Value> in the template for it to work. See the modified example of [using lists as datasets](https://doc.tmssoftware.com/flexcel/net/samples/csharp/netframework/reports/linq/index.html). See [https://support.tmssoftware.com/t/using-list-as-datasource/18513/4](https://support.tmssoftware.com/t/using-list-as-datasource/18513/4)
 
-- **Support for optional lambda parameters.** There is now full support for the new [optional lambda parameters in Excel](https://insider.office.com/blog/new-lambda-functions-available-in-excel).
+- **Ability to change the newline separator when exporting to CSV or Fixed-lenght text files.** By default FlexCel exports to CSV or fixed length using the newline separator from the OS. (that's CR/LF in Windows and LF in Unix/macOS). Now you can explicitly define the newline string when calling [Export](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Core/ExcelFile/Export.html) See [https://support.tmssoftware.com/t/settings-for-new-line-character-when-saving-texcelfile-to-csv/17886/3](https://support.tmssoftware.com/t/settings-for-new-line-character-when-saving-texcelfile-to-csv/17886/3)
 
-- **IsOmitted function support.** There is now full support for the new [IsOmitted function](https://support.microsoft.com/en-us/office/isomitted-function-831d6fbc-0f07-40c4-9c5b-9c73fd1d60c1).
+- **Support for Array formulas, UDFs, external names and Lambda names in Tokens.** [Tokens](https://doc.tmssoftware.com/flexcel/net/tips/using-tokens-to-get-information-from-formulas.html) now support Array formulas, user-defined functions (UDF), names that refer to external files, and Lambda names (like if you write in a formula "=MyName(4)" and MyName is a lambda function.). Standalone lambda functions (without using names) were already supported. The only thing not supported in tokens right now is what-if tables.
 
-- **Improved recovery mode.** [RecoveryMode](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Core/ExcelFile/RecoveryMode.html) can now load more types of invalid files.
+- **Function "INDEX" is now array-enabled.** Now you can pass arrays in the col and row parameters of the [INDEX](https://support.microsoft.com/en-us/office/index-function-a5dcf0dd-996d-40a4-a822-b56b061328bd) function and FlexCel will return an array of results.
 
-- **Support for localized versions of the CELL function.** Now you can write the first argument of function CELL in 24 languages, and FlexCel will understand them anyway. Before only English was understood. The languages added are Catalan, Croatian, Czech, Danish, Dutch, Finnish, French, Galician, German, Hungarian, Italian, Kazakh, Korean, Norwegian, Polish, Portuguese-Brazil, Portuguese-Portugal, Russian, Slovak, Slovenian, Spanish, Swedish, Turkish and Ukrainian
+- **Improved behavior when inside Docker containers.** Now when you try to run FlexCel in a Docker container without any fonts installed, FlexCel will tell you the problem and how to fix it. There is also a [new tip](https://doc.tmssoftware.com/flexcel/net/tips/running-flexcel-inside-docker-containers.html) explaining how to handle fonts inside docker containers.
 
-- **Bug Fix.** Now FlexCel will throw an exception if you try to save a chart with more than 255 series. Before this release, FlexCel would just save the file, but a file with more than 255 series crashes Excel.
+- **FlexCelReport.AddConnection now supports adding IDbCommand directly.** There is a new overload of [AddConnection](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Report/FlexCelReport/AddConnection.html) that takes a IDbCommand instead of a IDbDataAdapter. This allows you to use [DirectSQL](https://doc.tmssoftware.com/flexcel/net/guides/reports-designer-guide.html#direct-sql-in-templates) in reports when the data framework doesn't has DataAdapters (as is currently the case with Microsoft.Data.SQLite)
 
-- **Bug Fix.** APIMate wouldn't report deleted chart titles, which could lead to chart titles appearing when there was a series with a name.
+- **Bug Fix.** The functions SWITCH and IFS could fail is some border cases.
 
-- **Bug Fix.** It was impossible to manually enter lambda formulas referring to names if [AllowEnteringUnknownFunctionsAndNames](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Core/ExcelFile/AllowEnteringUnknownFunctionsAndNames.html) was false.
+- **Bug Fix.** Bubble charts could render bubbles of the wrong size if there were empty points in the chart data with bubble size different from 0.
 
-- **Bug Fix.** A horizontal fixed band in a report would insert columns if using more than the fixed space, instead of just overwriting the cells.
+- **Bug Fix.** Negative dates now show empty instead of "########" when they are labels of charts. This is the behavior Excel has too.
 
-- **Bug Fix.** Sometimes it was not possible to read properties from xls files.
+- **Bug Fix.** Cells with diagonal borders, but borders style set to none could be rendered by FlexCel in some cases.
+
+- **Bug Fix.** Some files containing khmer characters (or other complex scripts) could raise an exception when exporting to pdf.
+
+- **Bug Fix.** Sometimes RenderObjects would not render the images. See [https://support.tmssoftware.com/t/images-disappear-sometimes/18567/6](https://support.tmssoftware.com/t/images-disappear-sometimes/18567/6)
+
+- **Bug Fix.** There could be errors in some specific cases when copying sheets from one file to another which had linked formulas.
+
+- **Bug Fix.** The limit for custom formats in xls files was in 4000 when it really is 4050. We've updated FlexCel to allow 4050 custom formats when saving as xls.
+
+- **Bug Fix.** The [TYPE](https://support.microsoft.com/en-us/office/type-function-45b4e688-4bc3-48b3-a105-ffa892995899) function didn't return 128 for lambda functions.
+
+- **Bug Fix.** When third-party files had invalid modify/creation dates, FlexCel would refuse to open them. Now it will just ignore invalid dates and let those properties empty.
 
