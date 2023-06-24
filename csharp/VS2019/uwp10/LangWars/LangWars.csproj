@@ -22,13 +22,13 @@
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
     <RuntimeIdentifiers>win10-arm;win10-arm-aot;win10-x86;win10-x86-aot;win10-x64;win10-x64-aot</RuntimeIdentifiers>
-    <PackageCertificateThumbprint>D6AE2A697401C335D1AC052727E23C9EDD062DBB</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>660E06C1163B38C958C79A6A2D890C0F3769E041</PackageCertificateThumbprint>
     <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\x86\Debug\</OutputPath>
-    <DefineConstants>WINDOWS_UWP;COMPILERESOURCES;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47</DefineConstants>
+    <DefineConstants>WINDOWS_UWP;COMPILERESOURCES;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47;FRAMEWORK48</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
@@ -38,7 +38,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
-    <DefineConstants>WINDOWS_UWP;COMPILERESOURCES;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47</DefineConstants>
+    <DefineConstants>WINDOWS_UWP;COMPILERESOURCES;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47;FRAMEWORK48</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
     <DebugType>pdbonly</DebugType>
@@ -51,7 +51,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\ARM\Debug\</OutputPath>
-    <DefineConstants>WINDOWS_UWP;COMPILERESOURCES;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47</DefineConstants>
+    <DefineConstants>WINDOWS_UWP;COMPILERESOURCES;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47;FRAMEWORK48</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>ARM</PlatformTarget>
@@ -61,7 +61,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
     <OutputPath>bin\ARM\Release\</OutputPath>
-    <DefineConstants>WINDOWS_UWP;COMPILERESOURCES;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47</DefineConstants>
+    <DefineConstants>WINDOWS_UWP;COMPILERESOURCES;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47;FRAMEWORK48</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
     <DebugType>pdbonly</DebugType>
@@ -74,7 +74,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\x64\Debug\</OutputPath>
-    <DefineConstants>WINDOWS_UWP;COMPILERESOURCES;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47</DefineConstants>
+    <DefineConstants>WINDOWS_UWP;COMPILERESOURCES;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47;FRAMEWORK48</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
@@ -84,7 +84,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>bin\x64\Release\</OutputPath>
-    <DefineConstants>WINDOWS_UWP;COMPILERESOURCES;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47</DefineConstants>
+    <DefineConstants>WINDOWS_UWP;COMPILERESOURCES;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47;FRAMEWORK48</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
     <DebugType>pdbonly</DebugType>

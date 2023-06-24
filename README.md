@@ -8,28 +8,28 @@ You can find a description of each demo in the [documentation](https://doc.tmsso
 **:book: Note** We update this repository automatically every time we release a new FlexCel version. So if you have notifications integrated with github, you can subscribe to this feed to be notified of new releases.
 
 
-## New in v 7.16 - September 2022
+## New in v 7.17 - June 2023
 
 
-- **Support for using .NET 6 directly in iOS and Android, instead of Xamarin.** Now we support the new multi-target packages in .NET 6, which replace Xamarin.
+- **Optimized support for .NET 7.** We include now packages compiled against .NET 7
 
-- **Breaking Change: The default for the GraphicFramework property is now Native.** The property  [GraphicFramework](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Core/FlexCelConfig/GraphicFramework.html) now defaults to use the native framework if not manually specified. The native graphic frameworks normally work better than Skia, and don't require SkiaSharp.
+- **SkiaSharp updated to 2.88.3.** The minimum SkiaSharp now required is 2.88.3.
 
-- **Support for using native graphics engine in .NET 6 for Android, macOS and iOS.** In Nov 2020 [FlexCel 7.8](https://doc.tmssoftware.com/flexcel/net/about/whatsnew.html#new-in-v-78---november-2020) added support for switching graphics engines in Windows. Now when in .NET 6 you can also switch graphics engines in macOS, iOS (you can use CoreGraphics or Skia) and Android (you can use Native or Skia). To select between native or SkiaSharp in any platform, use the property  [GraphicFramework](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Core/FlexCelConfig/GraphicFramework.html)
+- **Removed support for .NET Core 3.1.** As .NET Core 3.1 reached EOL, now the minimum .NET Core version supported is 5.0
 
-- **SkiaSharp updated to 2.88.1.** The minimum SkiaSharp now required is 2.88.1. This was needed to support multi-targeting in .NET 6
+- **Improved API for defining columns in tables.** Now you can define a totals formula or a column formula for the columns in the table, if needed. As usual, APIMate will show you how to do it.
 
-- **Support for different numeric systems in cell formatting.** Now if you format a cell with a different numeric system like for example "[$-2000000]#,##0.00", FlexCel will render those numbers correctly. (see [https://ansarichat.wordpress.com/2018/02/20/how-to-type-arabic-numerals-in-excel/](https://ansarichat.wordpress.com/2018/02/20/how-to-type-arabic-numerals-in-excel/) )
+- **Now FlexCel preserves digital signatures in macros.** When you have digitally signed macros in a file, now FlexCel will preserve them when opening and saving that file
 
-- **Bug Fix.** When rendering charts that used =Offset to define the data, and some columns or rows were hidden, FlexCel could fail to hide the values when the chart was set to not plot hidden cells.
+- **New property  DeleteEmptyBandsFixed in FlexCelReport controls what to do with empty fixed bands.** The new function [DeleteEmptyBandsFixed ](https://doc.tmssoftware.com/flexcel/net/api/FlexCel.Report/FlexCelReport/DeleteEmptyBandsFixed.html) lets you define what happens if a fixed band has zero records.
 
-- **Bug Fix.** In some rare cases when there was merged cells whose first cell was hidden the background might not be exported to pdf.
+- **Bug Fix.** When recreating a table by calling AddTable and SetTable, the cell references could become invalid
 
-- **Bug Fix.** If printing gridlines and there were hidden columns or rows, the gridlines could be printed over the real borders of a cell.
+- **Bug Fix.** The functions IFERROR, ISERROR and ISERR could sometimes return the error instead of the result of the function.
 
-- **Bug Fix.** When exporting to CSV, there could be errors if you manually set cell values to NaN.
+- **Bug Fix.** The functions COUNTIF, SUMIF and similar could behave wrong in some cases where you used wildcards. See [https://support.tmssoftware.com/t/countif-formula-with-wildcard-failing-after-recalc-method-is-called/19266](https://support.tmssoftware.com/t/countif-formula-with-wildcard-failing-after-recalc-method-is-called/19266)
 
-- **Bug Fix.** If exporting to PDF and the "normal" font of the spreadsheet was Calibri 9 columns could be wider than expected.
+- **Bug Fix.** The function [TRIM](https://support.microsoft.com/en-us/office/trim-function-410388fa-c5df-49c6-b16c-9e5630b479f9) in Excel removes double spaces in the middle of a text, while FlexCel's implementation would remove only spaces at the beginning at end. Also Excel's TRIM only removes spaces (character 32) and not other whitespace like tabs. FlexCel's implementation now does the same.
 
-- **Bug Fix.** FlexCel could hang while loading some invalid third-party files.
+- **Bug Fix.** The function =NUMBERVALUE() could throw an Exception in some border cases
 

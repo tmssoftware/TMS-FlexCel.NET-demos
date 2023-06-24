@@ -15,7 +15,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
-    <DefineConstants>MONO;MONOTOUCH;XAMUNIFIEDAPI;OSX;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47;XAM13</DefineConstants>
+    <DefineConstants>MONO;MONOTOUCH;XAMUNIFIEDAPI;OSX;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47;FRAMEWORK48;XAM13</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
@@ -41,7 +41,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\iPhone\Debug</OutputPath>
-    <DefineConstants>MONO;MONOTOUCH;XAMUNIFIEDAPI;OSX;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47;XAM13</DefineConstants>
+    <DefineConstants>MONO;MONOTOUCH;XAMUNIFIEDAPI;OSX;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47;FRAMEWORK48;XAM13</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>

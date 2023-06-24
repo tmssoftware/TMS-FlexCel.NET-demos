@@ -24,7 +24,7 @@
     <DebugType>portable</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>MONO;MONODROID;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47</DefineConstants>
+    <DefineConstants>MONO;MONODROID;FRAMEWORK20;FRAMEWORK30;FRAMEWORK40;FRAMEWORK45;FRAMEWORK46;FRAMEWORK47;FRAMEWORK48</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
