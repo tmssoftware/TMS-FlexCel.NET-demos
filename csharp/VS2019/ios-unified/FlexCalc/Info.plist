@@ -49,8 +49,8 @@
     <key>CFBundleIdentifier</key>
     <string>FlexCalc</string>
     <key>CFBundleShortVersionString</key>
-    <string>7.17.0.0</string>
+    <string>7.18.0.0</string>
     <key>CFBundleVersion</key>
-    <string>7.17.0.0</string>
+    <string>7.18.0.0</string>
   </dict>
 </plist>
