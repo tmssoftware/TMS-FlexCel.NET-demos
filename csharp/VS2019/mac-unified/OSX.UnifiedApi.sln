@@ -22,6 +22,6 @@ Global
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = GettingStarted\GettingStarted.csproj
-		version = 7.19.0.0
+		version = 7.19.1.0
 	EndGlobalSection
 EndGlobal
