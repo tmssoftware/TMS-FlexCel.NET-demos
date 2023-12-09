@@ -63,7 +63,12 @@ namespace GettingStartedReports
 
                 if (MessageBox.Show("Do you want to open the generated file?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    Process.Start(saveFileDialog1.FileName);
+                    using (Process p = new Process())
+                    {               
+                        p.StartInfo.FileName = saveFileDialog1.FileName;
+                        p.StartInfo.UseShellExecute = true;
+                        p.Start();
+                    }
                 }
             }
         }
@@ -90,7 +95,12 @@ namespace GettingStartedReports
                     Xls.IsXltTemplate = true; //Make it an xltx template.
                     Xls.Save(OutStream);
                 }
-                Process.Start(FileName);
+                using (Process p = new Process())
+                {               
+                    p.StartInfo.FileName = FileName;
+                    p.StartInfo.UseShellExecute = true;
+                    p.Start();
+                }              
             }
             finally
             {

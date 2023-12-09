@@ -96,8 +96,18 @@ namespace ExcelUserDefinedFunctions
             AddData(Xls);
             if (MessageBox.Show("Do you want to open the generated files (PDF and XLS)?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Process.Start(saveFileDialog1.FileName);
-                Process.Start(Path.ChangeExtension(saveFileDialog1.FileName, "xls"));
+                using (Process p = new Process())
+                {               
+                    p.StartInfo.FileName = saveFileDialog1.FileName;
+                    p.StartInfo.UseShellExecute = true;
+                    p.Start();
+                }
+                using (Process p = new Process())
+                {               
+                    p.StartInfo.FileName = Path.ChangeExtension(saveFileDialog1.FileName, "xls");
+                    p.StartInfo.UseShellExecute = true;
+                    p.Start();
+                }
             }
 
         }

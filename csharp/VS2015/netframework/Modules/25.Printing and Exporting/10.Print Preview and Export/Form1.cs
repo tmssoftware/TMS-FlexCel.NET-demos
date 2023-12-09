@@ -493,7 +493,12 @@ namespace PrintPreviewandExport
             }
             if (MessageBox.Show("Do you want to open the generated file?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Process.Start(exportTiffDialog.FileName);
+                using (Process p = new Process())
+                {               
+                    p.StartInfo.FileName = exportTiffDialog.FileName;
+                    p.StartInfo.UseShellExecute = true;
+                    p.Start();
+                }              
             }
 
         }

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Reflection;
 using FlexCel.Core;
+using System.Diagnostics;
 
 namespace MainDemo
 {
@@ -26,12 +27,22 @@ namespace MainDemo
 
         private void linkLabel1_LinkClicked(object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start(linkLabel1.Text);
+            using (Process p = new Process())
+            {               
+                p.StartInfo.FileName = linkLabel1.Text;
+                p.StartInfo.UseShellExecute = true;
+                p.Start();
+            }
         }
 
         private void linkLabel2_LinkClicked(object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start(linkLabel2.Text);
+            using (Process p = new Process())
+            {               
+                p.StartInfo.FileName = linkLabel2.Text;
+                p.StartInfo.UseShellExecute = true;
+                p.Start();
+            }
         }
 
         private void AboutForm_Load(object sender, System.EventArgs e)

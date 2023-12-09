@@ -56,7 +56,12 @@ namespace GenericReports
                     //Nothing, create an empty udl.
                 }
 
-            Process.Start(ConfigFile);
+            using (Process p = new Process())
+            {               
+                p.StartInfo.FileName = ConfigFile;
+                p.StartInfo.UseShellExecute = true;
+                p.Start();
+            }              
         }
 
         private void btnQuery_Click(object sender, System.EventArgs e)
@@ -111,7 +116,12 @@ namespace GenericReports
 
                 if (MessageBox.Show("Do you want to open the generated file?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    Process.Start(saveFileDialog1.FileName);
+                    using (Process p = new Process())
+                    {               
+                        p.StartInfo.FileName = saveFileDialog1.FileName;
+                        p.StartInfo.UseShellExecute = true;
+                        p.Start();
+                    }
                 }
             }
         }

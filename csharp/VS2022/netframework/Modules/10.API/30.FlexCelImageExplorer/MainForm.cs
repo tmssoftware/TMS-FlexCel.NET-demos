@@ -8,6 +8,7 @@ using System.IO;
 
 using FlexCel.Core;
 using FlexCel.XlsAdapter;
+using System.Diagnostics;
 
 namespace FlexCelImageExplorer
 {
@@ -285,7 +286,12 @@ namespace FlexCelImageExplorer
                 MessageBox.Show("There is no open file");
                 return;
             }
-            System.Diagnostics.Process.Start(CurrentFilename);
+            using (Process p = new Process())
+            {               
+                p.StartInfo.FileName = CurrentFilename;
+                p.StartInfo.UseShellExecute = true;
+                p.Start();
+            }              
         }
 
         private void btnConvert_Click(object sender, System.EventArgs e)

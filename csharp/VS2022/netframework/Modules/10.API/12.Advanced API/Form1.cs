@@ -43,9 +43,9 @@ namespace AdvancedAPI
         }
 
         //some silly data to fill in the cells. A real app would read this from somewhere else.
-        string[] Country = { "USA", "Canada", "Spain", "France", "United Kingdom", "Australia", "Brazil", "Unknown" };
+        readonly string[] Country = { "USA", "Canada", "Spain", "France", "United Kingdom", "Australia", "Brazil", "Unknown" };
 
-        int DataRows = 100;
+        readonly int DataRows = 100;
 
         /// <summary>
         /// Will return a list of countries separated by Character(0) so it can be used as input for a built in list.
@@ -278,7 +278,12 @@ namespace AdvancedAPI
 
                 if (MessageBox.Show("Do you want to open the generated file?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    Process.Start(saveFileDialog1.FileName);
+                    using (Process p = new Process())
+                    {               
+                        p.StartInfo.FileName = saveFileDialog1.FileName;
+                        p.StartInfo.UseShellExecute = true;
+                        p.Start();
+                    }
                 }
             }
         }

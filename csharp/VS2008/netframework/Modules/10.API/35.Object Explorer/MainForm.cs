@@ -9,6 +9,7 @@ using System.IO;
 using FlexCel.Core;
 using FlexCel.XlsAdapter;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace ObjectExplorer
 {
@@ -119,7 +120,12 @@ namespace ObjectExplorer
                 MessageBox.Show("There is no open file");
                 return;
             }
-            System.Diagnostics.Process.Start(Xls.ActiveFileName);
+            using (Process p = new Process())
+            {               
+                p.StartInfo.FileName = Xls.ActiveFileName;
+                p.StartInfo.UseShellExecute = true;
+                p.Start();
+            }              
         }
 
 

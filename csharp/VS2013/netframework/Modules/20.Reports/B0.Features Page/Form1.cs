@@ -31,6 +31,20 @@ namespace FeaturesPage
             FlexCelConfig.DpiForImages = 192; //Make the exports in hidpi.
         }
 
+        private static void LaunchFile(string f)
+        {
+            if (f != null)
+            {
+                using (Process p = new Process())
+                {               
+                    p.StartInfo.FileName = f;
+                    p.StartInfo.UseShellExecute = true;
+                    p.Start();
+                }              
+            }            
+        }
+
+
         private void ResizeToolbar(ToolStrip toolbar)
         {
 
@@ -106,7 +120,7 @@ namespace FeaturesPage
 
             if (MessageBox.Show("Do you want to open the generated file?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Process.Start(XlsPath);
+                LaunchFile(XlsPath);
             }
 
         }
@@ -139,7 +153,7 @@ namespace FeaturesPage
             }
             if (MessageBox.Show("Do you want to open the generated file?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Process.Start(MainHtmlPath);
+                LaunchFile(MainHtmlPath);
             }
 
 
@@ -179,7 +193,7 @@ namespace FeaturesPage
 
             if (MessageBox.Show("Do you want to open the generated file?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Process.Start(PdfPath);
+                LaunchFile(PdfPath);
             }
 
         }

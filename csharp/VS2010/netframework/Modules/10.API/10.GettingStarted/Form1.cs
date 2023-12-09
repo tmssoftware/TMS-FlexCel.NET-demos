@@ -113,6 +113,19 @@ namespace GettingStarted
             }
         }
 
+        private static void LaunchFile(string f)
+        {
+            if (f != null)
+            {
+                using (Process p = new Process())
+                {               
+                    p.StartInfo.FileName = f;
+                    p.StartInfo.UseShellExecute = true;
+                    p.Start();
+                }              
+            }            
+        }
+
         private void NormalOpen(ExcelFile Xls)
         {
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
@@ -128,7 +141,7 @@ namespace GettingStarted
 
                 if (MessageBox.Show("Do you want to open the generated file?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    Process.Start(saveFileDialog1.FileName);
+                    LaunchFile(saveFileDialog1.FileName);
                 }
             }
         }
@@ -147,7 +160,7 @@ namespace GettingStarted
                     Xls.IsXltTemplate = true; //Make it an xltx template.
                     Xls.Save(OutStream);
                 }
-                Process.Start(FileName);
+                LaunchFile(FileName);
             }
             finally
             {

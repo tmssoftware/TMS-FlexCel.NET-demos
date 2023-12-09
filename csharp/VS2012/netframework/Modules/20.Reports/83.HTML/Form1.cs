@@ -74,7 +74,12 @@ namespace HTML
 
                         if (MessageBox.Show("Do you want to open the generated file?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
                         {
-                            Process.Start(SaveDialog.FileName);
+                            using (Process p = new Process())
+                            {               
+                                p.StartInfo.FileName = SaveDialog.FileName;
+                                p.StartInfo.UseShellExecute = true;
+                                p.Start();
+                            }              
                         }
                     }
                 }
@@ -102,7 +107,12 @@ namespace HTML
 
         private void linkLabel1_LinkClicked(object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start((sender as LinkLabel).Text);
+            using (Process p = new Process())
+            {               
+                p.StartInfo.FileName = (sender as LinkLabel).Text;
+                p.StartInfo.UseShellExecute = true;
+                p.Start();
+            }              
         }
     }
 

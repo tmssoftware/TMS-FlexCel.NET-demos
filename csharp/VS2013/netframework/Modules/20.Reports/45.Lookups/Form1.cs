@@ -44,7 +44,12 @@ namespace Lookups
 
                     if (MessageBox.Show("Do you want to open the generated file?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        Process.Start(saveFileDialog1.FileName);
+                        using (Process p = new Process())
+                        {               
+                            p.StartInfo.FileName = saveFileDialog1.FileName;
+                            p.StartInfo.UseShellExecute = true;
+                            p.Start();
+                        }
                     }
                 }
             }

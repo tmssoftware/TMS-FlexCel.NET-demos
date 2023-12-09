@@ -10,6 +10,7 @@ using System.Resources;
 using System.Threading;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using System.Diagnostics;
 
 namespace MainDemo
 {
@@ -62,18 +63,31 @@ namespace MainDemo
 
 
         #region Global constants.
-        private string PathToExe = Path.Combine("bin", "Debug");
-        private string ExtLaunch = ".xls";
-        private string ExtTemplate = ".template.xls";
-        private string ExtTemplateX = ".template.xlsx";
-        private string ExtCsProject = ".csproj";
-        private string ExtVbProject = ".vbproj";
-        private string ExtPrismProject = ".oxygene";
-        private string ExtLocation = ".location.txt";
+        private readonly string PathToExe = Path.Combine("bin", "Debug");
+        private readonly string ExtLaunch = ".xls";
+        private readonly string ExtTemplate = ".template.xls";
+        private readonly string ExtTemplateX = ".template.xlsx";
+        private readonly string ExtCsProject = ".csproj";
+        private readonly string ExtVbProject = ".vbproj";
+        private readonly string ExtPrismProject = ".oxygene";
+        private readonly string ExtLocation = ".location.txt";
 
         private SearchEngine Finder;
         private TTreeNode MainNode;
         #endregion
+
+        private static void LaunchFile(string f)
+        {
+            if (f != null)
+            {
+                using (Process p = new Process())
+                {               
+                    p.StartInfo.FileName = f;
+                    p.StartInfo.UseShellExecute = true;
+                    p.Start();
+                }              
+            }            
+        }
 
         private void LoadModules()
         {
@@ -215,7 +229,7 @@ namespace MainDemo
                     string f = HasFileToLaunch(ExtLaunch);
                     if (f != null)
                     {
-                        System.Diagnostics.Process.Start(f);
+                        LaunchFile(f);
                     }
                     return;
                 }
@@ -263,14 +277,14 @@ namespace MainDemo
             string f = HasFileToLaunch(ExtTemplateX);
             if (f != null)
             {
-                System.Diagnostics.Process.Start(f);
+                LaunchFile(f);
                 return;
             }
 
             f = HasFileToLaunch(ExtTemplate);
             if (f != null)
             {
-                System.Diagnostics.Process.Start(f);
+                LaunchFile(f);
             }
 
         }
@@ -287,7 +301,7 @@ namespace MainDemo
         {
             try
             {
-                System.Diagnostics.Process.Start(e.LinkText);
+                LaunchFile(e.LinkText);
             }
             catch (Exception ex)
             {
@@ -300,21 +314,21 @@ namespace MainDemo
             string f = HasFileToLaunch(ExtCsProject);
             if (f != null)
             {
-                System.Diagnostics.Process.Start(f);
+                LaunchFile(f);
                 return;
             }
 
             f = HasFileToLaunch(ExtVbProject);
             if (f != null)
             {
-                System.Diagnostics.Process.Start(f);
+                LaunchFile(f);
                 return;
             }
 
             f = HasFileToLaunch(ExtPrismProject);
             if (f != null)
             {
-                System.Diagnostics.Process.Start(f);
+                LaunchFile(f);
                 return;
             }
 
@@ -324,7 +338,7 @@ namespace MainDemo
         {
             if (modulesList.SelectedNode == null || modulesList.SelectedNode.Tag == null) return;
             string f = Path.GetDirectoryName((string)(modulesList.SelectedNode.Tag));
-            System.Diagnostics.Process.Start(f);
+            LaunchFile(f);
 
         }
 
@@ -427,7 +441,7 @@ namespace MainDemo
             MessageBox.Show(Answers[rnd.Next(Answers.Length)]);
         }
 
-        string TxtTypeToSearch = "Type to search...";  //this isn't a nice way to show a hint, but it will work for this simple demo, without using a third party control.
+        readonly string TxtTypeToSearch = "Type to search...";  //this isn't a nice way to show a hint, but it will work for this simple demo, without using a third party control.
 
         private void sdSearch_Enter(object sender, EventArgs e)
         {

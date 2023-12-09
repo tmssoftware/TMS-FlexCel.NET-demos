@@ -135,7 +135,12 @@ namespace ExportingWebServices
 
                     if (MessageBox.Show("Do you want to open the generated file?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        Process.Start(SaveDialog.FileName);
+                        using (Process p = new Process())
+                        {               
+                            p.StartInfo.FileName = SaveDialog.FileName;
+                            p.StartInfo.UseShellExecute = true;
+                            p.Start();
+                        }              
                     }
                 }
             }
