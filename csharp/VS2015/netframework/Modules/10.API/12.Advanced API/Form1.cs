@@ -124,13 +124,13 @@ namespace AdvancedAPI
             ApplyFormat.Borders.SetAllMembers(true);  //We will only apply the borders to the existing cell formats
             TFlxFormat fmt = Xls.GetDefaultFormat;
             fmt.Borders.Left.Style = TFlxBorderStyle.Double;
-            fmt.Borders.Left.Color = Color.Black;
+            fmt.Borders.Left.Color = Colors.Black;
             fmt.Borders.Right.Style = TFlxBorderStyle.Double;
-            fmt.Borders.Right.Color = Color.Black;
+            fmt.Borders.Right.Color = Colors.Black;
             fmt.Borders.Top.Style = TFlxBorderStyle.Double;
-            fmt.Borders.Top.Color = Color.Black;
+            fmt.Borders.Top.Color = Colors.Black;
             fmt.Borders.Bottom.Style = TFlxBorderStyle.Double;
-            fmt.Borders.Bottom.Color = Color.Black;
+            fmt.Borders.Bottom.Color = Colors.Black;
             Xls.SetCellFormat(DataCell.Top - 1, DataCell.Left, DataCell.Top, DataCell.Left + 1, fmt, ApplyFormat, true);  //Set last parameter to true so it draws a box.
 
             //Freeze panes
