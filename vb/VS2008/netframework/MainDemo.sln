@@ -26,7 +26,7 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Charts With Dynamic Series"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Images", "Modules\20.Reports\65.Images\Images.vbproj", "{5D9E4987-17DB-452B-9FD9-FA66DD90B4DE}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Templates On The Exe", "Modules\20.Reports\60.Templates On The Exe\Templates On The Exe.vbproj", "{B0623810-92B4-43AA-BF83-3C22860D2C5D}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Templates In The Exe", "Modules\20.Reports\60.Templates In The Exe\Templates In The Exe.vbproj", "{B0623810-92B4-43AA-BF83-3C22860D2C5D}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Lookups", "Modules\20.Reports\45.Lookups\Lookups.vbproj", "{86552929-5F4C-45C0-9F18-849FBD1C5F73}"
 EndProject

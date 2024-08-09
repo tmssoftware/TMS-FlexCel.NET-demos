@@ -26,7 +26,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Charts", "Modules\20.Report
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Images", "Modules\20.Reports\65.Images\Images.csproj", "{5D9E4987-17DB-452B-9FD9-FA66DD90B4DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templates On The Exe", "Modules\20.Reports\60.Templates On The Exe\Templates On The Exe.csproj", "{B0623810-92B4-43AA-BF83-3C22860D2C5D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templates In The Exe", "Modules\20.Reports\60.Templates In The Exe\Templates In The Exe.csproj", "{B0623810-92B4-43AA-BF83-3C22860D2C5D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lookups", "Modules\20.Reports\45.Lookups\Lookups.csproj", "{86552929-5F4C-45C0-9F18-849FBD1C5F73}"
 EndProject
