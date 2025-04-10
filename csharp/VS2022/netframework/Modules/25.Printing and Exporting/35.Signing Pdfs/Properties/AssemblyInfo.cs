@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Signing Pdfs")]
-[assembly: AssemblyCopyright("(c) 2002 - 2024 TMS Software")]
+[assembly: AssemblyCopyright("(c) 2002 - 2025 TMS Software")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -29,5 +29,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("7.23.0.0")]
-[assembly: AssemblyFileVersion("7.23.0.0")]
+[assembly: AssemblyVersion("7.24.0.0")]
+[assembly: AssemblyFileVersion("7.24.0.0")]
