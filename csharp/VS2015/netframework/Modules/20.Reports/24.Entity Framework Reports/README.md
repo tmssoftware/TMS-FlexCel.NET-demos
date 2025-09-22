@@ -1,6 +1,7 @@
 # Using Entity Framework datasources
 
 > [!Note]
+> 
 > To run this example, you need to have SQL Server (LocalDB) installed.
 > For this reason, and because it uses NuGet, this demo doesn't run from
 > MainDemo. You need to open this solution and run it alone.

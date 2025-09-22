@@ -1,7 +1,7 @@
 # ASP.NET
 
 FlexCel is not tied to any specific technology, you can use it the same
-on WinForms, Xamarin, Console apps, whatever. While most of the
+on WinForms, .NET MAUI, Console apps, whatever. While most of the
 demos here are on WinForms for convenience, converting them to ASP or others
 is really simple.
 
